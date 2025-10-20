@@ -16,13 +16,13 @@
         }
         
         .gradient-bg {
-            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+            background: linear-gradient(135deg, #1A1A1A 0%, #121212 50%, #0a0a0a 100%);
         }
         
         .glass-effect {
-            background: rgba(255, 255, 255, 0.1);
+            background: rgba(26, 26, 26, 0.8);
             backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.1);
         }
         
         .typing-cursor::after {
@@ -104,6 +104,43 @@
         .compiling-step:nth-child(3) { animation-delay: 0.6s; }
         .compiling-step:nth-child(4) { animation-delay: 0.8s; }
         .compiling-step:nth-child(5) { animation-delay: 1s; }
+        
+        .typing-animation {
+            display: inline-block;
+            position: relative;
+            white-space: nowrap;
+        }
+        
+        .typing-animation::after {
+            content: '|';
+            color: #22c55e;
+            animation: blink 1s infinite;
+            position: absolute;
+            right: -2px;
+            top: 0;
+        }
+        
+        .typing-text {
+            display: inline-block;
+            animation: typewriter 5s steps(25, end) infinite;
+            white-space: nowrap;
+            overflow: hidden;
+            width: 0;
+            vertical-align: baseline;
+            line-height: 1;
+        }
+        
+        @keyframes typewriter {
+            0% { width: 0; }
+            20% { width: 100%; }
+            80% { width: 100%; }
+            100% { width: 0; }
+        }
+        
+        @keyframes blink {
+            0%, 50% { opacity: 1; }
+            51%, 100% { opacity: 0; }
+        }
         
         .carousel-container {
             overflow: hidden;
@@ -226,7 +263,7 @@
                     </div>
                 </div>
                 <h1 class="text-2xl font-bold mt-4">Anas Abbas</h1>
-                <p class="text-green-400 text-lg">Full Stack Developer</p>
+                <p class="text-green-400 text-lg typing-animation"><span class="typing-text">Full Stack Developer</span></p>
             </div>
 
             <!-- Personal Info -->
@@ -304,39 +341,54 @@
     <main class="lg:ml-80 min-h-screen">
         <!-- Home Section -->
         <section id="home" class="min-h-screen flex items-center justify-center relative overflow-hidden pt-20 lg:pt-0">
-            <div class="container mx-auto px-4 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+            <!-- Animated Background Elements -->
+            <div class="absolute inset-0 overflow-hidden">
+                <div class="absolute top-1/4 left-1/4 w-64 h-64 bg-green-400/5 rounded-full blur-3xl animate-pulse"></div>
+                <div class="absolute bottom-1/4 right-1/4 w-80 h-80 bg-blue-400/5 rounded-full blur-3xl animate-pulse" style="animation-delay: 2s;"></div>
+                <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-purple-400/5 rounded-full blur-3xl animate-pulse" style="animation-delay: 4s;"></div>
+            </div>
+            
+            <div class="container mx-auto px-4 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center relative z-10">
                 <div class="space-y-8" data-aos="fade-right">
-                    <div class="space-y-4">
-                        <div class="inline-block bg-gray-800 px-4 py-2 rounded-full">
+                    <div class="space-y-6">
+                        <div class="inline-block px-6 py-3 rounded-full border border-green-400/20" style="background: linear-gradient(to right, #1A1A1A, #121212);">
                             <i class="fas fa-home mr-2 text-green-400"></i>
-                            <span class="text-gray-300">Hello</span>
+                            <span class="text-gray-300 font-medium">Welcome to my world</span>
                         </div>
-                        <h1 class="text-5xl font-bold leading-tight">
+                        <h1 class="text-6xl lg:text-7xl font-bold leading-tight">
                             I Craft
-                            <span class="text-green-400">Digital Landscapes</span>
+                            <span class="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-400">Digital</span>
+                            <br>
+                            <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Landscapes</span>
                         </h1>
-                        <p class="text-xl text-gray-300 leading-relaxed">
-                            I am a <strong>Full Stack Developer</strong> at heart, creating features that are perfectly suited for the job at hand.
+                        <p class="text-xl lg:text-2xl text-gray-300 leading-relaxed">
+                            I am a <span class="text-green-400 font-semibold">Full Stack Developer</span> at heart, creating features that are perfectly suited for the job at hand.
                         </p>
                     </div>
 
                     <!-- Availability -->
-                    <div class="space-y-3">
-                        <div class="flex items-center space-x-3">
-                            <i class="fas fa-check-circle text-green-400"></i>
-                            <span>Available for work</span>
+                    <div class="flex flex-wrap gap-4">
+                        <div class="flex items-center space-x-3 bg-green-400/10 px-4 py-2 rounded-full border border-green-400/20">
+                            <div class="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
+                            <span class="text-green-400 font-medium">Available for work</span>
                         </div>
-                        <div class="flex items-center space-x-3">
-                            <i class="fas fa-check-circle text-green-400"></i>
-                            <span>Full Time Job</span>
+                        <div class="flex items-center space-x-3 bg-blue-400/10 px-4 py-2 rounded-full border border-blue-400/20">
+                            <div class="w-2 h-2 bg-blue-400 rounded-full animate-pulse"></div>
+                            <span class="text-blue-400 font-medium">Full Time Job</span>
                         </div>
                     </div>
 
-                    <!-- CTA Button -->
-                    <button class="bg-green-400 hover:bg-green-500 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 flex items-center space-x-3">
-                        <i class="fas fa-paper-plane"></i>
-                        <span>Hire Me</span>
-                    </button>
+                    <!-- CTA Buttons -->
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <button class="bg-gradient-to-r from-green-400 to-green-500 hover:from-green-500 hover:to-green-600 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center space-x-3 shadow-lg hover:shadow-green-400/25">
+                            <i class="fas fa-paper-plane"></i>
+                            <span>Hire Me</span>
+                        </button>
+                        <button class="bg-transparent border-2 border-green-400 text-green-400 hover:bg-green-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center space-x-3">
+                            <i class="fas fa-download"></i>
+                            <span>Download CV</span>
+                        </button>
+                    </div>
 
                     <!-- Trusted Companies Carousel -->
                     <div class="space-y-3">
@@ -365,29 +417,47 @@
                     </div>
                 </div>
 
-                <!-- Compiling Animation -->
+                <!-- Enhanced VS Code Terminal -->
                 <div class="relative" data-aos="fade-left">
-                    <div class="bg-gray-900 border border-gray-700 rounded-xl p-6 shadow-2xl">
-                        <div class="flex items-center mb-4">
-                            <div class="flex space-x-2">
-                                <div class="w-3 h-3 bg-red-500 rounded-full"></div>
-                                <div class="w-3 h-3 bg-yellow-500 rounded-full"></div>
-                                <div class="w-3 h-3 bg-green-500 rounded-full"></div>
+                    <div class="bg-gray-900 border border-gray-700 rounded-xl p-6 shadow-2xl backdrop-blur-sm">
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="flex items-center space-x-2">
+                                <div class="flex space-x-2">
+                                    <div class="w-3 h-3 bg-red-500 rounded-full"></div>
+                                    <div class="w-3 h-3 bg-yellow-500 rounded-full"></div>
+                                    <div class="w-3 h-3 bg-green-500 rounded-full"></div>
+                                </div>
+                                <span class="ml-4 text-gray-400 text-sm font-mono">VS Code</span>
                             </div>
-                            <span class="ml-4 text-gray-400 text-sm">VS Code</span>
+                            <div class="flex items-center space-x-2">
+                                <div class="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
+                                <span class="text-green-400 text-xs">Live</span>
+                            </div>
                         </div>
                         <div class="space-y-3">
                             <div class="flex items-center space-x-2 compiling-step">
                                 <div class="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
-                                <span class="text-green-400 text-sm">Compiling...</span>
+                                <span class="text-green-400 text-sm font-mono typing-animation"><span class="typing-text">Compiling...</span></span>
                             </div>
-                            <div class="space-y-1">
-                                <div class="text-gray-300 text-sm compiling-step">✓ Building React components</div>
-                                <div class="text-gray-300 text-sm compiling-step">✓ Optimizing bundle size</div>
-                                <div class="text-gray-300 text-sm compiling-step">✓ Running tests</div>
-                                <div class="text-gray-300 text-sm compiling-step">✓ Deploying to production</div>
+                            <div class="space-y-1 font-mono text-sm">
+                                <div class="text-gray-300 compiling-step flex items-center space-x-2">
+                                    <span class="text-green-400">✓</span>
+                                    <span>Building React components</span>
+                                </div>
+                                <div class="text-gray-300 compiling-step flex items-center space-x-2">
+                                    <span class="text-green-400">✓</span>
+                                    <span>Optimizing bundle size</span>
+                                </div>
+                                <div class="text-gray-300 compiling-step flex items-center space-x-2">
+                                    <span class="text-green-400">✓</span>
+                                    <span>Running tests</span>
+                                </div>
+                                <div class="text-gray-300 compiling-step flex items-center space-x-2">
+                                    <span class="text-green-400">✓</span>
+                                    <span>Deploying to production</span>
+                                </div>
                             </div>
-                            <div class="mt-4 p-3 bg-green-400/10 rounded-lg border border-green-400/20 compiling-step">
+                            <div class="mt-4 p-4 bg-gradient-to-r from-green-400/10 to-blue-400/10 rounded-lg border border-green-400/20 compiling-step">
                                 <div class="flex items-center space-x-2">
                                     <i class="fas fa-check-circle text-green-400"></i>
                                     <span class="text-green-400 text-sm font-medium">Build successful!</span>
@@ -396,18 +466,37 @@
                             </div>
                         </div>
                     </div>
-                    <div class="absolute -top-4 -right-4 w-12 h-12 bg-gradient-to-br from-green-400 to-green-600 rounded-full flex items-center justify-center floating shadow-lg p-1">
-                        <!-- Your personal logo -->
-                        <div class="w-10 h-10 bg-white rounded-full flex items-center justify-center overflow-hidden">
-                            <img src="assets/img/logo.png" alt="Anas Abbas Logo" class="w-full h-full object-contain">
-                        </div>
+                    <div class="absolute -top-4 -right-4 w-8 h-8 bg-gradient-to-r from-green-400 to-blue-400 rounded-full flex items-center justify-center floating shadow-lg">
+                        <i class="fas fa-rocket text-white"></i>
+                    </div>
+                    <!-- Floating Code Elements -->
+                    <div class="absolute -top-2 -left-2 w-6 h-6 bg-blue-400/20 rounded-full flex items-center justify-center floating" style="animation-delay: 1s;">
+                        <i class="fas fa-code text-blue-400 text-xs"></i>
+                    </div>
+                    <div class="absolute -bottom-2 -left-2 w-6 h-6 bg-purple-400/20 rounded-full flex items-center justify-center floating" style="animation-delay: 2s;">
+                        <i class="fas fa-terminal text-purple-400 text-xs"></i>
                     </div>
                 </div>
             </div>
 
             <!-- Background Elements -->
-            <div class="absolute top-20 right-20 w-32 h-32 border border-green-400 opacity-20 rounded-full floating"></div>
-            <div class="absolute bottom-20 left-20 w-20 h-20 bg-green-400 opacity-10 rounded-full floating" style="animation-delay: 1s;"></div>
+            <div class="absolute top-20 right-20 w-32 h-32 border border-green-400 opacity-20 rounded-full floating flex items-center justify-center">
+                <div class="w-8 h-8 bg-green-400/30 rounded-full flex items-center justify-center">
+                    <i class="fas fa-code text-green-400 text-sm"></i>
+                </div>
+            </div>
+            <div class="absolute bottom-20 left-20 w-20 h-20 bg-green-400 opacity-10 rounded-full floating flex items-center justify-center" style="animation-delay: 1s;">
+                <div class="w-6 h-6 bg-green-400/50 rounded-full flex items-center justify-center">
+                    <i class="fas fa-rocket text-white text-xs"></i>
+                </div>
+            </div>
+            <!-- Additional floating elements -->
+            <div class="absolute top-1/3 left-10 w-16 h-16 bg-blue-400/10 rounded-full floating flex items-center justify-center" style="animation-delay: 2s;">
+                <i class="fas fa-terminal text-blue-400 text-lg"></i>
+            </div>
+            <div class="absolute bottom-1/3 right-10 w-12 h-12 bg-purple-400/20 rounded-full floating flex items-center justify-center" style="animation-delay: 3s;">
+                <i class="fas fa-database text-purple-400 text-sm"></i>
+            </div>
         </section>
 
         <!-- About Section -->
@@ -460,7 +549,7 @@
         </section>
 
         <!-- Skills Section -->
-        <section id="skills" class="py-20 px-4 lg:px-8 bg-gray-900/50">
+        <section id="skills" class="py-20 px-4 lg:px-8" style="background-color: #121212;">
             <div class="container mx-auto">
                 <div class="text-center mb-16" data-aos="fade-up">
                     <div class="inline-block bg-gray-800 px-4 py-2 rounded-full mb-4">
@@ -670,7 +759,7 @@
         </section>
 
         <!-- Education Section -->
-        <section id="education" class="py-20 px-4 lg:px-8 bg-gray-900/50">
+        <section id="education" class="py-20 px-4 lg:px-8" style="background-color: #121212;">
             <div class="container mx-auto">
                 <div class="text-center mb-16" data-aos="fade-up">
                     <div class="inline-block bg-gray-800 px-4 py-2 rounded-full mb-4">
@@ -801,7 +890,7 @@
         </section>
 
         <!-- Contact Section -->
-        <section id="contact" class="py-20 px-4 lg:px-8 bg-gray-900/50">
+        <section id="contact" class="py-20 px-4 lg:px-8" style="background-color: #121212;">
             <div class="container mx-auto">
                 <div class="text-center mb-16" data-aos="fade-up">
                     <div class="inline-block bg-gray-800 px-4 py-2 rounded-full mb-4">
@@ -880,7 +969,7 @@
     </main>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 py-12 px-4 lg:px-8 lg:ml-80">
+    <footer class="py-12 px-4 lg:px-8 lg:ml-80" style="background-color: #121212;">
         <div class="container mx-auto">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <!-- About -->
@@ -1140,7 +1229,7 @@
             }
         });
 
-        // Download CV functionality
+        // Download CV functionality for sidebar
         document.querySelector('aside button[class*="bg-green-400"]').addEventListener('click', () => {
             // Create a simple PDF content (in real implementation, you'd use a PDF library)
             const cvContent = `
@@ -1180,6 +1269,42 @@
         const compilingSteps = document.querySelectorAll('.compiling-step');
         compilingSteps.forEach((step, index) => {
             step.style.animationDelay = `${index * 0.2}s`;
+        });
+
+        // Download CV functionality for main section
+        document.querySelector('main button[class*="border-green-400"]').addEventListener('click', () => {
+            // Create a simple PDF content (in real implementation, you'd use a PDF library)
+            const cvContent = `
+                CURRICULUM VITAE
+                Anas Abbas
+                Full Stack Developer
+                
+                Personal Information:
+                - Age: 28
+                - Country: Saudi Arabia
+                - City: Riyadh
+                
+                Experience:
+                - Senior Full Stack Developer (2022-Present)
+                - Full Stack Developer (2020-2022)
+                - Frontend Developer (2019-2020)
+                
+                Skills:
+                - JavaScript (95%)
+                - React (90%)
+                - Node.js (88%)
+                - Python (85%)
+            `;
+            
+            const blob = new Blob([cvContent], { type: 'text/plain' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'Anas_Abbas_CV.txt';
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
         });
     </script>
 </body>
