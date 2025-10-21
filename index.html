@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anas M. Abbas - IT Specialist & Developer</title>
+    <title>Anas M. Abbas - Software Engineer & ERP Developer</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -273,6 +273,22 @@
             font-size: 0.75rem;
             border: 1px solid rgba(34, 197, 94, 0.2);
         }
+        
+        /* Project Cards Hover Effect */
+        .project-card {
+            transition: all 0.3s ease;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(34, 197, 94, 0.1);
+            border-color: rgba(34, 197, 94, 0.3);
+        }
+        
+        .project-card:hover .glass-effect {
+            background: rgba(26, 26, 26, 0.9);
+            border-color: rgba(34, 197, 94, 0.4);
+        }
     </style>
     <link rel="icon" href="assets/img/Logo.png" type="image/x-icon">
 </head>
@@ -484,7 +500,7 @@
                             <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Solutions</span>
                         </h1>
                         <p class="text-xl lg:text-2xl text-gray-300 leading-relaxed">
-                            I am an <span class="text-green-400 font-semibold">IT Specialist & Developer</span> with 11+ years of experience in creating innovative solutions and training the next generation of developers.
+                            I am an <span class="text-green-400 font-semibold">Software Engineer & ERP Developer</span> with 11+ years of experience in creating innovative solutions and training the next generation of developers.
                         </p>
                     </div>
 
@@ -655,22 +671,31 @@
 
                     <div class="space-y-6" data-aos="fade-left" class="order-1 lg:order-2">
                         <p class="text-base lg:text-lg text-gray-300 leading-relaxed">
-                            An experienced IT Specialist and Developer with over 11 years of expertise in ERP software development, WordPress development, and IT training. I specialize in PHP Yii Framework, C#, and various web technologies.
+                            Software Engineer and ERP Developer with 11+ years of experience in full-stack and WordPress development. Currently CTO at New G Solution, leading a global ERP platform integrating major e-commerce and logistics systems.
                         </p>
                         <p class="text-base lg:text-lg text-gray-300 leading-relaxed">
-                            I am passionate about sharing knowledge through training and mentoring. I have trained numerous students in programming languages and IT skills, helping them build successful careers in technology.
+                            Conducting applied research on using Augmented Reality (AR) for ERP employee training — combining innovation with practical enterprise development.
+                        </p>
+                        <p class="text-base lg:text-lg text-gray-300 leading-relaxed">
+                            Passionate about mentoring and IT education, with 100+ students trained in programming and software fundamentals.
                         </p>
                         
-                        <div class="grid grid-cols-2 gap-4 lg:gap-6">
+                        
+                        <div class="grid grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-6">
                             <div class="text-center p-4 glass-effect rounded-lg">
                                 <div class="text-2xl lg:text-3xl font-bold text-green-400">11+</div>
                                 <div class="text-gray-300 text-sm lg:text-base">Years Experience</div>
                             </div>
                             <div class="text-center p-4 glass-effect rounded-lg">
-                                <div class="text-2xl lg:text-3xl font-bold text-green-400">100+</div>
+                                <div class="text-2xl lg:text-3xl font-bold text-green-400">500+</div>
                                 <div class="text-gray-300 text-sm lg:text-base">Students Trained</div>
                             </div>
+                            <div class="text-center p-4 glass-effect rounded-lg">
+                                <div class="text-2xl lg:text-3xl font-bold text-green-400">CTO</div>
+                                <div class="text-gray-300 text-sm lg:text-base">New G Solution (ERP)</div>
+                            </div>
                         </div>
+                        
                     </div>
                 </div>
             </div>
@@ -1125,93 +1150,195 @@
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     <!-- Project 1 -->
                     <div class="project-card glass-effect rounded-lg overflow-hidden cursor-pointer" data-aos="fade-up" data-aos-delay="100" onclick="openProjectModal('project1')">
-                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=500&h=300&fit=crop" 
+                        <img src="assets/img/projects/newgsolution.png" 
                              alt="ERP Software Development" class="w-full h-48 object-cover">
                         <div class="p-6">
-                            <h3 class="text-xl font-bold mb-2">ERP Software Development</h3>
-                            <p class="text-gray-300 mb-4">Enterprise Resource Planning system built with PHP Yii Framework and deployed on AWS EC2</p>
+                            <h3 class="text-xl font-bold mb-2">New G Solution – Cloud ERP Platform</h3>
+                            <p class="text-gray-300 mb-4">Enterprise Resource Planning system built with PHP Yii Framework and deployed on AWS EC2.</p>
                             <div class="flex flex-wrap gap-2">
                                 <span class="px-2 py-1 bg-green-400/20 text-green-400 rounded text-sm">PHP Yii</span>
                                 <span class="px-2 py-1 bg-green-400/20 text-green-400 rounded text-sm">AWS EC2</span>
                                 <span class="px-2 py-1 bg-green-400/20 text-green-400 rounded text-sm">MySQL</span>
+                                <span class="px-2 py-1 bg-green-400/20 text-green-400 rounded text-sm">RESTful APIs</span>
+                                <span class="px-2 py-1 bg-green-400/20 text-green-400 rounded text-sm">JavaScript / jQuery</span>
+                                <span class="px-2 py-1 bg-green-400/20 text-green-400 rounded text-sm">Bootstrap / Tailwind</span>
+                                <span class="px-2 py-1 bg-green-400/20 text-green-400 rounded text-sm">OBAC</span>
+                                <span class="px-2 py-1 bg-green-400/20 text-green-400 rounded text-sm">RBAC</span>
+                                <span class="px-2 py-1 bg-green-400/20 text-green-400 rounded text-sm">Encryption</span>
+                                <span class="px-2 py-1 bg-green-400/20 text-green-400 rounded text-sm">API Integrations</span>
+                                <span class="px-2 py-1 bg-green-400/20 text-green-400 rounded text-sm">Multi-Tenant ERP</span>
+                                <span class="px-2 py-1 bg-green-400/20 text-green-400 rounded text-sm">Full WordPress integration for company and client portals</span>
                             </div>
                         </div>
                     </div>
 
                     <!-- Project 2 -->
                     <div class="project-card glass-effect rounded-lg overflow-hidden cursor-pointer" data-aos="fade-up" data-aos-delay="200" onclick="openProjectModal('project2')">
-                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=500&h=300&fit=crop" 
+                        <img src="assets/img/projects/b2b.png" 
                              alt="WordPress Development" class="w-full h-48 object-cover">
                         <div class="p-6">
-                            <h3 class="text-xl font-bold mb-2">WordPress Development</h3>
-                            <p class="text-gray-300 mb-4">Custom WordPress websites and plugins development with advanced functionality</p>
+                            <h3 class="text-xl font-bold mb-2">B2B E-Commerce Platform (Part of New G Solution)</h3>
+                            <p class="text-gray-300 mb-4">A Laravel-based B2B e-commerce platform built on the S-Cart framework, directly integrated with the New G Solution ERP ecosystem. Designed for multi-client deployments with secure, isolated sub-domains.</p>
                             <div class="flex flex-wrap gap-2">
-                                <span class="px-2 py-1 bg-green-400/20 text-green-400 rounded text-sm">WordPress</span>
                                 <span class="px-2 py-1 bg-green-400/20 text-green-400 rounded text-sm">PHP</span>
                                 <span class="px-2 py-1 bg-green-400/20 text-green-400 rounded text-sm">MySQL</span>
+                                <span class="px-2 py-1 bg-green-400/20 text-green-400 rounded text-sm">Laravel</span>
+                                <span class="px-2 py-1 bg-green-400/20 text-green-400 rounded text-sm">S-Cart Theme</span>
+                                <span class="px-2 py-1 bg-green-400/20 text-green-400 rounded text-sm">ERP Integration</span>
+                                <span class="px-2 py-1 bg-green-400/20 text-green-400 rounded text-sm">Order & RMA Modules</span>
+                                <span class="px-2 py-1 bg-green-400/20 text-green-400 rounded text-sm">Multi-Tenant Architecture</span>
+                                <span class="px-2 py-1 bg-green-400/20 text-green-400 rounded text-sm">Secure, Isolated Sub-Domains</span>
                             </div>
                         </div>
                     </div>
 
                     <!-- Project 3 -->
                     <div class="project-card glass-effect rounded-lg overflow-hidden cursor-pointer" data-aos="fade-up" data-aos-delay="300" onclick="openProjectModal('project3')">
-                        <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?w=500&h=300&fit=crop" 
-                             alt="Programming Training Platform" class="w-full h-48 object-cover">
+                        <img src="assets/img/projects/userguide.png" 
+                            alt="New G Solution – User Guide Platform" class="w-full h-48 object-cover">
                         <div class="p-6">
-                            <h3 class="text-xl font-bold mb-2">Programming Training Platform</h3>
-                            <p class="text-gray-300 mb-4">Online training platform for C#, C++, Java, and web development courses with interactive learning</p>
+                            <h3 class="text-xl font-bold mb-2">New G Solution – User Guide Platform</h3>
+                            <p class="text-gray-300 mb-4">A dedicated WordPress-based documentation platform developed as part of the New G Solution ERP ecosystem. Fully customized to provide structured user guides, clean navigation, and an optimized reading experience for clients and internal teams.</p>
                             <div class="flex flex-wrap gap-2">
-                                <span class="px-2 py-1 bg-green-400/20 text-green-400 rounded text-sm">C#</span>
-                                <span class="px-2 py-1 bg-green-400/20 text-green-400 rounded text-sm">Java</span>
-                                <span class="px-2 py-1 bg-green-400/20 text-green-400 rounded text-sm">C++</span>
+                                <span class="px-2 py-1 bg-green-400/20 text-green-400 rounded text-sm">WordPress</span>
+                                <span class="px-2 py-1 bg-green-400/20 text-green-400 rounded text-sm">PHP</span>
+                                <span class="px-2 py-1 bg-green-400/20 text-green-400 rounded text-sm">HTML / CSS / JavaScript</span>
+                                <span class="px-2 py-1 bg-green-400/20 text-green-400 rounded text-sm">Custom Theme Development</span>
                             </div>
                         </div>
                     </div>
 
                     <!-- Project 4 -->
                     <div class="project-card glass-effect rounded-lg overflow-hidden cursor-pointer" data-aos="fade-up" data-aos-delay="400" onclick="openProjectModal('project4')">
-                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=500&h=300&fit=crop" 
-                             alt="IT Support Solutions" class="w-full h-48 object-cover">
+                            <img src="assets/img/projects/ngswebsite.png" 
+                             alt="New G Solution – Official Website" class="w-full h-48 object-cover">
                         <div class="p-6">
-                            <h3 class="text-xl font-bold mb-2">IT Support Solutions</h3>
-                            <p class="text-gray-300 mb-4">Comprehensive IT support services including server management and network configuration</p>
+                            <h3 class="text-xl font-bold mb-2">New G Solution – Official Website</h3>
+                            <p class="text-gray-300 mb-4">The main corporate website for New G Solution ERP, fully developed and maintained by Anas Abbas. Built on WordPress to showcase ERP features, manage client subscriptions, and support affiliate marketing through MemberPress and EasyAffiliate integrations.</p>
                             <div class="flex flex-wrap gap-2">
-                                <span class="px-2 py-1 bg-green-400/20 text-green-400 rounded text-sm">Windows Server</span>
-                                <span class="px-2 py-1 bg-green-400/20 text-green-400 rounded text-sm">Mikrotik</span>
-                                <span class="px-2 py-1 bg-green-400/20 text-green-400 rounded text-sm">Security Systems</span>
+                                <span class="px-2 py-1 bg-green-400/20 text-green-400 rounded text-sm">WordPress</span>
+                                <span class="px-2 py-1 bg-green-400/20 text-green-400 rounded text-sm">PHP</span>
+                                <span class="px-2 py-1 bg-green-400/20 text-green-400 rounded text-sm">MemberPress</span>
+                                <span class="px-2 py-1 bg-green-400/20 text-green-400 rounded text-sm">EasyAffiliate</span>
+                                <span class="px-2 py-1 bg-green-400/20 text-green-400 rounded text-sm">HTML / CSS / JavaScript</span>
+                                <span class="px-2 py-1 bg-green-400/20 text-green-400 rounded text-sm">Responsive Design</span>
+                                <span class="px-2 py-1 bg-green-400/20 text-green-400 rounded text-sm">Security & Backups</span>
                             </div>
                         </div>
                     </div>
 
                     <!-- Project 5 -->
-                    <div class="project-card glass-effect rounded-lg overflow-hidden cursor-pointer" data-aos="fade-up" data-aos-delay="500" onclick="openProjectModal('project5')">
-                        <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?w=500&h=300&fit=crop" 
-                             alt="TabSkills Training Platform" class="w-full h-48 object-cover">
+                    <div class="project-card glass-effect rounded-lg overflow-hidden cursor-pointer" data-aos="fade-up" data-aos-delay="600" onclick="openProjectModal('project5')">
+                        <img src="assets/img/projects/dxbkaraoke.png" 
+                             alt="DXB Karaoke Music Store" class="w-full h-48 object-cover">
                         <div class="p-6">
-                            <h3 class="text-xl font-bold mb-2">TabSkills Training Platform</h3>
-                            <p class="text-gray-300 mb-4">Comprehensive IT training platform covering C++, Java, C#, and web development</p>
-                            <div class="flex flex-wrap gap-2">
-                                <span class="px-2 py-1 bg-green-400/20 text-green-400 rounded text-sm">C++</span>
-                                <span class="px-2 py-1 bg-green-400/20 text-green-400 rounded text-sm">Java</span>
-                                <span class="px-2 py-1 bg-green-400/20 text-green-400 rounded text-sm">C#</span>
-                            </div>
+                          <h3 class="text-xl font-bold mb-2">DXB Karaoke Music Store</h3>
+                          <p class="text-gray-300 mb-4">
+                            Custom WordPress / WooCommerce platform for Arabic and international karaoke songs with advanced singer taxonomy and bilingual setup.
+                          </p>
+                          <div class="flex flex-wrap gap-2">
+                            <span class="px-2 py-1 bg-green-400/20 text-green-400 rounded text-sm">WordPress</span>
+                            <span class="px-2 py-1 bg-green-400/20 text-green-400 rounded text-sm">WooCommerce</span>
+                            <span class="px-2 py-1 bg-green-400/20 text-green-400 rounded text-sm">Polylang</span>
+                          </div>
                         </div>
-                    </div>
+                      </div>
+                      
 
                     <!-- Project 6 -->
-                    <div class="project-card glass-effect rounded-lg overflow-hidden cursor-pointer" data-aos="fade-up" data-aos-delay="600" onclick="openProjectModal('project6')">
-                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=500&h=300&fit=crop" 
-                             alt="RBC Content Management" class="w-full h-48 object-cover">
+                    <div class="project-card glass-effect rounded-lg overflow-hidden cursor-pointer" data-aos="fade-up" data-aos-delay="800" onclick="openProjectModal('project6')">
+                        <img src="assets/img/projects/shopifyapp.webp" 
+                             alt="New G Solution Shopify App" class="w-full h-48 object-cover">
                         <div class="p-6">
-                            <h3 class="text-xl font-bold mb-2">RBC Content Management</h3>
-                            <p class="text-gray-300 mb-4">IT management and linguistic checking system for online content projects</p>
-                            <div class="flex flex-wrap gap-2">
-                                <span class="px-2 py-1 bg-green-400/20 text-green-400 rounded text-sm">Content Management</span>
-                                <span class="px-2 py-1 bg-green-400/20 text-green-400 rounded text-sm">Linguistic Checking</span>
-                                <span class="px-2 py-1 bg-green-400/20 text-green-400 rounded text-sm">IT Management</span>
-                            </div>
+                          <h3 class="text-xl font-bold mb-2">New G Solution – Shopify App</h3>
+                          <p class="text-gray-300 mb-4">
+                            Officially approved Shopify App integrating New G Solution ERP with global e-commerce channels for automated inventory and order management.
+                          </p>
+                          <div class="flex flex-wrap gap-2">
+                            <span class="px-2 py-1 bg-green-400/20 text-green-400 rounded text-sm">Shopify</span>
+                            <span class="px-2 py-1 bg-green-400/20 text-green-400 rounded text-sm">ERP Integration</span>
+                            <span class="px-2 py-1 bg-green-400/20 text-green-400 rounded text-sm">Cloud Sync</span>
+                            <span class="px-2 py-1 bg-green-400/20 text-green-400 rounded text-sm">RESTful APIs</span>
+                            <span class="px-2 py-1 bg-green-400/20 text-green-400 rounded text-sm">GraphQL</span>
+                            <span class="px-2 py-1 bg-green-400/20 text-green-400 rounded text-sm">OAuth 2.0 Authentication</span>
+                            <span class="px-2 py-1 bg-green-400/20 text-green-400 rounded text-sm">Tiered Subscription Plans</span>
+                          </div>
                         </div>
-                    </div>
+                      </div>
+                      
+                    <!-- Project 7 -->
+                      <div class="project-card glass-effect rounded-lg overflow-hidden cursor-pointer" data-aos="fade-up" data-aos-delay="900" onclick="openProjectModal('project7')">
+                        <img src="assets/img/projects/dxbmediaagency.png" 
+                             alt="DXB Media Agency Website" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                          <h3 class="text-xl font-bold mb-2">DXB Media Agency – Corporate Website</h3>
+                          <p class="text-gray-300 mb-4">
+                            Fully customised WordPress website for a Dubai-based branding & marketing agency, with tailored theme, responsive UI and project portfolio section.
+                          </p>
+                          <div class="flex flex-wrap gap-2">
+                            <span class="px-2 py-1 bg-green-400/20 text-green-400 rounded text-sm">WordPress</span>
+                            <span class="px-2 py-1 bg-green-400/20 text-green-400 rounded text-sm">Custom Theme</span>
+                            <span class="px-2 py-1 bg-green-400/20 text-green-400 rounded text-sm">Agency Website</span>
+                          </div>
+                        </div>
+                      </div>
+
+
+
+                      <!-- Project 9 -->
+                      <div class="project-card glass-effect rounded-lg overflow-hidden cursor-pointer" data-aos="fade-up" data-aos-delay="1000" onclick="openProjectModal('project9')">
+                        <img src="assets/img/projects/anbar.png" 
+                             alt="Anbar Restaurant Menu Website" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                          <h3 class="text-xl font-bold mb-2">Anbar Restaurant – Digital Menu</h3>
+                          <p class="text-gray-300 mb-4">
+                            Elegant digital menu website for Anbar Restaurant in Dubai, designed for iPad use with a seamless, app-like browsing experience.
+                          </p>
+                          <div class="flex flex-wrap gap-2">
+                            <span class="px-2 py-1 bg-green-400/20 text-green-400 rounded text-sm">WordPress</span>
+                            <span class="px-2 py-1 bg-green-400/20 text-green-400 rounded text-sm">Restaurant Menu</span>
+                            <span class="px-2 py-1 bg-green-400/20 text-green-400 rounded text-sm">Custom UI</span>
+                          </div>
+                        </div>
+                      </div>
+                      
+
+                      <!-- Project 10 -->
+                      <div class="project-card glass-effect rounded-lg overflow-hidden cursor-pointer" data-aos="fade-up" data-aos-delay="1100" onclick="openProjectModal('project10')">
+                        <img src="assets/img/projects/caspersy.png" 
+                             alt="Caspersy Restaurant Menu Website" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                          <h3 class="text-xl font-bold mb-2">Caspersy Restaurant – Dynamic Menu</h3>
+                          <p class="text-gray-300 mb-4">
+                            Bilingual WordPress menu website for Caspersy Restaurant with automated Excel-based price updates and an elegant user interface.
+                          </p>
+                          <div class="flex flex-wrap gap-2">
+                            <span class="px-2 py-1 bg-green-400/20 text-green-400 rounded text-sm">WordPress</span>
+                            <span class="px-2 py-1 bg-green-400/20 text-green-400 rounded text-sm">Excel Integration</span>
+                            <span class="px-2 py-1 bg-green-400/20 text-green-400 rounded text-sm">Bilingual</span>
+                          </div>
+                        </div>
+                      </div>
+                      
+
+                      <!-- Project 11 -->
+                      
+                      <div class="project-card glass-effect rounded-lg overflow-hidden cursor-pointer" data-aos="fade-up" data-aos-delay="1200" onclick="openProjectModal('project11')">
+                        <img src="assets/img/projects/ar-thesis.png" 
+                             alt="Augmented Reality for ERP Employee Training" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                          <h3 class="text-xl font-bold mb-2">Augmented Reality for ERP Employee Training</h3>
+                          <p class="text-gray-300 mb-4">
+                            An applied research project forming the Master’s thesis, exploring how Augmented Reality (AR) can enhance training efficiency for ERP system employees. The project focuses on interactive modules, visual guidance, and immersive task simulation within the New G Solution ERP environment.
+                          </p>
+                          <div class="flex flex-wrap gap-2">
+                            <span class="px-2 py-1 bg-green-400/20 text-green-400 rounded text-sm">Augmented Reality (AR)</span>
+                            <span class="px-2 py-1 bg-green-400/20 text-green-400 rounded text-sm">Web Science</span>
+                            <span class="px-2 py-1 bg-green-400/20 text-green-400 rounded text-sm">ERP Systems</span>
+                            <span class="px-2 py-1 bg-green-400/20 text-green-400 rounded text-sm">3D Visualization</span>
+                          </div>
+                        </div>
+                      </div>
                 </div>
             </div>
         </section>
@@ -1466,40 +1593,68 @@
                                 </div>
                                 <div class="flex items-center space-x-4">
                                     <div class="w-12 h-12 bg-green-400 rounded-full flex items-center justify-center">
-                                        <i class="fab fa-linkedin text-white"></i>
+                                        <i class="fab fa-whatsapp text-white"></i>
                                     </div>
                                     <div>
-                                        <p class="text-gray-300">LinkedIn</p>
-                                        <p class="text-white">linkedin.com/in/Anas.Abass</p>
+                                        <p class="text-gray-300">WhatsApp</p>
+                                        <p class="text-white">+963-988 102 369</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-center space-x-4">
+                                    <div class="w-12 h-12 bg-green-400 rounded-full flex items-center justify-center">
+                                        <i class="fab fa-telegram text-white"></i>
+                                    </div>
+                                    <div>
+                                        <p class="text-gray-300">Telegram</p>
+                                        <p class="text-white">+963-988 102 369</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Contact Form -->
+                    <!-- Follow Us -->
                     <div data-aos="fade-left">
-                        <form class="space-y-6">
-                            <div>
-                                <label class="block text-gray-300 mb-2">Name</label>
-                                <input type="text" class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:border-green-400 transition-colors">
+                        <div>
+                            <h3 class="text-2xl font-bold mb-6">Follow Us</h3>
+                            <div class="grid grid-cols-2 gap-4">
+                                <!-- YouTube -->
+                                <a href="#" class="glass-effect p-4 rounded-lg text-center hover:bg-green-400/10 transition-colors group">
+                                    <i class="fab fa-youtube text-3xl text-red-500 mb-2 group-hover:scale-110 transition-transform"></i>
+                                    <p class="text-gray-300 group-hover:text-white">YouTube</p>
+                                </a>
+                                
+                                <!-- Telegram -->
+                                <a href="#" class="glass-effect p-4 rounded-lg text-center hover:bg-green-400/10 transition-colors group">
+                                    <i class="fab fa-telegram text-3xl text-blue-400 mb-2 group-hover:scale-110 transition-transform"></i>
+                                    <p class="text-gray-300 group-hover:text-white">Telegram</p>
+                                </a>
+                                
+                                <!-- Facebook -->
+                                <a href="#" class="glass-effect p-4 rounded-lg text-center hover:bg-green-400/10 transition-colors group">
+                                    <i class="fab fa-facebook text-3xl text-blue-600 mb-2 group-hover:scale-110 transition-transform"></i>
+                                    <p class="text-gray-300 group-hover:text-white">Facebook</p>
+                                </a>
+                                
+                                <!-- Mostaql -->
+                                <a href="#" class="glass-effect p-4 rounded-lg text-center hover:bg-green-400/10 transition-colors group">
+                                    <i class="fas fa-briefcase text-3xl text-orange-500 mb-2 group-hover:scale-110 transition-transform"></i>
+                                    <p class="text-gray-300 group-hover:text-white">Mostaql</p>
+                                </a>
+                                
+                                <!-- Khamsat -->
+                                <a href="#" class="glass-effect p-4 rounded-lg text-center hover:bg-green-400/10 transition-colors group">
+                                    <i class="fas fa-handshake text-3xl text-green-500 mb-2 group-hover:scale-110 transition-transform"></i>
+                                    <p class="text-gray-300 group-hover:text-white">Khamsat</p>
+                                </a>
+                                
+                                <!-- GitHub -->
+                                <a href="#" class="glass-effect p-4 rounded-lg text-center hover:bg-green-400/10 transition-colors group">
+                                    <i class="fab fa-github text-3xl text-gray-300 mb-2 group-hover:scale-110 transition-transform"></i>
+                                    <p class="text-gray-300 group-hover:text-white">GitHub</p>
+                                </a>
                             </div>
-                            <div>
-                                <label class="block text-gray-300 mb-2">Email</label>
-                                <input type="email" class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:border-green-400 transition-colors">
-                            </div>
-                            <div>
-                                <label class="block text-gray-300 mb-2">Subject</label>
-                                <input type="text" class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:border-green-400 transition-colors">
-                            </div>
-                            <div>
-                                <label class="block text-gray-300 mb-2">Message</label>
-                                <textarea rows="4" class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:border-green-400 transition-colors resize-none"></textarea>
-                            </div>
-                            <button type="submit" class="w-full bg-green-400 hover:bg-green-500 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105">
-                                Send Message
-                            </button>
-                        </form>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -1675,98 +1830,247 @@
             }
         });
 
+        
         // Project modal functionality
         const projects = {
-            project1: {
-                title: 'ERP Software Development',
-                image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=400&fit=crop',
-                description: 'Enterprise Resource Planning system built with PHP Yii Framework and deployed on AWS EC2 for international clients.',
+                            project1 : {
+                title: 'New G Solution – Cloud ERP Platform',
+                image: 'assets/img/projects/newgsolution.png',
+                description:
+                    'Started in 2021 as an ERP and WordPress developer, now serving as CTO leading the full development team of New G Solution ERP — a large-scale, multi-tenant cloud platform built with PHP (Yii Framework) and hosted on AWS EC2.',
                 features: [
-                    'Complete ERP functionality',
-                    'User management system',
-                    'Financial reporting',
-                    'Inventory management',
-                    'Cloud deployment on AWS'
+                    'Comprehensive ERP covering finance, inventory, sales, procurement, manufacturing, refurbishing, and payroll',
+                    'Advanced cost distribution and BOM manufacturing modules linking production, expenses, and warehouse movements',
+                    'Custom systems for RMA, refurbishing, and service tracking with live stock synchronization',
+                    'Integrations with 50+ external APIs (Amazon, eBay, Shopify, Walmart, ShipStation, FedEx, UPS, USPS, Stamps.com, etc.)',
+                    'Multi-tenant cloud deployment with separate sub-domains, access rules, and branding per client',
+                    'Full WordPress integration for company and client portals',
+                    'Currently leading architecture design, backend optimization, and cross-team coordination as CTO'
                 ],
-                technologies: ['PHP Yii Framework', 'MySQL', 'AWS EC2', 'JavaScript', 'Bootstrap'],
-                github: 'https://github.com/anasabbasdev/erp-system',
-                demo: 'https://erp-demo.com'
-            },
-            project2: {
-                title: 'WordPress Development',
-                image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=400&fit=crop',
-                description: 'Custom WordPress websites and plugins development with advanced functionality and modern design.',
+                technologies: [
+                    'PHP (Yii Framework)',
+                    'MySQL / MariaDB',
+                    'AWS EC2 & S3',
+                    'RESTful APIs',
+                    'JavaScript / jQuery',
+                    'Bootstrap / Tailwind'
+                ],
+                //   github: 'https://github.com/anasabbasdev/erp-system',
+                demo: 'https://newgsolution.com'
+                }
+                ,
+                project2 : {
+                title: 'B2B E-Commerce Platform (Part of New G Solution)',
+                image: 'assets/img/projects/b2b.png', // Add the correct path to the image
+                description:
+                    'A Laravel-based B2B e-commerce platform built on the S-Cart framework, directly integrated with the New G Solution ERP ecosystem. Designed for multi-client deployments with secure, isolated sub-domains.',
                 features: [
-                    'Custom theme development',
-                    'Plugin development',
-                    'E-commerce integration',
-                    'SEO optimization',
-                    'Performance optimization'
+                    'Maintained and expanded the platform architecture under New G Solution ERP',
+                    'Implemented RMA and Order History modules with dynamic cost calculations',
+                    'Enhanced customer privacy by securing media and images per sub-domain',
+                    'Integrated order and RMA data flow with the ERP backend for real-time cost tracking',
+                    'Optimized performance, caching, and data isolation for multi-tenant clients'
                 ],
-                technologies: ['WordPress', 'PHP', 'MySQL', 'JavaScript', 'CSS3'],
-                github: 'https://github.com/anasabbasdev/wordpress-projects',
-                demo: 'https://wordpress-demo.com'
-            },
-            project3: {
-                title: 'Programming Training Platform',
-                image: 'https://images.unsplash.com/photo-1551434678-e076c223a692?w=800&h=400&fit=crop',
-                description: 'Online training platform for C#, C++, Java, and web development courses with interactive learning modules.',
-                features: [
-                    'Interactive coding exercises',
-                    'Video tutorials',
-                    'Progress tracking',
-                    'Student management',
-                    'Certificate generation'
+                technologies: [
+                    'Laravel Framework',
+                    'S-Cart Theme',
+                    'PHP / MySQL',
+                    'Multi-Tenant Architecture',
+                    'ERP Integration',
+                    'Order & RMA Modules',
+                    'Multi-Tenant Architecture',
+                    'Secure, Isolated Sub-Domains'
                 ],
-                technologies: ['C#', 'ASP.NET', 'SQL Server', 'JavaScript', 'Bootstrap'],
-                github: 'https://github.com/anasabbasdev/training-platform',
-                demo: 'https://training-demo.com'
-            },
-            project4: {
-                title: 'IT Support Solutions',
-                image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=400&fit=crop',
-                description: 'Comprehensive IT support services including Windows Server management, Mikrotik configuration, and security systems installation.',
-                features: [
-                    'Windows Server management',
-                    'Mikrotik router configuration',
-                    'Security camera installation',
-                    'Hardware troubleshooting',
-                    'Network maintenance'
-                ],
-                technologies: ['Windows Server', 'Mikrotik', 'Security Systems', 'Hardware Support', 'Network Management'],
-                github: 'https://github.com/anasabbasdev/it-support',
-                demo: 'https://itsupport-demo.com'
-            },
-            project5: {
-                title: 'TabSkills Training Platform',
-                image: 'https://images.unsplash.com/photo-1551434678-e076c223a692?w=800&h=400&fit=crop',
-                description: 'Comprehensive IT training platform covering C++, Java, C#, SQL, and web development for students and professionals.',
-                features: [
-                    'Multi-language programming courses',
-                    'Interactive learning modules',
-                    'Progress tracking system',
-                    'Student assessment tools',
-                    'Certificate management'
-                ],
-                technologies: ['C++', 'Java', 'C#', 'SQL', 'Web Development'],
-                github: 'https://github.com/anasabbasdev/tabskills-platform',
-                demo: 'https://tabskills-demo.com'
-            },
-            project6: {
-                title: 'RBC Content Management',
-                image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=400&fit=crop',
-                description: 'IT management and linguistic checking system for online content projects and content management workflows.',
-                features: [
-                    'Content management system',
-                    'Linguistic checking tools',
-                    'IT system management',
-                    'Workflow automation',
-                    'Quality control processes'
-                ],
-                technologies: ['Content Management', 'Linguistic Checking', 'IT Management', 'Workflow Automation', 'Quality Control'],
-                github: 'https://github.com/anasabbasdev/rbc-cms',
-                demo: 'https://rbc-cms-demo.com'
-            }
+                //   github: 'https://github.com/anasabbasdev/b2b-platform',
+                demo: 'https://newgsolution.com'
+                }
+,               
+project3: {
+  title: 'New G Solution – User Guide Platform',
+  image: 'assets/img/projects/userguide.png',
+  description:
+    'A dedicated WordPress-based documentation platform developed as part of the New G Solution ERP ecosystem. Fully customized to provide structured user guides, clean navigation, and an optimized reading experience for clients and internal teams.',
+  features: [
+    'Developed and structured the full WordPress site architecture for documentation and training materials',
+    'Customized and optimized the theme design, navigation, and layout for clarity and usability',
+    'Implemented responsive design, search structure, and dynamic content templates for future scalability',
+    'Handled all technical setup, configuration, and deployment of the platform'
+  ],
+  technologies: [
+    'WordPress',
+    'PHP',
+    'HTML / CSS / JavaScript',
+    'Custom Theme Development',
+    'Responsive Design'
+  ],
+//   github: 'https://github.com/anasabbasdev/newg-userguide',
+  demo: 'https://newgsolution.com/userguide'
+}
+,
+project4 : {
+  title: 'New G Solution – Official Website',
+  image: 'assets/img/projects/ngswebsite.png',
+  description:
+    'The main corporate website for New G Solution ERP, fully developed and maintained by Anas Abbas. Built on WordPress to showcase ERP features, manage client subscriptions, and support affiliate marketing through MemberPress and EasyAffiliate integrations.',
+  features: [
+    'Full WordPress development and technical management of the company’s main website',
+    'Integrated MemberPress for client subscription and license management',
+    'Implemented EasyAffiliate for the loyalty and affiliate program',
+    'Developed dedicated sections for product features, blog articles, and marketing pages',
+    'Handled server configuration, backups, security hardening, and ongoing maintenance',
+    'Customized design, layout, and responsive UI for consistent brand identity'
+  ],
+  technologies: [
+    'WordPress',
+    'PHP',
+    'MemberPress',
+    'EasyAffiliate',
+    'HTML / CSS / JavaScript',
+    'Responsive Design',
+    'Security & Backups'
+  ],
+//   github: 'https://github.com/anasabbasdev/newg-main-website',
+  demo: 'https://newgsolution.com/'
+},
+project5 : {
+  title: 'DXB Karaoke – Music Store Website',
+  image: 'assets/img/projects/dxbkaraoke.png',
+  description:
+    'A bilingual karaoke music store fully developed and customized by Anas Abbas using WordPress and WooCommerce. The platform offers Arabic and English interfaces, unique singer taxonomy, and optimized product organization for both performers and listeners.',
+  features: [
+    'Built and configured WordPress + WooCommerce for karaoke music products and digital downloads',
+    'Implemented custom taxonomy for singer names with alphabetical sorting (Arabic / English / numeric)',
+    'Configured Polylang for bilingual content without duplicating products or categories',
+    'Optimized the XStore theme for speed, accessibility, and responsive design',
+    'Customized product listing for song previews and simplified purchase workflow',
+    'Handled all technical setup, plugin configuration, and hosting integration'
+  ],
+  technologies: [
+    'WordPress',
+    'WooCommerce',
+    'PHP',
+    'Polylang',
+    'XStore Theme',
+    'HTML / CSS / JavaScript',
+    'Custom Taxonomies'
+  ],
+  demo: 'https://dxbkaraoke.com/shop/'
+},
+project6 : {
+  title: 'New G Solution – Shopify App Integration',
+  image: 'assets/img/projects/shopifyapp.webp',
+  description:
+    'An officially approved Shopify App listed on the Shopify App Store — marking a major milestone for New G Solution ERP. The app enables real-time synchronization of products, quantities, and orders between Shopify stores and the ERP cloud system, helping merchants streamline multi-channel operations efficiently.',
+  features: [
+    'Officially published and approved on Shopify App Store after technical and compliance review',
+    'Integrates Shopify stores directly with New G Solution ERP for real-time product, inventory, and order sync',
+    'Supports serialized and non-serialized inventory, RMA, and multi-warehouse management',
+    'Provides unified control of quantities, barcodes (UPC), and dynamic cost across sales channels',
+    'Works with major marketplaces such as Amazon, eBay, Magento, Amazon FBA, SPS, and ShipStation',
+    'Includes tiered subscription plans (Bronze – $250, Silver – $450, Gold – $700, Platinum – $1200 per month)',
+    'Developed using secure REST API communication between Shopify and New G Solution ERP backend'
+  ],
+  technologies: [
+    'Shopify REST API',
+    'Shopify App Bridge',
+    'Laravel Backend',
+    'PHP / MySQL',
+    'OAuth 2.0 Authentication',
+    'Cloud Integration'
+  ],
+  demo: 'https://apps.shopify.com/newgsolutionerp'
+},
+project7 : {
+  title: 'DXB Media Agency – Corporate Website (Dubai)',
+  image: 'assets/img/projects/dxbmediaagency.png',
+  description:
+    'Developed and deployed the official website for DXB Media Agency in Dubai using WordPress with a fully customised theme and tailored architecture. The site showcases the agency’s portfolio, services, blog and contact functionality, delivering a premium user experience and reflecting the brand’s modern identity.',
+  features: [
+    'Full WordPress installation and theme customisation from scratch',
+    'Development of services & portfolio sections including dynamic project gallery',
+    'Optimised responsive design and cross-device UI for international clients',
+    'Implemented blog module and CMS structure to allow easy future updates',
+    'Managed site performance, hosting setup, backups and security hardening'
+  ],
+  technologies: [
+    'WordPress',
+    'PHP',
+    'Custom Theme Development',
+    'HTML / CSS / JavaScript',
+    'Responsive Design',
+    'Performance Optimisation'
+  ],
+  demo: 'https://dxb-agency.com/'
+}
+
+,
+project9 : {
+  title: 'Anbar Restaurant – Interactive Digital Menu (Dubai)',
+  image: 'assets/img/projects/anbar.png',
+  description:
+    'Developed the official digital menu website for Anbar Restaurant in Dubai using WordPress. The site was engineered specifically for iPad in-restaurant use, providing a fast, elegant, and touch-friendly interface that mirrors a native app experience.',
+  features: [
+    'Custom WordPress development tailored for digital menu display only (no cart or checkout)',
+    'Responsive layout optimised for iPad and tablet usage',
+    'High-performance image loading and category-based navigation for dishes',
+    'Clean bilingual design supporting both Arabic and English menu views',
+    'Handled theme customisation, plugin setup, hosting, and ongoing maintenance'
+  ],
+  technologies: [
+    'WordPress',
+    'PHP',
+    'HTML / CSS / JavaScript',
+    'Custom Theme',
+    'Responsive Design',
+    'Performance Optimisation'
+  ],
+  demo: 'https://anbar-rest.com'
+},
+project10 : {
+  title: 'Caspersy Restaurant – Bilingual Dynamic Menu',
+  image: 'assets/img/projects/caspersy.png',
+  description:
+    'Developed a fully bilingual digital menu website for Caspersy Restaurant using WordPress. The platform enables restaurant owners to update prices and items easily by uploading Excel files from the admin dashboard, ensuring effortless menu management and accurate real-time pricing.',
+  features: [
+    'Custom WordPress development with bilingual Arabic–English interface',
+    'Automated Excel import feature for price and item updates directly from the admin panel',
+    'Dynamic menu categories with smooth navigation and responsive design',
+    'Optimised layout for tablets and in-restaurant use',
+    'Theme customisation, performance optimisation, and hosting setup handled end-to-end'
+  ],
+  technologies: [
+    'WordPress',
+    'PHP',
+    'Excel Import Integration',
+    'HTML / CSS / JavaScript',
+    'Responsive Design',
+    'Multilingual Support'
+  ],
+  demo: 'https://caspersy.com'
+},
+project11 : {
+  title: 'Augmented Reality for ERP Employee Training',
+  image: 'assets/img/projects/ar-thesis.png',
+  description:
+    'An applied research project forming the Master’s thesis of Anas Abbas, exploring how Augmented Reality (AR) can enhance training efficiency for ERP system employees. The project focuses on interactive modules, visual guidance, and immersive task simulation within the New G Solution ERP environment.',
+  features: [
+    'Applied research conducted in real ERP environment',
+    'AR prototypes for onboarding and process visualization',
+    'Improved comprehension and task accuracy through 3D interaction',
+    'Bridging academic research with enterprise software development'
+  ],
+  technologies: [
+    'Augmented Reality (AR)',
+    'Web Science',
+    'ERP Systems',
+    '3D Visualization'
+  ]
+}
+
+
+
+
+         
         };
 
         function openProjectModal(projectId) {
