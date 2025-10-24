@@ -391,15 +391,15 @@
             <div class="text-center mb-8">
                 <div class="relative inline-block">
                     <div class="w-32 h-32 rounded-full overflow-hidden border-4 border-green-400 pulse-glow">
-                        <img src="assets/img/Logo.png" 
-                             alt="Anas Abbas" class="w-20 h-20 mx-auto my-auto w-full h-full p-4 object-contain">
+                        <img src="assets/img/profile.png" 
+                             alt="Anas Abbas" class="w-full h-full object-cover">
                     </div>
                     <div class="absolute -bottom-2 -right-2 w-8 h-8 bg-green-400 rounded-full flex items-center justify-center">
                         <i class="fas fa-code text-white text-sm"></i>
                     </div>
                 </div>
                 <h1 class="text-2xl font-bold mt-4">Anas M. Abbas</h1>
-                <p class="text-green-400 text-lg typing-animation"><span class="typing-text">Software Engineer <br>& ERP Systems Developer</span></p>
+                <p class="text-green-400 text-base  typing-animation"><span class="typing-text">Software Engineer <br>& ERP Systems Developer</span></p>
             </div>
 
             <!-- Personal Info -->
@@ -499,7 +499,7 @@
                             <br>
                             <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Solutions</span>
                         </h1>
-                        <p class="text-xl lg:text-2xl text-gray-300 leading-relaxed">
+                        <p class="text-base lg:text-xl text-gray-300 leading-relaxed">
                             I am an <span class="text-green-400 font-semibold">Software Engineer & ERP Developer</span> with 11+ years of experience in creating innovative solutions and training the next generation of developers.
                         </p>
                     </div>
@@ -571,7 +571,7 @@
                                     <div class="w-3 h-3 bg-yellow-500 rounded-full"></div>
                                     <div class="w-3 h-3 bg-green-500 rounded-full"></div>
                                 </div>
-                                <span class="ml-4 text-gray-400 text-sm font-mono">VS Code</span>
+                                <span class="ml-4 text-gray-400 text-sm font-mono">Cursor AI </span>
                             </div>
                             <div class="flex items-center space-x-2">
                                 <div class="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
@@ -659,7 +659,7 @@
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
                     <div data-aos="fade-right" class="order-2 lg:order-1">
                         <div class="relative">
-                            <img src="assets/img/profile.jpg" 
+                            <img src="assets/img/profile.PNG" 
                                  alt="Anas Abbas" class="w-full h-80 lg:h-96 object-cover rounded-lg">
                             <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent rounded-lg"></div>
                             <div class="absolute bottom-4 left-4 text-white">
@@ -1150,8 +1150,17 @@
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     <!-- Project 1 -->
                     <div class="project-card glass-effect rounded-lg overflow-hidden cursor-pointer" data-aos="fade-up" data-aos-delay="100" onclick="openProjectModal('project1')">
-                        <img src="assets/img/projects/newgsolution.png" 
-                             alt="ERP Software Development" class="w-full h-48 object-cover">
+                       
+                        <div class="relative bg-white p-6 rounded-lg flex items-center justify-center h-48">
+                          
+                            <span class="absolute top-2 left-2 bg-green-500 text-black text-xs px-2 py-1 rounded">
+                                ERP Software
+                            </span>
+                            <img src="assets/img/projects/ngs.png" class=" object-contain">
+                            <div class="absolute top-2 right-2 bg-gray-600 text-white p-2 rounded-full shadow-md">
+                                <i class="fas fa-database"></i>
+                            </div>
+                          </div>
                         <div class="p-6">
                             <h3 class="text-xl font-bold mb-2">New G Solution – Cloud ERP Platform</h3>
                             <p class="text-gray-300 mb-4">Enterprise Resource Planning system built with PHP Yii Framework and deployed on AWS EC2.</p>
@@ -1174,8 +1183,15 @@
 
                     <!-- Project 2 -->
                     <div class="project-card glass-effect rounded-lg overflow-hidden cursor-pointer" data-aos="fade-up" data-aos-delay="200" onclick="openProjectModal('project2')">
-                        <img src="assets/img/projects/b2b.png" 
-                             alt="WordPress Development" class="w-full h-48 object-cover">
+                        <div class="relative bg-white p-6 rounded-lg flex items-center justify-center h-48">
+                            <span class="absolute top-2 left-2 bg-green-500 text-black text-xs px-2 py-1 rounded">
+                                B2B Platform
+                            </span>
+                            <img src="assets/img/projects/ngs.png" class=" object-contain">
+                            <div class="absolute top-2 right-2 bg-red-500 text-white p-2 rounded-full shadow-md">
+                                <i class="fab fa-laravel"></i>
+                            </div>
+                        </div>
                         <div class="p-6">
                             <h3 class="text-xl font-bold mb-2">B2B E-Commerce Platform (Part of New G Solution)</h3>
                             <p class="text-gray-300 mb-4">A Laravel-based B2B e-commerce platform built on the S-Cart framework, directly integrated with the New G Solution ERP ecosystem. Designed for multi-client deployments with secure, isolated sub-domains.</p>
@@ -1194,8 +1210,17 @@
 
                     <!-- Project 3 -->
                     <div class="project-card glass-effect rounded-lg overflow-hidden cursor-pointer" data-aos="fade-up" data-aos-delay="300" onclick="openProjectModal('project3')">
-                        <img src="assets/img/projects/userguide.png" 
-                            alt="New G Solution – User Guide Platform" class="w-full h-48 object-cover">
+                         
+                        <div class="relative bg-white p-6 rounded-lg flex items-center justify-center h-48">
+                          
+                            <span class="absolute top-2 left-2 bg-green-500 text-black text-xs px-2 py-1 rounded">
+                                User Guide Platform
+                            </span>
+                            <img src="assets/img/projects/ngs.png" class=" object-contain">
+                            <div class="absolute top-2 right-2 bg-blue-500 text-white p-2 rounded-full shadow-md">
+                                <i class="fab fa-wordpress"></i>
+                            </div>
+                          </div>
                         <div class="p-6">
                             <h3 class="text-xl font-bold mb-2">New G Solution – User Guide Platform</h3>
                             <p class="text-gray-300 mb-4">A dedicated WordPress-based documentation platform developed as part of the New G Solution ERP ecosystem. Fully customized to provide structured user guides, clean navigation, and an optimized reading experience for clients and internal teams.</p>
@@ -1210,8 +1235,19 @@
 
                     <!-- Project 4 -->
                     <div class="project-card glass-effect rounded-lg overflow-hidden cursor-pointer" data-aos="fade-up" data-aos-delay="400" onclick="openProjectModal('project4')">
-                            <img src="assets/img/projects/ngswebsite.png" 
-                             alt="New G Solution – Official Website" class="w-full h-48 object-cover">
+                    
+                        <div class="relative bg-white p-6 rounded-lg flex items-center justify-center h-48">
+                          
+                            <span class="absolute top-2 left-2 bg-green-500 text-black text-xs px-2 py-1 rounded">
+                                Official Website
+                            </span>
+                            <img src="assets/img/projects/ngs.png" class=" object-contain">
+                            <div class="absolute top-2 right-2 bg-blue-500 text-white p-2 rounded-full shadow-md">
+                                <i class="fab fa-wordpress"></i>
+                            </div>
+                          </div>
+                          
+                            
                         <div class="p-6">
                             <h3 class="text-xl font-bold mb-2">New G Solution – Official Website</h3>
                             <p class="text-gray-300 mb-4">The main corporate website for New G Solution ERP, fully developed and maintained by Anas Abbas. Built on WordPress to showcase ERP features, manage client subscriptions, and support affiliate marketing through MemberPress and EasyAffiliate integrations.</p>
@@ -1227,10 +1263,59 @@
                         </div>
                     </div>
 
+
+                    <!-- Project 6 -->
+                    <div class="project-card glass-effect rounded-lg overflow-hidden cursor-pointer" data-aos="fade-up" data-aos-delay="800" onclick="openProjectModal('project6')">                       
+                    <div class="relative bg-white p-6 rounded-lg flex items-center justify-center h-48">
+                        <span class="absolute top-2 left-2 bg-green-500 text-black text-xs px-2 py-1 rounded">
+                            Shopify App
+                        </span>
+                        <img src="assets/img/projects/ngs.png" class=" object-contain">
+                        <div class="absolute top-2 right-2 bg-green-500 text-white p-2 rounded-full shadow-md">
+                            <i class="fab fa-shopify text-lg"></i>
+                        </div>
+                        </div>
+                        
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-2">New G Solution – Shopify App</h3>
+                    <p class="text-gray-300 mb-4">
+                    Officially approved Shopify App integrating New G Solution ERP with global e-commerce channels for automated inventory and order management.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                    <span class="px-2 py-1 bg-green-400/20 text-green-400 rounded text-sm">Shopify</span>
+                    <span class="px-2 py-1 bg-green-400/20 text-green-400 rounded text-sm">ERP Integration</span>
+                    <span class="px-2 py-1 bg-green-400/20 text-green-400 rounded text-sm">Cloud Sync</span>
+                    <span class="px-2 py-1 bg-green-400/20 text-green-400 rounded text-sm">RESTful APIs</span>
+                    <span class="px-2 py-1 bg-green-400/20 text-green-400 rounded text-sm">GraphQL</span>
+                    <span class="px-2 py-1 bg-green-400/20 text-green-400 rounded text-sm">OAuth 2.0 Authentication</span>
+                    <span class="px-2 py-1 bg-green-400/20 text-green-400 rounded text-sm">Tiered Subscription Plans</span>
+                    </div>
+                </div>
+                </div>
+                
+
+                
+                      <!-- Project 9 -->
+                      <div class="project-card glass-effect rounded-lg overflow-hidden cursor-pointer" data-aos="fade-up" data-aos-delay="1000" onclick="openProjectModal('project9')">
+                        <img src="assets/img/projects/anbar.png" 
+                             alt="Anbar Restaurant Menu Website" class="w-full h-48 object-contain bg-white p-4">
+                        <div class="p-6">
+                          <h3 class="text-xl font-bold mb-2">Anbar Restaurant – Digital Menu</h3>
+                          <p class="text-gray-300 mb-4">
+                            Elegant digital menu website for Anbar Restaurant in Dubai, designed for iPad use with a seamless, app-like browsing experience.
+                          </p>
+                          <div class="flex flex-wrap gap-2">
+                            <span class="px-2 py-1 bg-green-400/20 text-green-400 rounded text-sm">WordPress</span>
+                            <span class="px-2 py-1 bg-green-400/20 text-green-400 rounded text-sm">Restaurant Menu</span>
+                            <span class="px-2 py-1 bg-green-400/20 text-green-400 rounded text-sm">Custom UI</span>
+                          </div>
+                        </div>
+                      </div>
+                      
                     <!-- Project 5 -->
                     <div class="project-card glass-effect rounded-lg overflow-hidden cursor-pointer" data-aos="fade-up" data-aos-delay="600" onclick="openProjectModal('project5')">
                         <img src="assets/img/projects/dxbkaraoke.png" 
-                             alt="DXB Karaoke Music Store" class="w-full h-48 object-cover">
+                             alt="DXB Karaoke Music Store" class="w-full h-48 object-contain bg-gray-700 p-4">
                         <div class="p-6">
                           <h3 class="text-xl font-bold mb-2">DXB Karaoke Music Store</h3>
                           <p class="text-gray-300 mb-4">
@@ -1245,31 +1330,12 @@
                       </div>
                       
 
-                    <!-- Project 6 -->
-                    <div class="project-card glass-effect rounded-lg overflow-hidden cursor-pointer" data-aos="fade-up" data-aos-delay="800" onclick="openProjectModal('project6')">
-                        <img src="assets/img/projects/shopifyapp.webp" 
-                             alt="New G Solution Shopify App" class="w-full h-48 object-cover">
-                        <div class="p-6">
-                          <h3 class="text-xl font-bold mb-2">New G Solution – Shopify App</h3>
-                          <p class="text-gray-300 mb-4">
-                            Officially approved Shopify App integrating New G Solution ERP with global e-commerce channels for automated inventory and order management.
-                          </p>
-                          <div class="flex flex-wrap gap-2">
-                            <span class="px-2 py-1 bg-green-400/20 text-green-400 rounded text-sm">Shopify</span>
-                            <span class="px-2 py-1 bg-green-400/20 text-green-400 rounded text-sm">ERP Integration</span>
-                            <span class="px-2 py-1 bg-green-400/20 text-green-400 rounded text-sm">Cloud Sync</span>
-                            <span class="px-2 py-1 bg-green-400/20 text-green-400 rounded text-sm">RESTful APIs</span>
-                            <span class="px-2 py-1 bg-green-400/20 text-green-400 rounded text-sm">GraphQL</span>
-                            <span class="px-2 py-1 bg-green-400/20 text-green-400 rounded text-sm">OAuth 2.0 Authentication</span>
-                            <span class="px-2 py-1 bg-green-400/20 text-green-400 rounded text-sm">Tiered Subscription Plans</span>
-                          </div>
-                        </div>
-                      </div>
+          
                       
                     <!-- Project 7 -->
                       <div class="project-card glass-effect rounded-lg overflow-hidden cursor-pointer" data-aos="fade-up" data-aos-delay="900" onclick="openProjectModal('project7')">
-                        <img src="assets/img/projects/dxbmediaagency.png" 
-                             alt="DXB Media Agency Website" class="w-full h-48 object-cover">
+                        <img src="assets/img/projects/dxbagency.svg" 
+                             alt="DXB Media Agency Website" class="w-full h-48 object-contain bg-gray-700 p-4">
                         <div class="p-6">
                           <h3 class="text-xl font-bold mb-2">DXB Media Agency – Corporate Website</h3>
                           <p class="text-gray-300 mb-4">
@@ -1285,28 +1351,11 @@
 
 
 
-                      <!-- Project 9 -->
-                      <div class="project-card glass-effect rounded-lg overflow-hidden cursor-pointer" data-aos="fade-up" data-aos-delay="1000" onclick="openProjectModal('project9')">
-                        <img src="assets/img/projects/anbar.png" 
-                             alt="Anbar Restaurant Menu Website" class="w-full h-48 object-cover">
-                        <div class="p-6">
-                          <h3 class="text-xl font-bold mb-2">Anbar Restaurant – Digital Menu</h3>
-                          <p class="text-gray-300 mb-4">
-                            Elegant digital menu website for Anbar Restaurant in Dubai, designed for iPad use with a seamless, app-like browsing experience.
-                          </p>
-                          <div class="flex flex-wrap gap-2">
-                            <span class="px-2 py-1 bg-green-400/20 text-green-400 rounded text-sm">WordPress</span>
-                            <span class="px-2 py-1 bg-green-400/20 text-green-400 rounded text-sm">Restaurant Menu</span>
-                            <span class="px-2 py-1 bg-green-400/20 text-green-400 rounded text-sm">Custom UI</span>
-                          </div>
-                        </div>
-                      </div>
-                      
 
                       <!-- Project 10 -->
                       <div class="project-card glass-effect rounded-lg overflow-hidden cursor-pointer" data-aos="fade-up" data-aos-delay="1100" onclick="openProjectModal('project10')">
-                        <img src="assets/img/projects/caspersy.png" 
-                             alt="Caspersy Restaurant Menu Website" class="w-full h-48 object-cover">
+                        <img src="assets/img/projects/casper.png" 
+                             alt="Caspersy Restaurant Menu Website" class="w-full h-48 object-contain bg-gray-700 p-4">
                         <div class="p-6">
                           <h3 class="text-xl font-bold mb-2">Caspersy Restaurant – Dynamic Menu</h3>
                           <p class="text-gray-300 mb-4">
@@ -1834,8 +1883,14 @@
         // Project modal functionality
         const projects = {
                             project1 : {
+                leftCornerColor: 'green-500',
+                Color: 'white',
+                cornerText: 'ERP Software',
+                cornerColor: 'gray-600',
+                cornerIcon: 'database',
+                faClass: 'fas',
                 title: 'New G Solution – Cloud ERP Platform',
-                image: 'assets/img/projects/newgsolution.png',
+                image: 'assets/img/projects/ngs.png',
                 description:
                     'Started in 2021 as an ERP and WordPress developer, now serving as CTO leading the full development team of New G Solution ERP — a large-scale, multi-tenant cloud platform built with PHP (Yii Framework) and hosted on AWS EC2.',
                 features: [
@@ -1860,8 +1915,14 @@
                 }
                 ,
                 project2 : {
+                    leftCornerColor: 'green-500',
+                Color: 'white',
+                cornerText: 'B2B Platform',
+                cornerColor: 'red-500',
+                cornerIcon: 'laravel',
+                faClass: 'fab',
                 title: 'B2B E-Commerce Platform (Part of New G Solution)',
-                image: 'assets/img/projects/b2b.png', // Add the correct path to the image
+                image: 'assets/img/projects/ngs.png', // Add the correct path to the image
                 description:
                     'A Laravel-based B2B e-commerce platform built on the S-Cart framework, directly integrated with the New G Solution ERP ecosystem. Designed for multi-client deployments with secure, isolated sub-domains.',
                 features: [
@@ -1886,8 +1947,14 @@
                 }
 ,               
 project3: {
+    leftCornerColor: 'green-500',
+  Color: 'white',
+  cornerText: 'User Guide Platform',
+  cornerColor: 'blue-500',
+  cornerIcon: 'wordpress',
+  faClass: 'fab',
   title: 'New G Solution – User Guide Platform',
-  image: 'assets/img/projects/userguide.png',
+  image: 'assets/img/projects/ngs.png',
   description:
     'A dedicated WordPress-based documentation platform developed as part of the New G Solution ERP ecosystem. Fully customized to provide structured user guides, clean navigation, and an optimized reading experience for clients and internal teams.',
   features: [
@@ -1908,8 +1975,14 @@ project3: {
 }
 ,
 project4 : {
+    leftCornerColor: 'green-500',
+  Color: 'white',
+  cornerText: 'Official Website',
+  cornerColor: 'blue-500',
+  cornerIcon: 'wordpress',
+  faClass: 'fab',
   title: 'New G Solution – Official Website',
-  image: 'assets/img/projects/ngswebsite.png',
+  image: 'assets/img/projects/ngs.png',
   description:
     'The main corporate website for New G Solution ERP, fully developed and maintained by Anas Abbas. Built on WordPress to showcase ERP features, manage client subscriptions, and support affiliate marketing through MemberPress and EasyAffiliate integrations.',
   features: [
@@ -1933,6 +2006,12 @@ project4 : {
   demo: 'https://newgsolution.com/'
 },
 project5 : {
+    leftCornerColor: 'gray-700',
+  cornerText: '',
+  cornerColor: 'gray-700',
+  cornerIcon: '',
+  faClass: '',
+  Color: 'gray-700',
   title: 'DXB Karaoke – Music Store Website',
   image: 'assets/img/projects/dxbkaraoke.png',
   description:
@@ -1957,8 +2036,14 @@ project5 : {
   demo: 'https://dxbkaraoke.com/shop/'
 },
 project6 : {
+    leftCornerColor: 'green-500',
+  Color: 'white',
+  cornerText: 'Shopify App',
+  cornerColor: 'green-500',
+  cornerIcon: 'shopify',
+  faClass: 'fab',
   title: 'New G Solution – Shopify App Integration',
-  image: 'assets/img/projects/shopifyapp.webp',
+  image: 'assets/img/projects/ngs.png',
   description:
     'An officially approved Shopify App listed on the Shopify App Store — marking a major milestone for New G Solution ERP. The app enables real-time synchronization of products, quantities, and orders between Shopify stores and the ERP cloud system, helping merchants streamline multi-channel operations efficiently.',
   features: [
@@ -1981,8 +2066,14 @@ project6 : {
   demo: 'https://apps.shopify.com/newgsolutionerp'
 },
 project7 : {
+  leftCornerColor: 'gray-700',
+  cornerText: '',
+  cornerColor: 'gray-700',
+  cornerIcon: '',
+  faClass: '',
+  Color: 'gray-700',
   title: 'DXB Media Agency – Corporate Website (Dubai)',
-  image: 'assets/img/projects/dxbmediaagency.png',
+  image: 'assets/img/projects/dxbagency.svg',
   description:
     'Developed and deployed the official website for DXB Media Agency in Dubai using WordPress with a fully customised theme and tailored architecture. The site showcases the agency’s portfolio, services, blog and contact functionality, delivering a premium user experience and reflecting the brand’s modern identity.',
   features: [
@@ -2005,6 +2096,12 @@ project7 : {
 
 ,
 project9 : {
+    leftCornerColor: 'white',
+    Color: 'white',
+  cornerText: '',
+  cornerColor: 'white',
+  cornerIcon: '',
+  faClass: '',
   title: 'Anbar Restaurant – Interactive Digital Menu (Dubai)',
   image: 'assets/img/projects/anbar.png',
   description:
@@ -2027,8 +2124,14 @@ project9 : {
   demo: 'https://anbar-rest.com'
 },
 project10 : {
+    leftCornerColor: 'gray-700',
+  cornerText: '',
+  cornerColor: 'gray-700',
+  cornerIcon: '',
+  faClass: '',
+  Color: 'gray-700',
   title: 'Caspersy Restaurant – Bilingual Dynamic Menu',
-  image: 'assets/img/projects/caspersy.png',
+  image: 'assets/img/projects/casper.png',
   description:
     'Developed a fully bilingual digital menu website for Caspersy Restaurant using WordPress. The platform enables restaurant owners to update prices and items easily by uploading Excel files from the admin dashboard, ensuring effortless menu management and accurate real-time pricing.',
   features: [
@@ -2049,6 +2152,8 @@ project10 : {
   demo: 'https://caspersy.com'
 },
 project11 : {
+  
+  cornerText: '',
   title: 'Augmented Reality for ERP Employee Training',
   image: 'assets/img/projects/ar-thesis.png',
   description:
@@ -2072,14 +2177,25 @@ project11 : {
 
          
         };
-
+// <img src="${project.image}" alt="${project.title}" class="w-full h-64 object-cover rounded-lg mb-6">
         function openProjectModal(projectId) {
             const project = projects[projectId];
             if (!project) return;
 
             document.getElementById('modalTitle').textContent = project.title;
             document.getElementById('modalContent').innerHTML = `
-                <img src="${project.image}" alt="${project.title}" class="w-full h-64 object-cover rounded-lg mb-6">
+                
+                        
+                
+                        <div class="relative bg-${project.Color} p-6 flex items-center justify-center object-contain rounded-lg mb-6 w-full h-64">
+                        <span class="absolute top-2 left-2 bg-${project.leftCornerColor} text-black text-xs px-2 py-1 rounded">
+                            ${project.cornerText}
+                        </span>
+                        <img src="${project.image}" alt="${project.title}" class=" object-contain h-64">
+                        <div class="absolute top-2 right-2 bg-${project.cornerColor} text-white p-2 rounded-full shadow-md">
+                            <i class="${project.faClass} fa-${project.cornerIcon} text-lg"></i>
+                        </div>
+                        </div>
                 <p class="text-gray-300 text-lg leading-relaxed mb-6">${project.description}</p>
                 
                 <div class="mb-6">
