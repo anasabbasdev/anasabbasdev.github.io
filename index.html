@@ -10,286 +10,7 @@
     <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <style>
-        * {
-            font-family: 'Inter', sans-serif;
-        }
-        
-        .gradient-bg {
-            background: linear-gradient(135deg, #1A1A1A 0%, #121212 50%, #0a0a0a 100%);
-        }
-        
-        .glass-effect {
-            background: rgba(26, 26, 26, 0.8);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-        
-        .typing-cursor::after {
-            content: '|';
-            animation: blink 1s infinite;
-        }
-        
-        @keyframes blink {
-            0%, 50% { opacity: 1; }
-            51%, 100% { opacity: 0; }
-        }
-        
-        .floating {
-            animation: floating 3s ease-in-out infinite;
-        }
-        
-        @keyframes floating {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-20px); }
-        }
-        
-        .pulse-glow {
-            animation: pulse-glow 2s ease-in-out infinite;
-        }
-        
-        @keyframes pulse-glow {
-            0%, 100% { box-shadow: 0 0 20px rgba(34, 197, 94, 0.3); }
-            50% { box-shadow: 0 0 40px rgba(34, 197, 94, 0.6); }
-        }
-        
-        .progress-bar {
-            transition: width 1s ease-in-out;
-        }
-        
-        .project-card {
-            transition: all 0.3s ease;
-        }
-        
-        .project-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-        }
-        
-        .nav-item {
-            transition: all 0.3s ease;
-        }
-        
-        .nav-item:hover {
-            background: rgba(34, 197, 94, 0.2);
-            transform: scale(1.1);
-        }
-        
-        .nav-item.active {
-            background: rgba(34, 197, 94, 0.3);
-        }
-        
-        .scroll-smooth {
-            scroll-behavior: smooth;
-        }
-        
-        .compiling-step {
-            opacity: 0;
-            animation: fadeInUp 0.8s ease forwards;
-        }
-        
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        
-        .compiling-step:nth-child(1) { animation-delay: 0.2s; }
-        .compiling-step:nth-child(2) { animation-delay: 0.4s; }
-        .compiling-step:nth-child(3) { animation-delay: 0.6s; }
-        .compiling-step:nth-child(4) { animation-delay: 0.8s; }
-        .compiling-step:nth-child(5) { animation-delay: 1s; }
-        
-        .typing-animation {
-            display: inline-block;
-            position: relative;
-            white-space: nowrap;
-        }
-        
-        .typing-animation::after {
-            content: '|';
-            color: #22c55e;
-            animation: blink 1s infinite;
-            position: absolute;
-            right: -2px;
-            top: 0;
-        }
-        
-        .typing-text {
-            display: inline-block;
-            animation: typewriter 5s steps(25, end) infinite;
-            white-space: nowrap;
-            overflow: hidden;
-            width: 0;
-            vertical-align: baseline;
-            line-height: 1;
-        }
-        
-        @keyframes typewriter {
-            0% { width: 0; }
-            20% { width: 100%; }
-            80% { width: 100%; }
-            100% { width: 0; }
-        }
-        
-        @keyframes blink {
-            0%, 50% { opacity: 1; }
-            51%, 100% { opacity: 0; }
-        }
-        
-        .carousel-container {
-            overflow: hidden;
-            position: relative;
-        }
-        
-        .carousel-track {
-            display: flex;
-            animation: scroll 20s linear infinite;
-        }
-        
-        .carousel-track:hover {
-            animation-play-state: paused;
-        }
-        
-        @keyframes scroll {
-            0% { transform: translateX(0); }
-            100% { transform: translateX(-50%); }
-        }
-        
-        .carousel-item {
-            flex: 0 0 auto;
-            margin-right: 2rem;
-        }
-        
-        @media (max-width: 768px) {
-            .sidebar-mobile {
-                transform: translateX(-100%);
-                transition: transform 0.3s ease;
-            }
-            .sidebar-mobile.open {
-                transform: translateX(0);
-            }
-        }
-        
-        /* Modern Timeline Styles */
-        .modern-timeline {
-            position: relative;
-            padding-left: 3rem;
-        }
-        
-        .modern-timeline::before {
-            content: '';
-            position: absolute;
-            left: 1.5rem;
-            top: 0;
-            bottom: 0;
-            width: 2px;
-            background: linear-gradient(to bottom, #22c55e, #3b82f6);
-        }
-        
-        .timeline-item-modern {
-            position: relative;
-            margin-bottom: 2.5rem;
-            padding-left: 2rem;
-        }
-        
-        .timeline-item-modern::before {
-            content: '';
-            position: absolute;
-            left: -1.25rem;
-            top: 0.75rem;
-            width: 0.75rem;
-            height: 0.75rem;
-            background: #22c55e;
-            border-radius: 50%;
-            border: 3px solid #1A1A1A;
-            z-index: 2;
-            box-shadow: 0 0 0 3px rgba(34, 197, 94, 0.2);
-        }
-        
-        .timeline-content-modern {
-            background: rgba(26, 26, 26, 0.6);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(34, 197, 94, 0.1);
-            border-radius: 0.75rem;
-            padding: 1.5rem;
-            position: relative;
-            transition: all 0.3s ease;
-        }
-        
-        .timeline-content-modern:hover {
-            transform: translateY(-2px);
-            border-color: rgba(34, 197, 94, 0.3);
-            box-shadow: 0 10px 30px rgba(34, 197, 94, 0.1);
-        }
-        
-        .timeline-date-modern {
-            display: inline-block;
-            background: linear-gradient(135deg, #22c55e, #3b82f6);
-            color: white;
-            padding: 0.25rem 0.75rem;
-            border-radius: 1rem;
-            font-size: 0.75rem;
-            font-weight: 600;
-            margin-bottom: 0.75rem;
-        }
-        
-        .timeline-title-modern {
-            color: #22c55e;
-            font-size: 1.125rem;
-            font-weight: 700;
-            margin-bottom: 0.25rem;
-        }
-        
-        .timeline-company-modern {
-            color: #9ca3af;
-            font-size: 0.875rem;
-            margin-bottom: 0.75rem;
-        }
-        
-        .timeline-description-modern {
-            color: #d1d5db;
-            line-height: 1.6;
-            margin-bottom: 1rem;
-            font-size: 0.875rem;
-        }
-        
-        .timeline-tech-modern {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.375rem;
-        }
-        
-        .tech-tag-modern {
-            background: rgba(34, 197, 94, 0.1);
-            color: #22c55e;
-            padding: 0.125rem 0.5rem;
-            border-radius: 0.75rem;
-            font-size: 0.75rem;
-            border: 1px solid rgba(34, 197, 94, 0.2);
-        }
-        
-        /* Project Cards Hover Effect */
-        .project-card {
-            transition: all 0.3s ease;
-        }
-        
-        .project-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 20px 40px rgba(34, 197, 94, 0.1);
-            border-color: rgba(34, 197, 94, 0.3);
-        }
-        
-        .project-card:hover .glass-effect {
-            background: rgba(26, 26, 26, 0.9);
-            border-color: rgba(34, 197, 94, 0.4);
-        }
-    </style>
+    <link rel="stylesheet" href="assets/css/style.css">
     <link rel="icon" href="assets/img/Logo.png" type="image/x-icon">
 </head>
 <body class="gradient-bg min-h-screen text-white scroll-smooth">
@@ -422,51 +143,7 @@
                     
                 </div>
                 <span class="text-white text-sm mt-2 font-bold">ERP Architecture, PHP (Yii / Laravel), C#(.NET), API Integrations (Amazon, Ebay, Shopify, etc.), Cloud Systems</span>
-            </div>
-
-            <!-- Skills -->
-            <!-- <div class="mb-8">
-                <h3 class="text-xl font-bold mb-4">Skills</h3>
-                <div class="space-y-4">
-                    <div>
-                        <div class="flex justify-between mb-2">
-                            <span>PHP Yii Framework</span>
-                            <span>95%</span>
-                        </div>
-                        <div class="w-full bg-gray-700 rounded-full h-2">
-                            <div class="bg-green-400 h-2 rounded-full progress-bar" style="width: 95%"></div>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="flex justify-between mb-2">
-                            <span>C# & .NET</span>
-                            <span>90%</span>
-                        </div>
-                        <div class="w-full bg-gray-700 rounded-full h-2">
-                            <div class="bg-green-400 h-2 rounded-full progress-bar" style="width: 90%"></div>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="flex justify-between mb-2">
-                            <span>WordPress</span>
-                            <span>88%</span>
-                        </div>
-                        <div class="w-full bg-gray-700 rounded-full h-2">
-                            <div class="bg-green-400 h-2 rounded-full progress-bar" style="width: 88%"></div>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="flex justify-between mb-2">
-                            <span>SQL Server</span>
-                            <span>85%</span>
-                        </div>
-                        <div class="w-full bg-gray-700 rounded-full h-2">
-                            <div class="bg-green-400 h-2 rounded-full progress-bar" style="width: 85%"></div>
-                        </div>
-                    </div>
-                </div>
-            </div> -->
-
+            </div>          
             <!-- Download CV Button -->
             <button class="w-full bg-green-400 hover:bg-green-500 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center space-x-2">
                 <i class="fas fa-download"></i>
@@ -514,15 +191,26 @@
                             <div class="w-2 h-2 bg-blue-400 rounded-full animate-pulse"></div>
                             <span class="text-blue-400 font-medium">Full Time Job</span>
                         </div>
+
+                        <div class="flex items-center space-x-3 bg-blue-400/10 px-4 py-2 rounded-full border border-blue-400/20">
+                            <div class="w-2 h-2 bg-blue-400 rounded-full animate-pulse"></div>
+                            <span class="text-blue-400 font-medium">Projects</span>
+                        </div>
+                        <div class="flex items-center space-x-3 bg-blue-400/10 px-4 py-2 rounded-full border border-blue-400/20">
+                            <div class="w-2 h-2 bg-blue-400 rounded-full animate-pulse"></div>
+                            <span class="text-blue-400 font-medium">Freelance</span>
+                        </div>
                     </div>
 
                     <!-- CTA Buttons -->
                     <div class="flex flex-col sm:flex-row gap-4">
-                        <button class="bg-gradient-to-r from-green-400 to-green-500 hover:from-green-500 hover:to-green-600 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center space-x-3 shadow-lg hover:shadow-green-400/25">
-                            <!-- <i class="fas fa-paper-plane"></i> -->
+                    
+                    <a href="https://wa.me/963988102369" target="_blank">   
+                        <button class="bg-gradient-to-r from-green-400 to-green-500 hover:from-green-500 hover:to-green-600 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center space-x-3 shadow-lg hover:shadow-green-400/25">                       
                             <i class="fa-brands fa-whatsapp text-2xl"></i>
                             <span>Hire Me</span>
                         </button>
+                    </a>
                         <button class="bg-transparent border-2 border-green-400 text-green-400 hover:bg-green-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center space-x-3">
                             <i class="fas fa-download"></i>
                             <span>Download ATS CV</span>
@@ -651,9 +339,14 @@
                         <i class="fas fa-user mr-2 text-green-400"></i>
                         <span class="text-gray-300">About</span>
                     </div>
-                    <h2 class="text-4xl font-bold mb-6">
-                        About <span class="text-green-400">Anas M. Abbas</span>
-                    </h2>
+                    <div class="flex items-center justify-center mb-6">
+                        <div class="mr-6 p-3 glass-effect rounded-xl border border-green-400/20">
+                            <img src="assets/img/Logo.png" alt="Anas M. Abbas Logo" class="w-20 h-20 object-contain">
+                        </div>
+                        <h2 class="text-4xl font-bold">
+                            About <span class="text-green-400">Anas M. Abbas</span>
+                        </h2>
+                    </div>
                 </div>
 
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
@@ -664,7 +357,7 @@
                             <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent rounded-lg"></div>
                             <div class="absolute bottom-4 left-4 text-white">
                                 <h3 class="text-xl lg:text-2xl font-bold">Anas Abbas</h3>
-                                <p class="text-green-400">Full Stack Developer</p>
+                                <p class="text-green-400">Software Engineer & ERP Developer</p>
                             </div>
                         </div>
                     </div>
@@ -1487,28 +1180,6 @@
 
                 <div class="max-w-4xl mx-auto">
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                        <!-- Arabic
-                        <div class="glass-effect p-6 rounded-lg" data-aos="fade-right">
-                            <div class="text-center mb-6">
-                                <i class="fas fa-globe text-4xl text-green-400 mb-4"></i>
-                                <h3 class="text-2xl font-bold text-green-400">Arabic</h3>
-                                <p class="text-gray-300">Native Language</p>
-                            </div>
-                            <div class="space-y-4">
-                                <div class="flex justify-between items-center">
-                                    <span class="text-gray-300">Reading</span>
-                                    <span class="text-green-400 font-bold">Excellent</span>
-                                </div>
-                                <div class="flex justify-between items-center">
-                                    <span class="text-gray-300">Speaking</span>
-                                    <span class="text-green-400 font-bold">Excellent</span>
-                                </div>
-                                <div class="flex justify-between items-center">
-                                    <span class="text-gray-300">Writing</span>
-                                    <span class="text-green-400 font-bold">Excellent</span>
-                                </div>
-                            </div>
-                        </div> -->
 <!-- Arabic -->
 <div class="glass-effect p-6 rounded-lg" data-aos="fade-right">
     <div class="text-center mb-6">
@@ -1710,17 +1381,11 @@
                                     <p class="text-gray-300 group-hover:text-white">Mostaql</p>
                                 </a>
                                 
-                                <!-- Khamsat -->
-                                <!-- <a href="https://khamsat.com/u/AnasAbbas" target="_blank" class="glass-effect p-4 rounded-lg text-center hover:bg-green-400/10 transition-colors group">
-                                    <i class="fas fa-handshake text-3xl text-green-500 mb-2 group-hover:scale-110 transition-transform"></i>
-                                    <p class="text-gray-300 group-hover:text-white">Khamsat</p>
-                                </a> -->
-                                
-                                <!-- GitHub -->
-                                <!-- <a href="https://github.com/anasabbasdev" target="_blank" class="glass-effect p-4 rounded-lg text-center hover:bg-green-400/10 transition-colors group">
-                                    <i class="fab fa-github text-3xl text-gray-300 mb-2 group-hover:scale-110 transition-transform"></i>
-                                    <p class="text-gray-300 group-hover:text-white">GitHub</p>
-                                </a> -->
+                                <!-- LinkedIn -->
+                                <a href="https://www.linkedin.com/in/anasabbasdev/" target="_blank" class="glass-effect p-4 rounded-lg text-center hover:bg-green-400/10 transition-colors group">
+                                    <i class="fab fa-linkedin text-3xl text-blue-600 mb-2 group-hover:scale-110 transition-transform"></i>
+                                    <p class="text-gray-300 group-hover:text-white">LinkedIn</p>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -1737,18 +1402,9 @@
                 <div class="text-center md:text-left">
                     <h3 class="text-2xl font-bold text-green-400 mb-4">Anas M. Abbas</h3>
                     <p class="text-gray-300 mb-4">
-                        IT Specialist & Developer with 11+ years of experience in software development, training, and IT solutions. Passionate about sharing knowledge and building innovative digital solutions.
+                        Software Engineer & ERP Developer with 11+ years of experience in software development, training, and IT solutions. Passionate about sharing knowledge and building innovative digital solutions.
                     </p>
-                    <div class="flex justify-center md:justify-start space-x-4">
-                        <a href="https://github.com/anasabbasdev" target="_blank" class="w-10 h-10 bg-green-400 rounded-full flex items-center justify-center hover:bg-green-500 transition-colors">
-                            <i class="fab fa-github text-white"></i>
-                        </a>
-                        <a href="https://linkedin.com/in/Anas.Abass" target="_blank" class="w-10 h-10 bg-green-400 rounded-full flex items-center justify-center hover:bg-green-500 transition-colors">
-                            <i class="fab fa-linkedin text-white"></i>
-                        </a>
-                        <a href="https://youtube.com/@AnasCourses" target="_blank" class="w-10 h-10 bg-green-400 rounded-full flex items-center justify-center hover:bg-green-500 transition-colors">
-                            <i class="fab fa-youtube text-white"></i>
-                        </a>
+                    <div class="flex justify-center md:justify-start space-x-4">                     
                     </div>
                 </div>
 
@@ -1804,549 +1460,7 @@
         </div>
     </div>
 
-    <script>
-        // Initialize AOS
-        AOS.init({
-            duration: 1000,
-            once: true
-        });
-
-        // Navigation functionality
-        const navItems = document.querySelectorAll('.nav-item');
-        const sections = document.querySelectorAll('section');
-
-        navItems.forEach(item => {
-            item.addEventListener('click', () => {
-                const targetSection = item.getAttribute('data-section');
-                const targetElement = document.getElementById(targetSection);
-                
-                if (targetElement) {
-                    targetElement.scrollIntoView({ behavior: 'smooth' });
-                    // Close mobile menu if open
-                    const mobileMenu = document.getElementById('mobileMenu');
-                    if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
-                        mobileMenu.classList.add('hidden');
-                    }
-                }
-            });
-        });
-
-        // Update active nav item on scroll
-        window.addEventListener('scroll', () => {
-            let current = '';
-            sections.forEach(section => {
-                const sectionTop = section.offsetTop;
-                const sectionHeight = section.clientHeight;
-                if (scrollY >= (sectionTop - 200)) {
-                    current = section.getAttribute('id');
-                }
-            });
-
-            navItems.forEach(item => {
-                item.classList.remove('active');
-                if (item.getAttribute('data-section') === current) {
-                    item.classList.add('active');
-                }
-            });
-        });
-
-        // Sidebar is now always visible - no scroll animation needed
-
-        // Progress bars animation
-        const progressBars = document.querySelectorAll('.progress-bar');
-        const observerOptions = {
-            threshold: 0.5
-        };
-
-        const progressObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    const progressBar = entry.target;
-                    const width = progressBar.style.width;
-                    progressBar.style.width = '0%';
-                    setTimeout(() => {
-                        progressBar.style.width = width;
-                    }, 500);
-                }
-            });
-        }, observerOptions);
-
-        progressBars.forEach(bar => {
-            progressObserver.observe(bar);
-        });
-
-        // Mobile menu toggle
-        function toggleMobileMenu() {
-            const mobileMenu = document.getElementById('mobileMenu');
-            mobileMenu.classList.toggle('hidden');
-        }
-
-        // Add event listener for mobile menu button
-        document.getElementById('mobileMenuBtn').addEventListener('click', (e) => {
-            e.preventDefault();
-            e.stopPropagation();
-            toggleMobileMenu();
-        });
-
-        // Close mobile menu when clicking outside
-        document.addEventListener('click', (e) => {
-            const mobileMenu = document.getElementById('mobileMenu');
-            const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-            
-            if (!mobileMenu.contains(e.target) && !mobileMenuBtn.contains(e.target)) {
-                mobileMenu.classList.add('hidden');
-            }
-        });
-
-        
-        // Project modal functionality
-        const projects = {
-            project1 : {
-    leftCornerColor: 'gray-700',
-    Color: 'white',
-    cornerText: 'ERP Software',
-    cornerColor: 'gray-600',
-    cornerIcon: 'database',
-    faClass: 'fas',
-    title: 'New G Solution – Cloud ERP Platform',
-    image: 'assets/img/projects/ngs.png',
-    description:
-        'Joined New G Solution in 2021 as a WordPress developer, later contributing to the ERP’s backend development, and currently serving as CTO overseeing system architecture, integrations, and development workflows for the company’s multi-tenant cloud ERP.',
-    features: [
-        'Collaborated on ERP modules covering finance, inventory, RMA, returns, payroll, and manufacturing processes',
-        'Participated in the design of cost distribution and BOM manufacturing logic integrated with warehouse and accounting data',
-        'Supported the implementation of dynamic RMA and refurbishing systems with synchronized stock management',
-        'Supervised and contributed to integrations with 50+ external APIs (Amazon, eBay, Shopify, Walmart, ShipStation, FedEx, UPS, USPS, etc.)',
-        'Assisted in designing and maintaining a multi-tenant cloud deployment with custom branding and access rules per client',
-        'Integrated WordPress portals for company and client access',
-        'Currently leading system architecture, backend optimization, and cross-team collaboration as CTO'
-    ],
-    technologies: [
-        'PHP (Yii Framework)',
-        'MySQL / MariaDB',
-        'AWS EC2 & S3',
-        'RESTful APIs',
-        'JavaScript / jQuery',
-        'Bootstrap / Tailwind',
-        'ACL / OBAC / RBAC',
-        'API Integrations',
-        'Multi-Tenant ERP',
-        'WordPress Integration'
-    ],
-    // github: 'https://github.com/anasabbasdev/newg-erp',
-    demo: 'https://newgsolution.com'
-}
-
-                ,
-                project2 : {
-                    leftCornerColor: 'red-500',
-                Color: 'white',
-                cornerText: 'B2B Platform',
-                cornerColor: 'red-500',
-                cornerIcon: 'laravel',
-                faClass: 'fab',
-                title: 'B2B E-Commerce Platform (Part of New G Solution)',
-                image: 'assets/img/projects/ngs.png', // Add the correct path to the image
-                description:
-                    'A Laravel-based B2B e-commerce platform built on the S-Cart framework, directly integrated with the New G Solution ERP ecosystem. Designed for multi-client deployments with secure, isolated sub-domains.',
-                features: [
-                    'Maintained and expanded the platform architecture under New G Solution ERP',
-                    'Implemented RMA and Order History modules with dynamic cost calculations',
-                    'Enhanced customer privacy by securing media and images per sub-domain',
-                    'Integrated order and RMA data flow with the ERP backend for real-time cost tracking',
-                    'Optimized performance, caching, and data isolation for multi-tenant clients'
-                ],
-                technologies: [
-                    'Laravel Framework',
-                    'S-Cart Theme',
-                    'PHP',
-                    'MySQL',                    
-                    'ERP Integration',
-                    'Order & RMA Modules',
-                    'Multi-Tenant Architecture',
-                    'Secure',
-                    'Isolated Sub-Domains'
-                ],
-                //   github: 'https://github.com/anasabbasdev/b2b-platform',
-                demo: 'https://newgsolution.com'
-                }
-,               
-project3: {
-    leftCornerColor: 'blue-500',
-  Color: 'white',
-  cornerText: 'User Guide Platform',
-  cornerColor: 'blue-500',
-  cornerIcon: 'wordpress',
-  faClass: 'fab',
-  title: 'New G Solution – User Guide Platform',
-  image: 'assets/img/projects/ngs.png',
-  description:
-    'A dedicated WordPress-based documentation platform developed as part of the New G Solution ERP ecosystem. Fully customized to provide structured user guides, clean navigation, and an optimized reading experience for clients and internal teams.',
-  features: [
-    'Developed and structured the full WordPress site architecture for documentation and training materials',
-    'Customized and optimized the theme design, navigation, and layout for clarity and usability',
-    'Implemented responsive design, search structure, and dynamic content templates for future scalability',
-    'Handled all technical setup, configuration, and deployment of the platform'
-  ],
-  technologies: [
-    'WordPress',
-    'PHP',
-    'HTML / CSS / JavaScript',
-    'Custom Theme Development',
-    'Responsive Design'
-  ],
-//   github: 'https://github.com/anasabbasdev/newg-userguide',
-  demo: 'https://newgsolution.com/userguide'
-}
-,
-project4 : {
-    leftCornerColor: 'blue-500',
-  Color: 'white',
-  cornerText: 'Official Website',
-  cornerColor: 'blue-500',
-  cornerIcon: 'wordpress',
-  faClass: 'fab',
-  title: 'New G Solution – Official Website',
-  image: 'assets/img/projects/ngs.png',
-  description:
-    'The main corporate website for New G Solution ERP, fully developed and maintained by me. Built on WordPress to showcase ERP features, manage client subscriptions, and support affiliate marketing through MemberPress and EasyAffiliate integrations.',
-  features: [
-    'Full WordPress development and technical management of the company’s main website',
-    'Integrated MemberPress for client subscription and license management',
-    'Implemented EasyAffiliate for the loyalty and affiliate program',
-    'Developed dedicated sections for product features, blog articles, and marketing pages with custom theme development',
-    'Handled server configuration, backups, security hardening, and ongoing maintenance',
-    'Customized design, layout, and responsive UI for consistent brand identity'
-  ],
-  technologies: [
-    'WordPress',
-    'PHP',
-    'MemberPress',
-    'EasyAffiliate',
-    'HTML / CSS / JavaScript',
-    'Responsive Design',
-    'Security & Backups'
-  ],
-//   github: 'https://github.com/anasabbasdev/newg-main-website',
-  demo: 'https://newgsolution.com/'
-},
-project5 : {
-    leftCornerColor: 'gray-700',
-  cornerText: '',
-  cornerColor: 'gray-700',
-  cornerIcon: '',
-  faClass: '',
-  Color: 'gray-700',
-  title: 'DXB Karaoke – Music Store Website',
-  image: 'assets/img/projects/dxbkaraoke.png',
-  description:
-    'A bilingual karaoke selection website for a Dubai-based restaurant concept. The platform allows guests to browse and choose from over 16,000 karaoke tracks in multiple languages, submit their selections directly via WhatsApp, and have them prepared manually by staff for live performances.',
-  features: [
-    'Custom WordPress + WooCommerce setup used as a structured catalog for karaoke tracks (no online payment)',
-    'Interactive song selection form integrated with WhatsApp for instant submission',
-    'Supports over 16,000 karaoke tracks across multiple languages and genres',
-    'Implemented custom singer taxonomy with alphabetical sorting (Arabic, English, and others)',
-    'Polylang configuration for bilingual Arabic–English interface without product duplication',
-    'Optimized theme and UI for fast navigation, responsive design, and mobile-first usability',
-    'Full technical setup, plugin configuration, and hosting integration setup'
-  ],
-  technologies: [
-    'WordPress',
-    'WooCommerce (Catalog Mode)',
-    'PHP',
-    'Polylang',
-    'XStore Theme',
-    'HTML / CSS / JavaScript',
-    'Custom Taxonomies',
-    'WhatsApp Integration'
-  ],
-  demo: 'https://dxbkaraoke.com/shop/'
-},
-project6 : {
-    leftCornerColor: 'green-500',
-  Color: 'white',
-  cornerText: 'Shopify App',
-  cornerColor: 'green-500',
-  cornerIcon: 'shopify',
-  faClass: 'fab',
-  title: 'New G Solution – Shopify App Integration',
-  image: 'assets/img/projects/ngs.png',
-  description:
-    'An officially approved Shopify App listed on the Shopify App Store — marking a major milestone for New G Solution ERP. The app enables real-time synchronization of products, quantities, and orders between Shopify stores and the ERP cloud system, helping merchants streamline multi-channel operations efficiently.',
-  features: [
-    'Officially published and approved on Shopify App Store after technical and compliance review',
-    'Integrates Shopify stores directly with New G Solution ERP for real-time product, inventory, and order sync',
-    'Provides unified control of quantities, SKU, Master SKU, product categories, and dynamic cost across sales channels',
-    'Includes tiered subscription plans',
-    'Developed using secure REST API and GraphQL communication between Shopify and New G Solution ERP backend'
-  ],
-  technologies: [
-  'Shopify',  
-  'Shopify REST API',
-  'Cloud Sync',
-  'Product Categories',
-  'SKU',
-  'Master SKU',
-  'Tiered Subscription Plans',
-    'Shopify GraphQL API',    
-    'PHP Yii Framework',
-    'MariaDB',
-    'OAuth 2.0 Authentication',
-    'RESTful APIs',    
-  ],
-  // github: 'https://github.com/anasabbasdev/newg-shopify-app',
-  demo: 'https://apps.shopify.com/newgsolutionerp'
-},
-project7 : {
-  leftCornerColor: 'gray-700',
-  cornerText: '',
-  cornerColor: 'gray-700',
-  cornerIcon: '',
-  faClass: '',
-  Color: 'gray-700',
-  title: 'DXB Media Agency – Corporate Website (Dubai)',
-  image: 'assets/img/projects/dxbagency.svg',
-  description:
-    'Developed and deployed the official website for DXB Media Agency in Dubai using WordPress with a fully customised theme and tailored architecture. The site showcases the agency’s portfolio, services, blog and contact functionality, delivering a premium user experience and reflecting the brand’s modern identity.',
-  features: [
-    'Full WordPress installation and theme customisation from scratch',
-    'Development of services & portfolio sections including dynamic project gallery',
-    'Optimised responsive design and cross-device UI for international clients',
-    'Implemented blog module and CMS structure to allow easy future updates',
-    'Managed site performance, hosting setup, backups and security hardening'
-  ],
-  technologies: [
-    'WordPress',
-    'PHP',
-    'Custom Theme Development',
-    'HTML / CSS / JavaScript',
-    'Responsive Design',
-    'Performance Optimisation'
-  ],
-  demo: 'https://dxb-agency.com/'
-}
-
-,
-project9 : {
-    leftCornerColor: 'white',
-    Color: 'white',
-  cornerText: '',
-  cornerColor: 'white',
-  cornerIcon: '',
-  faClass: '',
-  title: 'Anbar Restaurant – Interactive Digital Menu (Dubai)',
-  image: 'assets/img/projects/anbar.png',
-  description:
-    'Developed the official digital menu website for Anbar Restaurant in Dubai using WordPress. The site was engineered specifically for iPad in-restaurant use, providing a fast, elegant, and touch-friendly interface that mirrors a native app experience.',
-  features: [
-    'Custom WordPress development tailored for digital menu display only (no cart or checkout)',
-    'Responsive layout optimised for iPad and tablet usage',
-    'High-performance image loading and category-based navigation for dishes',
-    'Clean bilingual design supporting both Arabic and English menu views',
-    'Handled theme customisation, plugin setup, hosting, and ongoing maintenance'
-  ],
-  technologies: [
-    'WordPress',
-    'PHP',
-    'HTML / CSS / JavaScript',
-    'Custom Theme',
-    'Responsive Design',
-    'Performance Optimisation'
-  ],
-  demo: 'https://anbar-rest.com'
-},
-project10 : {
-    leftCornerColor: 'gray-700',
-  cornerText: '',
-  cornerColor: 'gray-700',
-  cornerIcon: '',
-  faClass: '',
-  Color: 'gray-700',
-  title: 'Caspersy Restaurant – Bilingual Dynamic Menu',
-  image: 'assets/img/projects/casper.png',
-  description:
-    'Developed a fully bilingual digital menu website for Caspersy Restaurant using WordPress. The platform enables restaurant owners to update prices and items easily by uploading Excel files from the admin dashboard, ensuring effortless menu management and accurate real-time pricing.',
-  features: [
-    'Custom WordPress development with bilingual Arabic–English interface',
-    'Automated Excel import feature for price and item updates directly from the admin panel',
-    'Dynamic menu categories with smooth navigation and responsive design',
-    'Optimised layout for tablets and in-restaurant use',
-    'Theme customisation, performance optimisation, and hosting setup handled end-to-end'
-  ],
-  technologies: [
-    'WordPress',
-    'PHP',
-    'Excel Import Integration',
-    'HTML / CSS / JavaScript',
-    'Responsive Design',
-    'Multilingual Support'
-  ],
-  demo: 'https://caspersy.com'
-},
-project11 : {
-  
-  cornerText: '',
-  title: 'Augmented Reality for ERP Employee Training',
-  image: 'assets/img/projects/ar-thesis.png',
-  description:
-    'An applied research project forming the Master’s thesis of Anas Abbas, exploring how Augmented Reality (AR) can enhance training efficiency for ERP system employees. The project focuses on interactive modules, visual guidance, and immersive task simulation within the New G Solution ERP environment.',
-  features: [
-    'Applied research conducted in real ERP environment',
-    'AR prototypes for onboarding and process visualization',
-    'Improved comprehension and task accuracy through 3D interaction',
-    'Bridging academic research with enterprise software development'
-  ],
-  technologies: [
-    'Augmented Reality (AR)',
-    'Web Science',
-    'ERP Systems',
-    '3D Visualization'
-  ]
-}
-
-
-
-
-         
-        };
-// <img src="${project.image}" alt="${project.title}" class="w-full h-64 object-cover rounded-lg mb-6">
-        function openProjectModal(projectId) {
-            const project = projects[projectId];
-            if (!project) return;
-
-            document.getElementById('modalTitle').textContent = project.title;
-            document.getElementById('modalContent').innerHTML = `
-                
-                        
-                
-                        <div class="relative bg-${project.Color} p-6 flex items-center justify-center object-contain rounded-lg mb-6 w-full h-64">
-                        <span class="absolute top-2 left-2 bg-${project.leftCornerColor} text-${project.Color} text-xs px-2 py-1 rounded">
-                            ${project.cornerText}
-                        </span>
-                        <img src="${project.image}" alt="${project.title}" class=" object-contain h-64 p-7">
-                        <div class="absolute top-2 right-2 bg-${project.cornerColor} text-white p-2 rounded-full shadow-md">
-                            <i class="${project.faClass} fa-${project.cornerIcon} text-lg"></i>
-                        </div>
-                        </div>
-                <p class="text-gray-300 text-lg leading-relaxed mb-6">${project.description}</p>
-                
-                <div class="mb-6">
-                    <h4 class="text-xl font-bold mb-4">Key Features:</h4>
-                    <ul class="space-y-2">
-                        ${project.features.map(feature => `<li class="flex items-center space-x-2"><i class="fas fa-check text-green-400"></i><span>${feature}</span></li>`).join('')}
-                    </ul>
-                </div>
-                
-                <div class="mb-6">
-                    <h4 class="text-xl font-bold mb-4">Technologies Used:</h4>
-                    <div class="flex flex-wrap gap-2">
-                        ${project.technologies.map(tech => `<span class="px-3 py-1 bg-green-400/20 text-green-400 rounded-full">${tech}</span>`).join('')}
-                    </div>
-                </div>
-                
-                <div class="flex space-x-4">
-                    <a href="${project.github}" target="_blank" class="flex-1 bg-gray-800 hover:bg-gray-700 text-white font-bold py-3 px-6 rounded-lg transition-colors text-center">
-                        <i class="fab fa-github mr-2"></i>View Code
-                    </a>
-                    <a href="${project.demo}" target="_blank" class="flex-1 bg-green-400 hover:bg-green-500 text-white font-bold py-3 px-6 rounded-lg transition-colors text-center">
-                        <i class="fas fa-external-link-alt mr-2"></i>Live Demo
-                    </a>
-                </div>
-            `;
-            
-            document.getElementById('projectModal').classList.remove('hidden');
-        }
-
-        function closeProjectModal() {
-            document.getElementById('projectModal').classList.add('hidden');
-        }
-
-        // Close modal on outside click
-        document.getElementById('projectModal').addEventListener('click', (e) => {
-            if (e.target.id === 'projectModal') {
-                closeProjectModal();
-            }
-        });
-
-        // Download CV functionality for sidebar
-        document.querySelector('aside button[class*="bg-green-400"]').addEventListener('click', () => {
-            // Create a simple PDF content (in real implementation, you'd use a PDF library)
-            const cvContent = `
-                CURRICULUM VITAE
-                Anas M. Abbas
-                IT Specialist & Developer
-                
-                Personal Information:
-                - Location: Damascus, Syria
-                - Phone: +963-988 102 369
-                - Email: anas.abass1@gmail.com
-                
-                Experience:
-                - ERP Software Developer & WordPress Developer (2021-Present)
-                - IT Specialist Freelance (2019-Present)
-                - Programming Trainer (2019-Present)
-                - IT Specialist at APEX (2017-2019)
-                
-                Skills:
-                - PHP Yii Framework (95%)
-                - C# & .NET (90%)
-                - WordPress (88%)
-                - SQL Server (85%)
-            `;
-            
-            const blob = new Blob([cvContent], { type: 'text/plain' });
-            const url = URL.createObjectURL(blob);
-            const a = document.createElement('a');
-            a.href = url;
-            a.download = 'Anas_Abbas_CV.txt';
-            document.body.appendChild(a);
-            a.click();
-            document.body.removeChild(a);
-            URL.revokeObjectURL(url);
-        });
-
-        // Compiling animation for steps
-        const compilingSteps = document.querySelectorAll('.compiling-step');
-        compilingSteps.forEach((step, index) => {
-            step.style.animationDelay = `${index * 0.2}s`;
-        });
-
-        // Download CV functionality for main section
-        document.querySelector('main button[class*="border-green-400"]').addEventListener('click', () => {
-            // Create a simple PDF content (in real implementation, you'd use a PDF library)
-            const cvContent = `
-                CURRICULUM VITAE
-                Anas M. Abbas
-                IT Specialist & Developer
-                
-                Personal Information:
-                - Location: Damascus, Syria
-                - Phone: +963-988 102 369
-                - Email: anas.abass1@gmail.com
-                
-                Experience:
-                - ERP Software Developer & WordPress Developer (2021-Present)
-                - IT Specialist Freelance (2019-Present)
-                - Programming Trainer (2019-Present)
-                - IT Specialist at APEX (2017-2019)
-                
-                Skills:
-                - PHP Yii Framework (95%)
-                - C# & .NET (90%)
-                - WordPress (88%)
-                - SQL Server (85%)
-            `;
-            
-            const blob = new Blob([cvContent], { type: 'text/plain' });
-            const url = URL.createObjectURL(blob);
-            const a = document.createElement('a');
-            a.href = url;
-            a.download = 'Anas_Abbas_CV.txt';
-            document.body.appendChild(a);
-            a.click();
-            document.body.removeChild(a);
-            URL.revokeObjectURL(url);
-        });
-    </script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/project_english.js"></script>
 </body>
 </html>
