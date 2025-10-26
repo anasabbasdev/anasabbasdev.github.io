@@ -1,37 +1,39 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anas M. Abbas - Software Engineer & ERP Developer</title>
+    <title>أنس م. عباس - مهندس برمجيات ومطور أنظمة ERP</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/style_e.css">
+    <!-- <link rel="stylesheet" href="assets/css/style.css"> -->
     <link rel="icon" href="assets/img/Logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="assets/css/style_a.css">
 </head>
 <body class="gradient-bg min-h-screen text-white scroll-smooth">
 
     <!-- Top Language Bar -->
-    <nav id="languageBar" class="fixed top-0 right-0 z-50 transform -translate-y-full transition-transform duration-300 bg-gray-900/95 backdrop-blur-md border-b border-green-400/20" style="left: 320px;">
+    <nav id="languageBar" class="fixed top-0 left-0 z-50 transform -translate-y-full transition-transform duration-300 bg-gray-900/95 backdrop-blur-md border-b border-green-400/20" style="right: 320px;">
         <div class="container mx-auto px-4 py-3 flex items-center justify-between">
-            <a href="index-ar.html" class="flex items-center space-x-2 bg-green-400 hover:bg-green-500 text-white px-4 py-2 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-green-400/25">
-                <i class="fas fa-arrow-right"></i>
-                <span>العربية</span>
-            </a>
             <div class="flex items-center space-x-2">
                 <i class="fas fa-language text-green-400"></i>
-                <span class="text-white font-medium hidden sm:inline">Switch to Arabic</span>
-                <span class="text-white font-medium sm:hidden">Arabic</span>
+                <span class="text-white font-medium hidden sm:inline">التبديل إلى الإنجليزية</span>
+                <span class="text-white font-medium sm:hidden">الإنجليزية</span>
             </div>
+            <a href="index.html" class="flex items-center space-x-2 bg-green-400 hover:bg-green-500 text-white px-4 py-2 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-green-400/25">
+                <span>English</span>
+                <i class="fas fa-arrow-left"></i>
+            </a>
         </div>
     </nav>
 
     <!-- Navigation -->
-    <nav class="fixed right-0 top-1/2 transform -translate-y-1/2 z-40 mr-2 hidden lg:block">
+    <nav class="fixed left-0 top-1/2 transform -translate-y-1/2 z-40 ml-2 hidden lg:block">
         <div class="glass-effect rounded-full p-1 space-y-1">
             <div class="nav-item active w-8 h-8 rounded-full flex items-center justify-center cursor-pointer" data-section="home">
                 <i class="fas fa-home text-sm"></i>
@@ -67,7 +69,7 @@
     </nav>
 
     <!-- Mobile Navigation -->
-    <nav class="lg:hidden fixed top-4 right-4 z-40">
+    <nav class="lg:hidden fixed top-4 left-4 z-40">
         <div class="relative">
             <!-- Menu Button -->
             <button id="mobileMenuBtn" class="w-12 h-12 bg-green-400 hover:bg-green-500 rounded-full flex items-center justify-center transition-colors">
@@ -75,145 +77,147 @@
             </button>
             
             <!-- Dropdown Menu -->
-            <div id="mobileMenu" class="hidden absolute top-14 right-0 glass-effect rounded-lg p-2 space-y-1 min-w-48">
+            <div id="mobileMenu" class="hidden absolute top-14 left-0 glass-effect rounded-lg p-2 space-y-1 min-w-48">
                 <div class="nav-item active flex items-center space-x-3 px-3 py-2 rounded-lg cursor-pointer" data-section="home">
                     <i class="fas fa-home text-green-400"></i>
-                    <span class="text-white">Home</span>
+                    <span class="text-white">الرئيسية</span>
                 </div>
                 <div class="nav-item flex items-center space-x-3 px-3 py-2 rounded-lg cursor-pointer" data-section="about">
                     <i class="fas fa-user text-green-400"></i>
-                    <span class="text-white">About</span>
+                    <span class="text-white">نبذة</span>
                 </div>
                 <div class="nav-item flex items-center space-x-3 px-3 py-2 rounded-lg cursor-pointer" data-section="skills">
                     <i class="fas fa-code text-green-400"></i>
-                    <span class="text-white">Skills</span>
+                    <span class="text-white">المهارات</span>
                 </div>
                 <div class="nav-item flex items-center space-x-3 px-3 py-2 rounded-lg cursor-pointer" data-section="experience">
                     <i class="fas fa-briefcase text-green-400"></i>
-                    <span class="text-white">Experience</span>
+                    <span class="text-white">الخبرة</span>
                 </div>
                 <div class="nav-item flex items-center space-x-3 px-3 py-2 rounded-lg cursor-pointer" data-section="education">
                     <i class="fas fa-graduation-cap text-green-400"></i>
-                    <span class="text-white">Education</span>
+                    <span class="text-white">التعليم</span>
                 </div>
                 <div class="nav-item flex items-center space-x-3 px-3 py-2 rounded-lg cursor-pointer" data-section="projects">
                     <i class="fas fa-project-diagram text-green-400"></i>
-                    <span class="text-white">Projects</span>
+                    <span class="text-white">المشاريع</span>
                 </div>
                 <div class="nav-item flex items-center space-x-3 px-3 py-2 rounded-lg cursor-pointer" data-section="volunteer">
                     <i class="fas fa-heart text-green-400"></i>
-                    <span class="text-white">Volunteer</span>
+                    <span class="text-white">التطوع</span>
                 </div>
                 <div class="nav-item flex items-center space-x-3 px-3 py-2 rounded-lg cursor-pointer" data-section="languages">
                     <i class="fas fa-language text-green-400"></i>
-                    <span class="text-white">Languages</span>
+                    <span class="text-white">اللغات</span>
                 </div>
                 <div class="nav-item flex items-center space-x-3 px-3 py-2 rounded-lg cursor-pointer" data-section="hobbies">
                     <i class="fas fa-star text-green-400"></i>
-                    <span class="text-white">Hobbies</span>
+                    <span class="text-white">الهوايات</span>
                 </div>
                 <div class="nav-item flex items-center space-x-3 px-3 py-2 rounded-lg cursor-pointer" data-section="contact">
                     <i class="fas fa-envelope text-green-400"></i>
-                    <span class="text-white">Contact</span>
+                    <span class="text-white">التواصل</span>
                 </div>
             </div>
         </div>
     </nav>
 
-    <!-- Left Sidebar -->
-    <aside class="hidden lg:block fixed left-0 top-0 h-full w-80 glass-effect z-40" id="sidebar">
+
+
+    <!-- Right Sidebar -->
+    <aside class="hidden lg:block fixed right-0 top-0 h-full w-80 glass-effect z-40" id="sidebar">
         <div class="p-8 h-full flex flex-col">
             <!-- Profile Image -->
             <div class="text-center mb-8">
                 <div class="relative inline-block">
                     <div class="w-32 h-32 rounded-full overflow-hidden border-4 border-green-400 pulse-glow">
                         <img src="assets/img/profile.png" 
-                             alt="Anas Abbas" class="w-full h-full object-cover">
+                             alt="أنس عباس" class="w-full h-full object-cover">
                     </div>
-                    <div class="absolute -bottom-2 -right-2 w-8 h-8 bg-green-400 rounded-full flex items-center justify-center">
+                    <div class="absolute -bottom-2 -left-2 w-8 h-8 bg-green-400 rounded-full flex items-center justify-center">
                         <i class="fas fa-code text-white text-sm"></i>
                     </div>
                 </div>
-                <h1 class="text-2xl font-bold mt-4">Anas M. Abbas</h1>
-                <p class="text-green-400 text-base  typing-animation"><span class="typing-text">Software Engineer <br>& ERP Systems Developer</span></p>
+                <h1 class="text-2xl font-bold mt-4">أنس م. عباس</h1>
+                <p class="text-green-400 text-base typing-animation"><span class="typing-text">مهندس برمجيات<br>ومطور أنظمة ERP</span></p>
             </div>
 
             <!-- Personal Info -->
             <div class="space-y-4 mb-8">
                 <div class="flex justify-between items-center">
-                    <span class="text-gray-300">Location:</span>
-                    <span class="text-white">The 🌐 world</span>
+                    <span class="text-gray-300">الموقع:</span>
+                    <span class="text-white">الكرة الأرضية 🌐</span>
                 </div>
                 <div class="flex justify-between items-center">
-                    <span class="text-gray-300">Experience:</span>
-                    <span class="text-white">11+ Years</span>
+                    <span class="text-gray-300">الخبرة:</span>
+                    <span class="text-white">11+ سنة</span>
                 </div>
         
                 <div class="flex justify-between items-center">
-                    <span class="text-gray-300">Status:</span>
-                    <span class="text-green-400">Available</span>
+                    <span class="text-gray-300">الحالة:</span>
+                    <span class="text-green-400">متاح</span>
                 </div>
                 <div class="flex justify-between items-center">
-                    <span class="text-gray-300">Core Expertise:</span>
+                    <span class="text-gray-300">التخصص الأساسي:</span>
                     
                 </div>
-                <span class="text-white text-sm mt-2 font-bold">ERP Architecture, PHP (Yii / Laravel), C#(.NET), API Integrations (Amazon, Ebay, Shopify, etc.), Cloud Systems</span>
+                <span class="text-white text-sm mt-2 font-bold">معمارية ERP <br>، PHP (Yii / Laravel)، C#(.NET)، تكامل APIs (Amazon، Ebay، Shopify، إلخ)، الأنظمة السحابية</span>
             </div>          
             <!-- Download CV Button -->
             <button class="w-full bg-green-400 hover:bg-green-500 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center space-x-2">
                 <i class="fas fa-download"></i>
-                <span>Download ATS CV</span>
+                <span>تحميل السيرة الذاتية</span>
             </button>
         </div>
     </aside>
 
     <!-- Main Content -->
-    <main class="lg:ml-80 lg:mr-20 min-h-screen">
+    <main class="lg:mr-80 lg:ml-20 min-h-screen">
         <!-- Home Section -->
         <section id="home" class="min-h-screen flex items-center justify-center relative overflow-hidden pt-20 lg:pt-0">
             <!-- Animated Background Elements -->
             <div class="absolute inset-0 overflow-hidden">
-                <div class="absolute top-1/4 left-1/4 w-64 h-64 bg-green-400/5 rounded-full blur-3xl animate-pulse"></div>
-                <div class="absolute bottom-1/4 right-1/4 w-80 h-80 bg-blue-400/5 rounded-full blur-3xl animate-pulse" style="animation-delay: 2s;"></div>
-                <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-purple-400/5 rounded-full blur-3xl animate-pulse" style="animation-delay: 4s;"></div>
+                <div class="absolute top-1/4 right-1/4 w-64 h-64 bg-green-400/5 rounded-full blur-3xl animate-pulse"></div>
+                <div class="absolute bottom-1/4 left-1/4 w-80 h-80 bg-blue-400/5 rounded-full blur-3xl animate-pulse" style="animation-delay: 2s;"></div>
+                <div class="absolute top-1/2 right-1/2 transform translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-purple-400/5 rounded-full blur-3xl animate-pulse" style="animation-delay: 4s;"></div>
             </div>
             
             <div class="container mx-auto px-4 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center relative z-10">
-                <div class="space-y-8" data-aos="fade-right">
+                <div class="space-y-8" data-aos="fade-left">
                     <div class="space-y-6">
-                        <div class="inline-block px-6 py-3 rounded-full border border-green-400/20" style="background: linear-gradient(to right, #1A1A1A, #121212);">
-                            <i class="fas fa-home mr-2 text-green-400"></i>
-                            <span class="text-gray-300 font-medium">Welcome to my world</span>
+                        <div class="inline-block px-6 py-3 rounded-full border border-green-400/20" style="background: linear-gradient(to left, #1A1A1A, #121212);">
+                            <i class="fas fa-home ml-2 text-green-400"></i>
+                            <span class="text-gray-300 font-medium">مرحباً بك في عالمي</span>
                         </div>
                         <h1 class="text-6xl lg:text-7xl font-bold leading-tight">
-                            I Build
-                            <span class="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-400">Digital</span>
-                            <br>
-                            <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Solutions</span>
+                            <!-- أبني -->
+                            <span class="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-400">حلول</span>
+                            
+                            <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">رقمية</span>
                         </h1>
                         <p class="text-base lg:text-xl text-gray-300 leading-relaxed">
-                            I am an <span class="text-green-400 font-semibold">Software Engineer & ERP Developer</span> with 11+ years of experience in creating innovative solutions and training the next generation of developers.
+                             <span class="text-green-400 font-semibold">مهندس برمجيات ومطور أنظمة ERP</span> مع أكثر من 11 سنة من الخبرة في إنشاء حلول مبتكرة وتدريب الجيل القادم من المطورين.
                         </p>
                     </div>
 
                     <!-- Availability -->
                     <div class="flex flex-wrap gap-4">
                         <div class="flex items-center space-x-3 bg-green-400/10 px-4 py-2 rounded-full border border-green-400/20">
-                            <div class="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
-                            <span class="text-green-400 font-medium">Available for work</span>
+                            <div class="w-2 h-2 bg-green-400 rounded-full animate-pulse mx-2"></div>
+                            <span class="text-green-400 font-medium"> متاح للعمل</span>
                         </div>
                         <div class="flex items-center space-x-3 bg-blue-400/10 px-4 py-2 rounded-full border border-blue-400/20">
-                            <div class="w-2 h-2 bg-blue-400 rounded-full animate-pulse"></div>
-                            <span class="text-blue-400 font-medium">Full Time Job</span>
+                            <div class="w-2 h-2 bg-blue-400 rounded-full animate-pulse mx-2"></div>
+                            <span class="text-blue-400 font-medium">دوام كامل</span>
                         </div>
 
                         <div class="flex items-center space-x-3 bg-blue-400/10 px-4 py-2 rounded-full border border-blue-400/20">
-                            <div class="w-2 h-2 bg-blue-400 rounded-full animate-pulse"></div>
-                            <span class="text-blue-400 font-medium">Projects</span>
+                            <div class="w-2 h-2 bg-blue-400 rounded-full animate-pulse mx-2"></div>
+                            <span class="text-blue-400 font-medium">المشاريع</span>
                         </div>
                         <div class="flex items-center space-x-3 bg-blue-400/10 px-4 py-2 rounded-full border border-blue-400/20">
-                            <div class="w-2 h-2 bg-blue-400 rounded-full animate-pulse"></div>
-                            <span class="text-blue-400 font-medium">Freelance</span>
+                            <div class="w-2 h-2 bg-blue-400 rounded-full animate-pulse mx-2"></div>
+                            <span class="text-blue-400 font-medium">العمل الحر</span>
                         </div>
                     </div>
 
@@ -222,21 +226,21 @@
                     
                     <a href="https://wa.me/963988102369" target="_blank">   
                         <button class="bg-gradient-to-r from-green-400 to-green-500 hover:from-green-500 hover:to-green-600 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center space-x-3 shadow-lg hover:shadow-green-400/25">                       
-                            <i class="fa-brands fa-whatsapp text-2xl"></i>
-                            <span>Hire Me</span>
+                            <i class="fa-brands fa-whatsapp text-2xl mx-2"></i>
+                            <span>تواصل معي</span>
                         </button>
                     </a>
-                        <button class="bg-transparent border-2 border-green-400 text-green-400 hover:bg-green-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center space-x-3">
-                            <i class="fas fa-download"></i>
-                            <span>Download ATS CV</span>
+                        <button class="bg-transparent border-2 border-green-400 text-green-400 hover:bg-green-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center space-x-3" onclick="downloadCV()">
+                            <i class="fas fa-download mx-2"></i>
+                            <span>تحميل السيرة الذاتية</span>
                         </button>
                     </div>
 
                     <!-- Trusted Companies Carousel -->
                     <div class="space-y-3">
-                        <p class="text-gray-400">Integrations & Collaborations</p>
-                        <div class="carousel-container">
-                          <div class="carousel-track">
+                        <p class="text-gray-400">التكاملات والشراكات</p>
+                        <div class="carousel-container rtl-carousel">
+                          <div class="carousel-track rtl-carousel">
                             <div class="carousel-item text-gray-500 text-lg font-medium">Amazon</div>
                             <div class="carousel-item text-gray-500 text-lg font-medium">eBay</div>
                             <div class="carousel-item text-gray-500 text-lg font-medium">Shopify</div>
@@ -258,6 +262,18 @@
                             <div class="carousel-item text-gray-500 text-lg font-medium">USPS</div>
                             <div class="carousel-item text-gray-500 text-lg font-medium">New G Solution</div>
                             <div class="carousel-item text-gray-500 text-lg font-medium">Syriatel</div>
+
+                            <!-- Duplicate for seamless loop -->
+                            <div class="carousel-item text-gray-500 text-lg font-medium">Amazon</div>
+                            <div class="carousel-item text-gray-500 text-lg font-medium">eBay</div>
+                            <div class="carousel-item text-gray-500 text-lg font-medium">Shopify</div>
+                            <div class="carousel-item text-gray-500 text-lg font-medium">Walmart</div>
+                            <div class="carousel-item text-gray-500 text-lg font-medium">ShipStation</div>
+                            <div class="carousel-item text-gray-500 text-lg font-medium">FedEx</div>
+                            <div class="carousel-item text-gray-500 text-lg font-medium">UPS</div>
+                            <div class="carousel-item text-gray-500 text-lg font-medium">USPS</div>
+                            <div class="carousel-item text-gray-500 text-lg font-medium">New G Solution</div>
+                            <div class="carousel-item text-gray-500 text-lg font-medium">Syriatel</div>
                           </div>
                         </div>
                       </div>
@@ -265,7 +281,7 @@
                 </div>
 
                 <!-- Enhanced VS Code Terminal -->
-                <div class="relative" data-aos="fade-left">
+                <div class="relative" data-aos="fade-right">
                     <div class="bg-gray-900 border border-gray-700 rounded-xl p-6 shadow-2xl backdrop-blur-sm">
                         <div class="flex items-center justify-between mb-4">
                             <div class="flex items-center space-x-2">
@@ -278,70 +294,70 @@
                             </div>
                             <div class="flex items-center space-x-2">
                                 <div class="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
-                                <span class="text-green-400 text-xs">Live</span>
+                                <span class="text-green-400 text-xs">مباشر</span>
                             </div>
                         </div>
                         <div class="space-y-3">
                             <div class="flex items-center space-x-2 compiling-step">
                                 <div class="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
-                                <span class="text-green-400 text-sm font-mono typing-animation"><span class="typing-text">Compiling...</span></span>
+                                <span class="text-green-400 text-sm font-mono typing-animation"><span class="typing-text">جاري التجميع...</span></span>
                             </div>
                             <div class="space-y-1 font-mono text-sm">
                                 <div class="text-gray-300 compiling-step flex items-center space-x-2">
                                     <span class="text-green-400">✓</span>
-                                    <span>Building Laravel components</span>
+                                    <span>بناء المكونات</span>
                                 </div>
                                 <div class="text-gray-300 compiling-step flex items-center space-x-2">
                                     <span class="text-green-400">✓</span>
-                                    <span>Optimizing bundle size</span>
+                                    <span>تحسين حجم الحزم</span>
                                 </div>
                                 <div class="text-gray-300 compiling-step flex items-center space-x-2">
                                     <span class="text-green-400">✓</span>
-                                    <span>Running tests</span>
+                                    <span>تشغيل الاختبارات المخصصة</span>
                                 </div>
                                 <div class="text-gray-300 compiling-step flex items-center space-x-2">
                                     <span class="text-green-400">✓</span>
-                                    <span>Deploying to production</span>
+                                    <span>الإصدار الأخير</span>
                                 </div>
                             </div>
                             <div class="mt-4 p-4 bg-gradient-to-r from-green-400/10 to-blue-400/10 rounded-lg border border-green-400/20 compiling-step">
                                 <div class="flex items-center space-x-2">
                                     <i class="fas fa-check-circle text-green-400"></i>
-                                    <span class="text-green-400 text-sm font-medium">Build successful!</span>
+                                    <span class="text-green-400 text-sm font-medium">تم التجميع بنجاح!</span>
                                 </div>
-                                <div class="text-gray-300 text-xs mt-1">Ready to create amazing experiences</div>
+                                <div class="text-gray-300 text-xs mt-1">جاهز لإنشاء تجارب مذهلة</div>
                             </div>
                         </div>
                     </div>
-                    <div class="absolute -top-4 -right-4 w-8 h-8 bg-gradient-to-r from-green-400 to-blue-400 rounded-full flex items-center justify-center floating shadow-lg">
+                    <div class="absolute -top-4 -left-4 w-8 h-8 bg-gradient-to-r from-green-400 to-blue-400 rounded-full flex items-center justify-center floating shadow-lg">
                         <i class="fas fa-rocket text-white"></i>
                     </div>
                     <!-- Floating Code Elements -->
-                    <div class="absolute -top-2 -left-2 w-6 h-6 bg-blue-400/20 rounded-full flex items-center justify-center floating" style="animation-delay: 1s;">
+                    <div class="absolute -top-2 -right-2 w-6 h-6 bg-blue-400/20 rounded-full flex items-center justify-center floating" style="animation-delay: 1s;">
                         <i class="fas fa-code text-blue-400 text-xs"></i>
                     </div>
-                    <div class="absolute -bottom-2 -left-2 w-6 h-6 bg-purple-400/20 rounded-full flex items-center justify-center floating" style="animation-delay: 2s;">
+                    <div class="absolute -bottom-2 -right-2 w-6 h-6 bg-purple-400/20 rounded-full flex items-center justify-center floating" style="animation-delay: 2s;">
                         <i class="fas fa-terminal text-purple-400 text-xs"></i>
                     </div>
                 </div>
             </div>
 
             <!-- Background Elements -->
-            <div class="absolute top-20 right-20 w-32 h-32 border border-green-400 opacity-20 rounded-full floating flex items-center justify-center">
+            <div class="absolute top-20 left-20 w-32 h-32 border border-green-400 opacity-20 rounded-full floating flex items-center justify-center">
                 <div class="w-8 h-8 bg-green-400/30 rounded-full flex items-center justify-center">
                     <i class="fas fa-code text-green-400 text-sm"></i>
                 </div>
             </div>
-            <div class="absolute bottom-20 left-20 w-20 h-20 bg-green-400 opacity-10 rounded-full floating flex items-center justify-center" style="animation-delay: 1s;">
+            <div class="absolute bottom-20 right-20 w-20 h-20 bg-green-400 opacity-10 rounded-full floating flex items-center justify-center" style="animation-delay: 1s;">
                 <div class="w-6 h-6 bg-green-400/50 rounded-full flex items-center justify-center">
                     <i class="fas fa-rocket text-white text-xs"></i>
                 </div>
             </div>
             <!-- Additional floating elements -->
-            <div class="absolute top-1/3 left-10 w-16 h-16 bg-blue-400/10 rounded-full floating flex items-center justify-center" style="animation-delay: 2s;">
+            <div class="absolute top-1/3 right-10 w-16 h-16 bg-blue-400/10 rounded-full floating flex items-center justify-center" style="animation-delay: 2s;">
                 <i class="fas fa-terminal text-blue-400 text-lg"></i>
             </div>
-            <div class="absolute bottom-1/3 right-10 w-12 h-12 bg-purple-400/20 rounded-full floating flex items-center justify-center" style="animation-delay: 3s;">
+            <div class="absolute bottom-1/3 left-10 w-12 h-12 bg-purple-400/20 rounded-full floating flex items-center justify-center" style="animation-delay: 3s;">
                 <i class="fas fa-database text-purple-400 text-sm"></i>
             </div>
         </section>
@@ -351,55 +367,55 @@
             <div class="container mx-auto">
                 <div class="text-center mb-16" data-aos="fade-up">
                     <div class="inline-block bg-gray-800 px-4 py-2 rounded-full mb-4">
-                        <i class="fas fa-user mr-2 text-green-400"></i>
-                        <span class="text-gray-300">About</span>
+                        <i class="fas fa-user ml-2 text-green-400"></i>
+                        <span class="text-gray-300">نبذة</span>
                     </div>
                     <div class="flex items-center justify-center mb-6">
-                        <div class="mr-6 p-3 glass-effect rounded-xl border border-green-400/20">
-                            <img src="assets/img/Logo.png" alt="Anas M. Abbas Logo" class="w-20 h-20 object-contain">
+                        <div class="ml-6 p-3 glass-effect rounded-xl border border-green-400/20">
+                            <img src="assets/img/Logo.png" alt="شعار أنس م. عباس" class="w-20 h-20 object-contain">
                         </div>
                         <h2 class="text-4xl font-bold">
-                            About <span class="text-green-400">Anas M. Abbas</span>
+                            نبذة عن المهندس <span class="text-green-400">أنس عباس</span>
                         </h2>
                     </div>
                 </div>
 
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
-                    <div data-aos="fade-right" class="order-2 lg:order-1">
+                    <div data-aos="fade-left" class="order-2 lg:order-1">
                         <div class="relative">
                             <img src="assets/img/profile.png" 
-                                 alt="Anas Abbas" class="w-full h-80 lg:h-96 object-cover rounded-lg">
+                                 alt="أنس عباس" class="w-full h-80 lg:h-96 object-cover rounded-lg">
                             <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent rounded-lg"></div>
-                            <div class="absolute bottom-4 left-4 text-white">
-                                <h3 class="text-xl lg:text-2xl font-bold">Anas Abbas</h3>
-                                <p class="text-green-400">Software Engineer & ERP Developer</p>
+                            <div class="absolute bottom-4 right-4 text-white">
+                                <h3 class="text-xl lg:text-2xl font-bold">أنس عباس</h3>
+                                <p class="text-green-400">مهندس برمجيات ومطور أنظمة ERP</p>
                             </div>
                         </div>
                     </div>
 
-                    <div class="space-y-6" data-aos="fade-left" class="order-1 lg:order-2">
+                    <div class="space-y-6" data-aos="fade-right" class="order-1 lg:order-2">
                         <p class="text-base lg:text-lg text-gray-300 leading-relaxed">
-                            Software Engineer and ERP Developer with 11+ years of experience in full-stack and WordPress development. Currently CTO at New G Solution, leading a global ERP platform integrating major e-commerce and logistics systems.
+                            مهندس برمجيات ومطور أنظمة ERP مع أكثر من 11 سنة من الخبرة في تطوير الواجهات الخلفية والأمامية وتطوير WordPress. حالياً رئيس قسم التكنولوجيا في New G Solution، أتولى قيادة منصة ERP عالمية متكاملة مع أنظمة التجارة الإلكترونية واللوجستيات الرئيسية.
                         </p>
                         <p class="text-base lg:text-lg text-gray-300 leading-relaxed">
-                            Conducting applied research on using Augmented Reality (AR) for ERP employee training — combining innovation with practical enterprise development.
+                            أقوم بإجراء بحث أكاديمي حول استخدام الواقع المعزز (AR) في تدريب موظفي أنظمة ERP - مما يجمع بين الابتكار والتطوير العملي للمؤسسات.
                         </p>
                         <p class="text-base lg:text-lg text-gray-300 leading-relaxed">
-                            Passionate about mentoring and IT education, with 500+ students trained in programming and software fundamentals.
+                            شغوف بالإرشاد والتعليم التقني، مع تدريب أكثر من 500 طالب في أساسيات البرمجة والبرمجيات.
                         </p>
                         
                         
                         <div class="grid grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-6">
                             <div class="text-center p-4 glass-effect rounded-lg">
                                 <div class="text-2xl lg:text-3xl font-bold text-green-400">11+</div>
-                                <div class="text-gray-300 text-sm lg:text-base">Years Experience</div>
+                                <div class="text-gray-300 text-sm lg:text-base">سنوات الخبرة</div>
                             </div>
                             <div class="text-center p-4 glass-effect rounded-lg">
                                 <div class="text-2xl lg:text-3xl font-bold text-green-400">500+</div>
-                                <div class="text-gray-300 text-sm lg:text-base">Students Trained</div>
+                                <div class="text-gray-300 text-sm lg:text-base">طالب مدرب</div>
                             </div>
                             <div class="text-center p-4 glass-effect rounded-lg">
-                                <div class="text-2xl lg:text-3xl font-bold text-green-400">CTO</div>
+                                <div class="text-2xl lg:text-3xl font-bold text-green-400">رئيس تقني</div>
                                 <div class="text-gray-300 text-sm lg:text-base">New G Solution (ERP)</div>
                             </div>
                         </div>
@@ -409,117 +425,115 @@
             </div>
         </section>
 
-      <!-- Skills Section -->
-<section id="skills" class="py-20 px-4 lg:px-8" style="background-color: #121212;">
-    <div class="container mx-auto">
-      <div class="text-center mb-16" data-aos="fade-up">
-        <div class="inline-block bg-gray-800 px-4 py-2 rounded-full mb-4">
-          <i class="fas fa-code mr-2 text-green-400"></i>
-          <span class="text-gray-300">Skills</span>
-        </div>
-        <h2 class="text-4xl font-bold mb-6">
-          My <span class="text-green-400">Core & Technical</span> Expertise
-        </h2>
-      </div>
-  
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-        <!-- Core Development -->
-        <div class="glass-effect p-6 rounded-lg" data-aos="fade-up" data-aos-delay="100">
-          <div class="text-center mb-6">
-            <i class="fas fa-code-branch text-4xl text-green-400 mb-4"></i>
-            <h3 class="text-xl font-bold">Core Development</h3>
-          </div>
-          <div class="space-y-4">
-            <div><div class="flex justify-between mb-2"><span>PHP (Yii / Laravel)</span><span>95%</span></div><div class="w-full bg-gray-700 rounded-full h-2"><div class="bg-green-400 h-2 rounded-full progress-bar" style="width:95%"></div></div></div>
-            <div><div class="flex justify-between mb-2"><span>C# & .NET</span><span>90%</span></div><div class="w-full bg-gray-700 rounded-full h-2"><div class="bg-green-400 h-2 rounded-full progress-bar" style="width:90%"></div></div></div>
-            <div><div class="flex justify-between mb-2"><span>Java</span><span>80%</span></div><div class="w-full bg-gray-700 rounded-full h-2"><div class="bg-green-400 h-2 rounded-full progress-bar" style="width:80%"></div></div></div>
-            <div><div class="flex justify-between mb-2"><span>JavaScript (ES6 / jQuery)</span><span>88%</span></div><div class="w-full bg-gray-700 rounded-full h-2"><div class="bg-green-400 h-2 rounded-full progress-bar" style="width:88%"></div></div></div>
-          </div>
-        </div>
-  
-        <!-- Systems & Integrations -->
-        <div class="glass-effect p-6 rounded-lg" data-aos="fade-up" data-aos-delay="200">
-          <div class="text-center mb-6">
-            <i class="fas fa-network-wired text-4xl text-green-400 mb-4"></i>
-            <h3 class="text-xl font-bold">Systems & Integrations</h3>
-          </div>
-          <div class="space-y-4">
-            <div><div class="flex justify-between mb-2"><span>Amazon / eBay / Shopify / Walmart</span><span>93%</span></div><div class="w-full bg-gray-700 rounded-full h-2"><div class="bg-green-400 h-2 rounded-full progress-bar" style="width:93%"></div></div></div>
-            <div><div class="flex justify-between mb-2"><span>RESTful APIs & Webhooks</span><span>90%</span></div><div class="w-full bg-gray-700 rounded-full h-2"><div class="bg-green-400 h-2 rounded-full progress-bar" style="width:90%"></div></div></div>
-            <!-- <div><div class="flex justify-between mb-2"><span>AWS EC2 & S3</span><span>85%</span></div><div class="w-full bg-gray-700 rounded-full h-2"><div class="bg-green-400 h-2 rounded-full" style="width:85%"></div></div></div> -->
-            <div><div class="flex justify-between mb-2"><span>ERP Systems Architecture</span><span>95%</span></div><div class="w-full bg-gray-700 rounded-full h-2"><div class="bg-green-400 h-2 rounded-full progress-bar" style="width:95%"></div></div></div>
-          </div>
-        </div>
-  
-        <!-- Database & Infrastructure -->
-        <div class="glass-effect p-6 rounded-lg" data-aos="fade-up" data-aos-delay="300">
-          <div class="text-center mb-6">
-            <i class="fas fa-database text-4xl text-green-400 mb-4"></i>
-            <h3 class="text-xl font-bold">Database & Infrastructure</h3>
-          </div>
-          <div class="space-y-4">
-            <div><div class="flex justify-between mb-2"><span>MySQL / MariaDB</span><span>90%</span></div><div class="w-full bg-gray-700 rounded-full h-2"><div class="bg-green-400 h-2 rounded-full progress-bar" style="width:90%"></div></div></div>
-            <div><div class="flex justify-between mb-2"><span>SQL Server</span><span>88%</span></div><div class="w-full bg-gray-700 rounded-full h-2"><div class="bg-green-400 h-2 rounded-full progress-bar" style="width:88%"></div></div></div>
-            <div><div class="flex justify-between mb-2"><span>Database Design & Optimization</span><span>85%</span></div><div class="w-full bg-gray-700 rounded-full h-2"><div class="bg-green-400 h-2 rounded-full progress-bar" style="width:85%"></div></div></div>
-            <div><div class="flex justify-between mb-2"><span>Windows Server / Mikrotik / Networking</span><span>70%</span></div><div class="w-full bg-gray-700 rounded-full h-2"><div class="bg-green-400 h-2 rounded-full progress-bar" style="width:70%"></div></div></div>
-          </div>
-        </div>
-  
-        <!-- Project Management & Training -->
-        <div class="glass-effect p-6 rounded-lg" data-aos="fade-up" data-aos-delay="400">
-          <div class="text-center mb-6">
-            <i class="fas fa-users-cog text-4xl text-green-400 mb-4"></i>
-            <h3 class="text-xl font-bold">Project Management & Training</h3>
-          </div>
-          <div class="space-y-4">
-            <div><div class="flex justify-between mb-2"><span>Team Leadership & Coordination</span><span>92%</span></div><div class="w-full bg-gray-700 rounded-full h-2"><div class="bg-green-400 h-2 rounded-full progress-bar" style="width:92%"></div></div></div>
-            <div><div class="flex justify-between mb-2"><span>Project Planning & Execution</span><span>90%</span></div><div class="w-full bg-gray-700 rounded-full h-2"><div class="bg-green-400 h-2 rounded-full progress-bar" style="width:90%"></div></div></div>
-            <div><div class="flex justify-between mb-2"><span>Technical Training (C#, SQL, ERP)</span><span>95%</span></div><div class="w-full bg-gray-700 rounded-full h-2"><div class="bg-green-400 h-2 rounded-full progress-bar" style="width:95%"></div></div></div>
-            <div><div class="flex justify-between mb-2"><span>Communication & Mentorship</span><span>88%</span></div><div class="w-full bg-gray-700 rounded-full h-2"><div class="bg-green-400 h-2 rounded-full progress-bar" style="width:88%"></div></div></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  
+        <!-- Skills Section -->
+        <section id="skills" class="py-20 px-4 lg:px-8" style="background-color: #121212;">
+            <div class="container mx-auto">
+                <div class="text-center mb-16" data-aos="fade-up">
+                    <div class="inline-block bg-gray-800 px-4 py-2 rounded-full mb-4">
+                        <i class="fas fa-code ml-2 text-green-400"></i>
+                        <span class="text-gray-300">المهارات</span>
+                    </div>
+                    <h2 class="text-4xl font-bold mb-6">
+                        <span class="text-green-400">التخصصات الأساسية والتقنية</span> لدي
+                    </h2>
+                </div>
+            
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <!-- Core Development -->
+                    <div class="glass-effect p-6 rounded-lg" data-aos="fade-up" data-aos-delay="100">
+                        <div class="text-center mb-6">
+                            <i class="fas fa-code-branch text-4xl text-green-400 mb-4"></i>
+                            <h3 class="text-xl font-bold">التطوير الأساسي</h3>
+                        </div>
+                        <div class="space-y-4">
+                            <div><div class="flex justify-between mb-2"><span>PHP (Yii / Laravel)</span><span>95%</span></div><div class="w-full bg-gray-700 rounded-full h-2"><div class="bg-green-400 h-2 rounded-full progress-bar" style="width:95%"></div></div></div>
+                            <div><div class="flex justify-between mb-2"><span>C# & .NET</span><span>90%</span></div><div class="w-full bg-gray-700 rounded-full h-2"><div class="bg-green-400 h-2 rounded-full progress-bar" style="width:90%"></div></div></div>
+                            <div><div class="flex justify-between mb-2"><span>Java</span><span>80%</span></div><div class="w-full bg-gray-700 rounded-full h-2"><div class="bg-green-400 h-2 rounded-full progress-bar" style="width:80%"></div></div></div>
+                            <div><div class="flex justify-between mb-2"><span>JavaScript (ES6 / jQuery)</span><span>88%</span></div><div class="w-full bg-gray-700 rounded-full h-2"><div class="bg-green-400 h-2 rounded-full progress-bar" style="width:88%"></div></div></div>
+                        </div>
+                    </div>
+            
+                    <!-- Systems & Integrations -->
+                    <div class="glass-effect p-6 rounded-lg" data-aos="fade-up" data-aos-delay="200">
+                        <div class="text-center mb-6">
+                            <i class="fas fa-network-wired text-4xl text-green-400 mb-4"></i>
+                            <h3 class="text-xl font-bold">الأنظمة والتكاملات</h3>
+                        </div>
+                        <div class="space-y-4">
+                            <div><div class="flex justify-between mb-2"><span>Amazon / eBay / Shopify / Walmart</span><span>93%</span></div><div class="w-full bg-gray-700 rounded-full h-2"><div class="bg-green-400 h-2 rounded-full progress-bar" style="width:93%"></div></div></div>
+                            <div><div class="flex justify-between mb-2"><span>RESTful APIs & Webhooks</span><span>90%</span></div><div class="w-full bg-gray-700 rounded-full h-2"><div class="bg-green-400 h-2 rounded-full progress-bar" style="width:90%"></div></div></div>
+                            <div><div class="flex justify-between mb-2"><span>معمارية أنظمة ERP</span><span>95%</span></div><div class="w-full bg-gray-700 rounded-full h-2"><div class="bg-green-400 h-2 rounded-full progress-bar" style="width:95%"></div></div></div>
+                        </div>
+                    </div>
+            
+                    <!-- Database & Infrastructure -->
+                    <div class="glass-effect p-6 rounded-lg" data-aos="fade-up" data-aos-delay="300">
+                        <div class="text-center mb-6">
+                            <i class="fas fa-database text-4xl text-green-400 mb-4"></i>
+                            <h3 class="text-xl font-bold">قواعد البيانات والبنية التحتية</h3>
+                        </div>
+                        <div class="space-y-4">
+                            <div><div class="flex justify-between mb-2"><span>MySQL / MariaDB</span><span>90%</span></div><div class="w-full bg-gray-700 rounded-full h-2"><div class="bg-green-400 h-2 rounded-full progress-bar" style="width:90%"></div></div></div>
+                            <div><div class="flex justify-between mb-2"><span>SQL Server</span><span>88%</span></div><div class="w-full bg-gray-700 rounded-full h-2"><div class="bg-green-400 h-2 rounded-full progress-bar" style="width:88%"></div></div></div>
+                            <div><div class="flex justify-between mb-2"><span>تصميم وتحسين قواعد البيانات</span><span>85%</span></div><div class="w-full bg-gray-700 rounded-full h-2"><div class="bg-green-400 h-2 rounded-full progress-bar" style="width:85%"></div></div></div>
+                            <div><div class="flex justify-between mb-2"><span>Windows Server / Mikrotik / الشبكات</span><span>70%</span></div><div class="w-full bg-gray-700 rounded-full h-2"><div class="bg-green-400 h-2 rounded-full progress-bar" style="width:70%"></div></div></div>
+                        </div>
+                    </div>
+            
+                    <!-- Project Management & Training -->
+                    <div class="glass-effect p-6 rounded-lg" data-aos="fade-up" data-aos-delay="400">
+                        <div class="text-center mb-6">
+                            <i class="fas fa-users-cog text-4xl text-green-400 mb-4"></i>
+                            <h3 class="text-xl font-bold">إدارة المشاريع والتدريب</h3>
+                        </div>
+                        <div class="space-y-4">
+                            <div><div class="flex justify-between mb-2"><span>قيادة الفريق والتنسيق</span><span>92%</span></div><div class="w-full bg-gray-700 rounded-full h-2"><div class="bg-green-400 h-2 rounded-full progress-bar" style="width:92%"></div></div></div>
+                            <div><div class="flex justify-between mb-2"><span>تخطيط وتنفيذ المشاريع</span><span>90%</span></div><div class="w-full bg-gray-700 rounded-full h-2"><div class="bg-green-400 h-2 rounded-full progress-bar" style="width:90%"></div></div></div>
+                            <div><div class="flex justify-between mb-2"><span>التدريب التقني (C#, SQL, ERP)</span><span>95%</span></div><div class="w-full bg-gray-700 rounded-full h-2"><div class="bg-green-400 h-2 rounded-full progress-bar" style="width:95%"></div></div></div>
+                            <div><div class="flex justify-between mb-2"><span>التواصل والإرشاد</span><span>88%</span></div><div class="w-full bg-gray-700 rounded-full h-2"><div class="bg-green-400 h-2 rounded-full progress-bar" style="width:88%"></div></div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
         <!-- Experience Section -->
         <section id="experience" class="py-20 px-4 lg:px-8">
             <div class="container mx-auto">
                 <div class="text-center mb-16" data-aos="fade-up">
                     <div class="inline-block bg-gray-800 px-4 py-2 rounded-full mb-4">
-                        <i class="fas fa-briefcase mr-2 text-green-400"></i>
-                        <span class="text-gray-300">Experience</span>
+                        <i class="fas fa-briefcase ml-2 text-green-400"></i>
+                        <span class="text-gray-300">الخبرة</span>
                     </div>
                     <h2 class="text-4xl font-bold mb-6">
-                        My <span class="text-green-400">Professional</span> Journey
+                        رحلتي <span class="text-green-400">المهنية</span>
                     </h2>
                 </div>
 
                 <div class="max-w-4xl mx-auto">
                     <div class="modern-timeline">
                         <!-- Experience 1 -->
-                        <div class="timeline-item-modern" data-aos="fade-right">
+                        <div class="timeline-item-modern" data-aos="fade-left">
                             <div class="timeline-content-modern">
-                            <div class="timeline-date-modern">2021 – Present</div>
-                            <h3 class="timeline-title-modern">ERP Software Developer → CTO</h3>
-                            <p class="timeline-company-modern">New G Solution ERP / Web Developer Online (U.S.A.)</p>
+                            <div class="timeline-date-modern">2021 – حتى الآن</div>
+                            <h3 class="timeline-title-modern">مطور برمجيات ERP → رئيس تقني</h3>
+                            <p class="timeline-company-modern">New G Solution ERP / Web Developer Online (الولايات المتحدة الأمريكية)</p>
                         
                             <p class="timeline-description-modern">
-                                Joined the company in 2021 as an ERP and WordPress developer, contributing to core module development and custom website projects.  
-                                Gradually advanced to lead the development team and now serve as the Chief Technology Officer responsible for the system’s overall architecture, security, and technical strategy.  
-                                Spearheaded the design of a multi-tenant cloud ERP platform built with PHP (Yii Framework) on AWS EC2, integrating over 50 external APIs (Amazon, eBay, Shopify, Walmart, FedEx, UPS and more) with encrypted data flows and custom ACL(OBAC and RBAC) permissions.
+                                انضممت إلى الشركة في عام 2021 كمطور WordPress  ثم تطوير ERP, ساهمت في تطوير الوحدات الأساسية ومشاريع المواقع المخصصة.  
+                                تدرجت تدريجياً لقيادة فريق التطوير وأشغل الآن منصب رئيس قسم التكنولوجيا المسؤول عن المعمارية العامة للنظام والأمان والاستراتيجية التقنية.  
+                                قمت بقيادة تصميم منصة ERP سحابية متعددة المستأجرين مبنية بـ PHP (Yii Framework) على AWS EC2، متكاملة مع أكثر من 50 API خارجي (Amazon، eBay، Shopify، Walmart، FedEx، UPS والمزيد) مع تدفقات البيانات المشفرة وأذونات ACL مخصصة (OBAC و RBAC).
                             </p>
                         
                             <div class="timeline-tech-modern">
                                 <span class="tech-tag-modern">PHP (Yii Framework)</span>
                                 <span class="tech-tag-modern">WordPress</span>
                                 <span class="tech-tag-modern">AWS EC2</span>
-                                <span class="tech-tag-modern">Multi-Tenant ERP</span>
-                                <span class="tech-tag-modern">API Integrations</span>
-                                <span class="tech-tag-modern">Team Leadership</span>
-                                <span class="tech-tag-modern">ACL Security</span>
-                                <span class="tech-tag-modern">Encryption</span>
+                                <span class="tech-tag-modern">ERP متعدد المستأجرين</span>
+                                <span class="tech-tag-modern">تكامل APIs</span>
+                                <span class="tech-tag-modern">قيادة الفريق</span>
+                                <span class="tech-tag-modern">أمان ACL</span>
+                                <span class="tech-tag-modern">التشفير</span>
                                 <span class="tech-tag-modern">OBAC</span>
                                 <span class="tech-tag-modern">RBAC</span>
                             </div>
@@ -527,117 +541,117 @@
                         </div>
   
                         <!-- Experience 2 -->
-                        <div class="timeline-item-modern" data-aos="fade-right">
+                        <div class="timeline-item-modern" data-aos="fade-left">
                             <div class="timeline-content-modern">
-                            <div class="timeline-date-modern">2021 - Present</div>
-                            <h3 class="timeline-title-modern">Freelance Web Developer</h3>
-                            <p class="timeline-company-modern">Remote / Worldwide</p>
+                            <div class="timeline-date-modern">2021 - حتى الآن</div>
+                            <h3 class="timeline-title-modern">مطور ويب مستقل</h3>
+                            <p class="timeline-company-modern">عن بُعد / عالمياً</p>
                             <p class="timeline-description-modern">
-                                Building professional websites and web applications using WordPress, Laravel, C#(.NET).  
-                                Delivering diverse projects for companies, institutes, and commercial brands — including  
-                                corporate portfolios, student service platforms, restaurant menus, and custom-designed templates  
-                                tailored to client needs.
+                                بناء المواقع والتطبيقات المهنية باستخدام WordPress، Laravel، C#(.NET).  
+                                تقديم مشاريع متنوعة للشركات والمعاهد والعلامات التجارية - بما في ذلك  
+                                المحافظ المؤسسية ومنصات خدمات الطلاب وقوائم المطاعم والقوالب المخصصة  
+                                المصممة حسب احتياجات العملاء.
                             </p>
                             <div class="timeline-tech-modern">
                                 <span class="tech-tag-modern">WordPress</span>
                                 <span class="tech-tag-modern">Laravel</span>
                                 <span class="tech-tag-modern">C#</span>
                                 <span class="tech-tag-modern">PHP</span>
-                                <span class="tech-tag-modern">Custom Templates</span>
-                                <span class="tech-tag-modern">Responsive Design</span>
+                                <span class="tech-tag-modern">قوالب مخصصة</span>
+                                <span class="tech-tag-modern">تصميم متجاوب</span>
                             </div>
                             </div>
                         </div>
 
   
                         <!-- Experience 3 -->
-                        <div class="timeline-item-modern" data-aos="fade-left">
+                        <div class="timeline-item-modern" data-aos="fade-right">
                             <div class="timeline-content-modern">
                                 <div class="timeline-date-modern">2019 - 2022</div>
-                                <h3 class="timeline-title-modern">IT Specialist (Freelance)</h3>
-                                <p class="timeline-company-modern">Damascus, Syria</p>
+                                <h3 class="timeline-title-modern">أخصائي تقنية معلومات (مستقل)</h3>
+                                <p class="timeline-company-modern">دمشق، سوريا</p>
                                 <p class="timeline-description-modern">
-                                    Providing comprehensive IT services including Windows Server management, Mikrotik configuration, 
-                                    security camera installation and maintenance, and hardware support for various clients.
+                                    تقديم خدمات تقنية معلومات شاملة تشمل إدارة Windows Server، تكوين Mikrotik، 
+                                    تركيب وصيانة كاميرات الأمان، ودعم الأجهزة للعملاء المختلفين.
                                 </p>
                                 <div class="timeline-tech-modern">
                                     <span class="tech-tag-modern">Windows Server</span>
                                     <span class="tech-tag-modern">Mikrotik</span>
-                                    <span class="tech-tag-modern">Security Systems</span>
-                                    <span class="tech-tag-modern">Hardware Support</span>
+                                    <span class="tech-tag-modern">أنظمة الأمان</span>
+                                    <span class="tech-tag-modern">دعم الأجهزة</span>
                                 </div>
                             </div>
                         </div>
 
                             <!-- Experience 4 -->
-                        <div class="timeline-item-modern" data-aos="fade-right">
+                        <div class="timeline-item-modern" data-aos="fade-left">
                             <div class="timeline-content-modern">
-                                <div class="timeline-date-modern">2019 - Present</div>
-                                <h3 class="timeline-title-modern">Programming Trainer</h3>
-                                <p class="timeline-company-modern">Al Hadara Group, Damascus</p>
+                                <div class="timeline-date-modern">2019 - حتى الآن</div>
+                                <h3 class="timeline-title-modern">مدرب برمجة</h3>
+                                <p class="timeline-company-modern">مجموعة الحضارة، دمشق</p>
                                 <p class="timeline-description-modern">
-                                    Training students in C# programming covering basics, intermediate level, SQL Server, and Windows Forms. 
-                                    Helping students build strong foundations in software development.
+                                    تدريب الطلاب في برمجة C# تغطي الأساسيات والمستوى المتوسط، SQL Server، و Windows Forms. 
+                                    مساعدة الطلاب في بناء أساس قوي في تطوير البرمجيات.
                                 </p>
                                 <div class="timeline-tech-modern">
-                                    <span class="tech-tag-modern">C# Training</span>
+                                    <span class="tech-tag-modern">تدريب C#</span>
                                     <span class="tech-tag-modern">SQL Server</span>
                                     <span class="tech-tag-modern">Windows Forms</span>
-                                    <span class="tech-tag-modern">Mentoring</span>
+                                    <span class="tech-tag-modern">الإرشاد</span>
                                 </div>
                             </div>
                         </div>
 
                         <!-- Experience 5 -->
-                        <div class="timeline-item-modern" data-aos="fade-left">
+                        <div class="timeline-item-modern" data-aos="fade-right">
                             <div class="timeline-content-modern">
                                 <div class="timeline-date-modern">2017 - 2019</div>
-                                <h3 class="timeline-title-modern">IT Specialist</h3>
-                                <p class="timeline-company-modern">APEX, Mazzeh, Damascus</p>
+                                <h3 class="timeline-title-modern">أخصائي تقنية معلومات</h3>
+                                <p class="timeline-company-modern">APEX، المزة، دمشق</p>
                                 <p class="timeline-description-modern">
-                                    Provided comprehensive IT support including Windows Server management, Mikrotik configuration, 
-                                    security camera installation, and hardware maintenance for corporate clients.
+                                    قدمت دعم تقني شامل يشمل إدارة Windows Server، تكوين Mikrotik، 
+                                    تركيب كاميرات الأمان، وصيانة الأجهزة للعملاء المؤسسيين.
                                 </p>
                                 <div class="timeline-tech-modern">
                                     <span class="tech-tag-modern">Windows Server</span>
                                     <span class="tech-tag-modern">Mikrotik</span>
-                                    <span class="tech-tag-modern">Security Systems</span>
-                                    <span class="tech-tag-modern">Hardware Support</span>
+                                    <span class="tech-tag-modern">أنظمة الأمان</span>
+                                    <span class="tech-tag-modern">دعم الأجهزة</span>
                                 </div>
                             </div>
                         </div>
 
                         <!-- Experience 6 -->
-                        <div class="timeline-item-modern" data-aos="fade-right">
+                        <div class="timeline-item-modern" data-aos="fade-left">
                             <div class="timeline-content-modern">
                                 <div class="timeline-date-modern">2017</div>
-                                <h3 class="timeline-title-modern">Technical Support Specialist</h3>
-                                <p class="timeline-company-modern">Syriatel, Sahnaya, Syria</p>
+                                <h3 class="timeline-title-modern">أخصائي دعم تقني</h3>
+                                <p class="timeline-company-modern">سيريتل، صحنايا، سوريا</p>
                                 <p class="timeline-description-modern">
-                                    Handled technical complaints and communicated with various sections and units 
-                                    to follow up on customer issues and ensure resolution.
+                                    تعاملت مع الشكاوى التقنية وتواصلت مع الأقسام والوحدات المختلفة 
+                                    لمتابعة قضايا العملاء وضمان الحل.
                                 </p>
                                 <div class="timeline-tech-modern">
-                                    <span class="tech-tag-modern">Technical Support</span>
-                                    <span class="tech-tag-modern">Customer Service</span>
-                                    <span class="tech-tag-modern">Problem Solving</span>
+                                    <span class="tech-tag-modern">الدعم التقني</span>
+                                    <span class="tech-tag-modern">خدمة العملاء</span>
+                                    <span class="tech-tag-modern">حل المشاكل</span>
                                 </div>
                             </div>
                         </div>
 
                         <!-- Experience 7 -->
-                        <div class="timeline-item-modern" data-aos="fade-left">
+                        <div class="timeline-item-modern" data-aos="fade-right">
                             <div class="timeline-content-modern">
                                 <div class="timeline-date-modern">2015 - 2017</div>
-                                <h3 class="timeline-title-modern">Founder - TabSkills Team</h3>
-                                <p class="timeline-company-modern">Damascus, Syria</p>
+                                <h3 class="timeline-title-modern">مؤسس - فريق TabSkills</h3>
+                                <p class="timeline-company-modern">دمشق، سوريا</p>
                                 <p class="timeline-description-modern">
-                                    Founded and led TabSkills Team for IT Training, providing comprehensive training 
-                                    in C++, Java, C#, SQL, and web development to students and professionals.
+                                    أسست وترأست فريق TabSkills للتدريب التقني، قدمت تدريب شامل 
+                                    في C++، Java، C#، SQL، وتطوير الويب للطلاب والمهنيين.
                                 </p>
                                 <div class="timeline-tech-modern">
-                                    <span class="tech-tag-modern">Team Leadership</span>
-                                    <span class="tech-tag-modern">IT Training</span>
+                                    <span class="tech-tag-modern">قيادة الفريق</span>
+                                    <span class="tech-tag-modern">التدريب التقني</span>
                                     <span class="tech-tag-modern">C++</span>
                                     <span class="tech-tag-modern">Java</span>
                                 </div>
@@ -645,20 +659,23 @@
                         </div>
 
                         <!-- Experience 8 -->
-                        <div class="timeline-item-modern" data-aos="fade-right">
+                        <div class="timeline-item-modern" data-aos="fade-left">
                             <div class="timeline-content-modern">
-                                <div class="timeline-date-modern">2014 - Present</div>
-                                <h3 class="timeline-title-modern">Founder - Online Business</h3>
-                                <p class="timeline-company-modern">Syria - Online</p>
+                                <div class="timeline-date-modern">2014 - حتى الآن</div>
+                                <h3 class="timeline-title-modern">مؤسس - عمل إلكتروني</h3>
+                                <p class="timeline-company-modern">سوريا - عبر الإنترنت</p>
                                 <p class="timeline-description-modern">
-                                    Founded online training business, training SVU students in C#, SQL, Database, 
-                                    Visual Programming, and various programming courses.
+                                    أسست عملي في التدريب الإلكتروني، دربت طلاب الجامعة الافتراضية السورية في C#، SQL، قواعد البيانات،
+                                     البرمجة المرئية، وبرمجة الويب Full-Stack بلغة C# وتقنيات ASP.NET, SQL Server, LINQ to SQL, ADO.NET
                                 </p>
                                 <div class="timeline-tech-modern">
-                                    <span class="tech-tag-modern">Online Training</span>
+                                    <span class="tech-tag-modern">التدريب الإلكتروني</span>
                                     <span class="tech-tag-modern">C#</span>
                                     <span class="tech-tag-modern">SQL</span>
-                                    <span class="tech-tag-modern">Database</span>
+                                    <span class="tech-tag-modern">قواعد البيانات</span>
+                                    <span class="tech-tag-modern">ASP.NET</span>
+                                    <span class="tech-tag-modern">LINQ to SQL</span>
+                                    <span class="tech-tag-modern">ADO.NET</span>
                                 </div>
                             </div>
                         </div>
@@ -673,11 +690,11 @@
             <div class="container mx-auto">
                 <div class="text-center mb-16" data-aos="fade-up">
                     <div class="inline-block bg-gray-800 px-4 py-2 rounded-full mb-4">
-                        <i class="fas fa-graduation-cap mr-2 text-green-400"></i>
-                        <span class="text-gray-300">Education</span>
+                        <i class="fas fa-graduation-cap ml-2 text-green-400"></i>
+                        <span class="text-gray-300">التعليم</span>
                     </div>
                     <h2 class="text-4xl font-bold mb-6">
-                        My <span class="text-green-400">Educational</span> Journey
+                        رحلتي <span class="text-green-400">التعليمية</span>
                     </h2>
                 </div>
 
@@ -686,19 +703,19 @@
                         <!-- Education 1 -->
                         <div class="timeline-item-modern" data-aos="fade-up" data-aos-delay="100">
                             <div class="timeline-content-modern">
-                              <div class="timeline-date-modern">2nd Year – Present</div>
-                              <h3 class="timeline-title-modern">MWS - Master in Web Science</h3>
-                              <p class="timeline-company-modern">Syrian Virtual University</p>
+                              <div class="timeline-date-modern">السنة الثانية – حتى الآن</div>
+                              <h3 class="timeline-title-modern">ماجستير في علوم الويب</h3>
+                              <p class="timeline-company-modern">الجامعة الافتراضية السورية</p>
                               <p class="timeline-description-modern">
-                                Currently preparing a master’s thesis on applying <strong>Augmented Reality (AR)</strong>  
-                                in training ERP system employees at <strong>New G Solution</strong>,  
-                                focusing on enhancing learning efficiency and interactive system understanding.
+                                أقوم حالياً بإعداد أطروحة الماجستير حول تطبيق <strong>الواقع المعزز (AR)</strong>  
+                                في تدريب موظفي أنظمة ERP في <strong>New G Solution</strong>،  
+                                مع التركيز على تحسين كفاءة التعلم والفهم التفاعلي للنظام.
                               </p>
                               <div class="timeline-tech-modern">
-                                <span class="tech-tag-modern">Augmented Reality</span>
-                                <span class="tech-tag-modern">ERP Systems</span>
-                                <span class="tech-tag-modern">Interactive Training</span>
-                                <span class="tech-tag-modern">Web Science</span>
+                                <span class="tech-tag-modern">الواقع المعزز</span>
+                                <span class="tech-tag-modern">أنظمة ERP</span>
+                                <span class="tech-tag-modern">التدريب التفاعلي</span>
+                                <span class="tech-tag-modern">علوم الويب</span>
                               </div>
                             </div>
                           </div>
@@ -707,16 +724,16 @@
                         <div class="timeline-item-modern" data-aos="fade-up">
                             <div class="timeline-content-modern">
                             <div class="timeline-date-modern">2021</div>
-                            <h3 class="timeline-title-modern">Bachelor in Information System Engineering (Software Engineering)</h3>
-                            <p class="timeline-company-modern">Syrian Virtual University</p>
+                            <h3 class="timeline-title-modern">بكالوريوس في هندسة نظم المعلومات (هندسة البرمجيات)</h3>
+                            <p class="timeline-company-modern">الجامعة الافتراضية السورية</p>
                             <p class="timeline-description-modern">
-                                Graduated with Excellent grade.  
-                                Specialized in software development, system analysis, and database design.
+                                تخرجت بمرتبة امتياز.  
+                                متخصص في تطوير البرمجيات وتحليل الأنظمة وتصميم قواعد البيانات.
                             </p>
                             <div class="timeline-tech-modern">
-                                <span class="tech-tag-modern">Software Engineering</span>
-                                <span class="tech-tag-modern">System Analysis</span>
-                                <span class="tech-tag-modern">Database Design</span>
+                                <span class="tech-tag-modern">هندسة البرمجيات</span>
+                                <span class="tech-tag-modern">تحليل الأنظمة</span>
+                                <span class="tech-tag-modern">تصميم قواعد البيانات</span>
                             </div>
                             </div>
                         </div>
@@ -725,17 +742,17 @@
                         <div class="timeline-item-modern" data-aos="fade-up" data-aos-delay="200">
                             <div class="timeline-content-modern">
                             <div class="timeline-date-modern">2025</div>
-                            <h3 class="timeline-title-modern">Professional Course – Laravel 12 Framework</h3>
-                            <p class="timeline-company-modern">Udemy Online Platform</p>
+                            <h3 class="timeline-title-modern">دورة مهنية – إطار عمل Laravel 12</h3>
+                            <p class="timeline-company-modern">منصة Udemy الإلكترونية</p>
                             <p class="timeline-description-modern">
-                                Completed an advanced Laravel 12 course on Udemy as part of continuous learning and skill enhancement.  
-                                Focused on new features, performance optimization, and modern best practices in backend development.
+                                أكملت دورة Laravel 12 متقدمة على Udemy كجزء من التعلم المستمر وتحسين المهارات.  
+                                ركزت على الميزات الجديدة وتحسين الأداء وأفضل الممارسات الحديثة في تطوير الواجهات الخلفية.
                             </p>
                             <div class="timeline-tech-modern">
                                 <span class="tech-tag-modern">Laravel 12</span>
                                 <span class="tech-tag-modern">PHP</span>
-                                <span class="tech-tag-modern">Backend Development</span>
-                                <span class="tech-tag-modern">Continuous Learning</span>
+                                <span class="tech-tag-modern">تطوير الواجهات الخلفية</span>
+                                <span class="tech-tag-modern">التعلم المستمر</span>
                             </div>
                             </div>
                         </div>
@@ -744,17 +761,20 @@
                         <div class="timeline-item-modern" data-aos="fade-up" data-aos-delay="500">
                             <div class="timeline-content-modern">
                                 <div class="timeline-date-modern">2014</div>
-                                <h3 class="timeline-title-modern">TOT Training Certificate</h3>
-                                <p class="timeline-company-modern">IÉCD (Institut Européen de Coopération et de Développement), Damascus</p>
+                                <h3 class="timeline-title-modern">شهادة إعداد المدربين TOT</h3>
+                                <p class="timeline-company-modern">المعهد الأوروبي للتعاون والتنمية، دمشق</p>
                                 <p class="timeline-description-modern">
-                                    Training of Trainers certificate in Computer Maintenance, covering hardware troubleshooting, 
-                                    system installation, and maintenance procedures.
+                                    شهادة إعداد المدربين في صيانة الحاسوب، تغطي استكشاف أخطاء الأجهزة، 
+                                    تثبيت الأنظمة، وإجراءات الصيانة البرمجية والعتادية.
                                 </p>
                                 <div class="timeline-tech-modern">
-                                    <span class="tech-tag-modern">Computer Maintenance</span>
-                                    <span class="tech-tag-modern">Hardware Troubleshooting</span>
-                                    <span class="tech-tag-modern">System Installation</span>
-                                    <span class="tech-tag-modern">Training</span>
+                                    <span class="tech-tag-modern">صيانة الحاسوب</span>
+                                    <span class="tech-tag-modern">استكشاف أخطاء الأجهزة</span>
+                                    <span class="tech-tag-modern">تثبيت الأنظمة</span>
+                                    <span class="tech-tag-modern">التدريب</span>
+                                    <span class="tech-tag-modern">الصيانة البرمجية والعتادية</span>
+                                    <span class="tech-tag-modern">TOT</span>
+
                                 </div>
                             </div>
                         </div>
@@ -763,17 +783,18 @@
                         <div class="timeline-item-modern" data-aos="fade-up" data-aos-delay="600">
                             <div class="timeline-content-modern">
                                 <div class="timeline-date-modern">2015</div>
-                                <h3 class="timeline-title-modern">Management & Business Skills</h3>
-                                <p class="timeline-company-modern">UNFPA (United Nations Population Fund), Damascus</p>
+                                <h3 class="timeline-title-modern">مهارات الإدارة والأعمال</h3>
+                                <p class="timeline-company-modern">صندوق الأمم المتحدة للسكان، دمشق (UNFPA)</p>
                                 <p class="timeline-description-modern">
-                                    Training in management skills, business start-up strategies, and communication skills 
-                                    for professional development and entrepreneurship.
+                                    تدريب في مهارات الإدارة واستراتيجيات بدء الأعمال ومهارات التواصل 
+                                    للتطوير المهني وريادة الأعمال.
                                 </p>
                                 <div class="timeline-tech-modern">
-                                    <span class="tech-tag-modern">Management Skills</span>
-                                    <span class="tech-tag-modern">Business Strategies</span>
-                                    <span class="tech-tag-modern">Communication</span>
-                                    <span class="tech-tag-modern">Entrepreneurship</span>
+                                    <span class="tech-tag-modern">مهارات الإدارة</span>
+                                    <span class="tech-tag-modern">استراتيجيات الأعمال</span>
+                                    <span class="tech-tag-modern">التواصل الفعال</span>
+                                    <span class="tech-tag-modern">ريادة الأعمال</span>
+                                    <span class="tech-tag-modern">UNFPA</span>
                                 </div>
                             </div>
                         </div>
@@ -781,11 +802,11 @@
                         <div class="timeline-item-modern" data-aos="fade-up" data-aos-delay="200">
                             <div class="timeline-content-modern">
                                 <div class="timeline-date-modern">2011 - 2012</div>
-                                <h3 class="timeline-title-modern">Microsoft .NET Framework Training</h3>
-                                <p class="timeline-company-modern">SBS Training Centers, Damascus</p>
+                                <h3 class="timeline-title-modern">تدريب إطار عمل Microsoft .NET</h3>
+                                <p class="timeline-company-modern">مراكز تدريب SBS، دمشق</p>
                                 <p class="timeline-description-modern">
-                                    Comprehensive training in Microsoft .NET Framework, Visual Studio, Windows Forms, 
-                                    and SQL Server Transact-SQL for enterprise application development.
+                                    تدريب شامل في إطار عمل Microsoft .NET، Visual Studio، Windows Forms، 
+                                    و SQL Server Transact-SQL لتطوير التطبيقات المؤسسية.
                                 </p>
                                 <div class="timeline-tech-modern">
                                     <span class="tech-tag-modern">.NET Framework</span>
@@ -800,19 +821,20 @@
                         <div class="timeline-item-modern" data-aos="fade-up" data-aos-delay="300">
                             <div class="timeline-content-modern">
                                 <div class="timeline-date-modern">2012</div>
-                                <h3 class="timeline-title-modern">Core Windows Forms Technologies</h3>
-                                <p class="timeline-company-modern">SBS Training Centers, Damascus</p>
+                                <h3 class="timeline-title-modern">تقنيات Windows Forms الأساسية</h3>
+                                <p class="timeline-company-modern">مراكز تدريب SBS، دمشق</p>
                                 <p class="timeline-description-modern">
-                                    Advanced training in Windows Forms development using Microsoft Visual Studio, 
-                                    covering GUI design, event handling, and desktop application development.
+                                    تدريب متقدم في تطوير Windows Forms باستخدام Microsoft Visual Studio، 
+                                    تغطي تصميم واجهة المستخدم ومعالجة الأحداث وتطوير التطبيقات المكتبية وإعداد التقارير باستخدام Crystal Reports.
                                 </p>
                                 <div class="timeline-tech-modern">
                                     <span class="tech-tag-modern">Windows Forms</span>
-                                    <span class="tech-tag-modern">GUI Design</span>
-                                    <span class="tech-tag-modern">Event Handling</span>
-                                    <span class="tech-tag-modern">Desktop Apps</span>
+                                    <span class="tech-tag-modern">تصميم واجهة المستخدم</span>
+                                    <span class="tech-tag-modern">معالجة الأحداث</span>
+                                    <span class="tech-tag-modern">التطبيقات المكتبية</span>
                                     <span class="tech-tag-modern">Microsoft Visual Studio</span>
                                     <span class="tech-tag-modern">Crystal Reports</span>
+                                    <span class="tech-tag-modern">SBS</span>
                                 </div>
                             </div>
                         </div>
@@ -822,16 +844,18 @@
                             <div class="timeline-content-modern">
                                 <div class="timeline-date-modern">2011</div>
                                 <h3 class="timeline-title-modern">SQL Server Transact-SQL</h3>
-                                <p class="timeline-company-modern">SBS Training Centers, Damascus</p>
+                                <p class="timeline-company-modern">مراكز تدريب SBS، دمشق</p>
                                 <p class="timeline-description-modern">
-                                    Comprehensive training in writing queries using Microsoft SQL Server Transact-SQL, 
-                                    covering database design, query optimization, and stored procedures.
+                                    تدريب شامل في كتابة الاستعلامات باستخدام Microsoft SQL Server Transact-SQL، 
+                                    تغطي تصميم قواعد البيانات وتحسين الاستعلامات والإجراءات.
                                 </p>
                                 <div class="timeline-tech-modern">
                                     <span class="tech-tag-modern">SQL Server</span>
                                     <span class="tech-tag-modern">Transact-SQL</span>
-                                    <span class="tech-tag-modern">Database Design</span>
-                                    <span class="tech-tag-modern">Stored Procedures</span>
+                                    <span class="tech-tag-modern">تصميم قواعد البيانات</span>
+                                    <span class="tech-tag-modern">الإجراءات</span>
+                                    <span class="tech-tag-modern">SBS</span>
+
                                 </div>
                             </div>
                         </div>
@@ -847,11 +871,11 @@
             <div class="container mx-auto">
                 <div class="text-center mb-16" data-aos="fade-up">
                     <div class="inline-block bg-gray-800 px-4 py-2 rounded-full mb-4">
-                        <i class="fas fa-project-diagram mr-2 text-green-400"></i>
-                        <span class="text-gray-300">Projects</span>
+                        <i class="fas fa-project-diagram ml-2 text-green-400"></i>
+                        <span class="text-gray-300">المشاريع</span>
                     </div>
                     <h2 class="text-4xl font-bold mb-6">
-                        My <span class="text-green-400">Latest</span> Projects
+                        <span class="text-green-400">أحدث</span> مشاريعي
                     </h2>
                 </div>
 
@@ -861,17 +885,17 @@
                        
                         <div class="relative bg-white p-6 rounded-lg flex items-center justify-center h-48">
                           
-                            <span class="absolute top-2 left-2 bg-gray-700 text-white text-xs px-2 py-1 rounded">
-                                ERP Software
+                            <span class="absolute top-2 right-2 bg-gray-700 text-white text-xs px-2 py-1 rounded">
+                                برمجيات ERP
                             </span>
                             <img src="assets/img/projects/ngs.png" class=" object-contain">
-                            <div class="absolute top-2 right-2 bg-gray-600 text-white p-2 rounded-full shadow-md">
+                            <div class="absolute top-2 left-2 bg-gray-600 text-white p-2 rounded-full shadow-md">
                                 <i class="fas fa-database"></i>
                             </div>
                           </div>
                         <div class="p-6">
-                            <h3 class="text-xl font-bold mb-2">New G Solution – Cloud ERP Platform</h3>
-                            <p class="text-gray-300 mb-4">Enterprise Resource Planning system built with PHP Yii Framework and deployed on AWS EC2.</p>
+                            <h3 class="text-xl font-bold mb-2">New G Solution – منصة ERP السحابية</h3>
+                            <p class="text-gray-300 mb-4">نظام تخطيط موارد المؤسسة مبني بـ PHP Yii Framework ونشر على AWS EC2.</p>
                             <div class="flex flex-wrap gap-2">
                                 <span class="px-2 py-1 bg-green-400/20 text-green-400 rounded text-sm">PHP Yii</span>
                                 <span class="px-2 py-1 bg-green-400/20 text-green-400 rounded text-sm">AWS EC2</span>
@@ -881,10 +905,10 @@
                                 <span class="px-2 py-1 bg-green-400/20 text-green-400 rounded text-sm">Bootstrap / Tailwind</span>
                                 <span class="px-2 py-1 bg-green-400/20 text-green-400 rounded text-sm">OBAC</span>
                                 <span class="px-2 py-1 bg-green-400/20 text-green-400 rounded text-sm">RBAC</span>
-                                <span class="px-2 py-1 bg-green-400/20 text-green-400 rounded text-sm">Encryption</span>
-                                <span class="px-2 py-1 bg-green-400/20 text-green-400 rounded text-sm">API Integrations</span>
-                                <span class="px-2 py-1 bg-green-400/20 text-green-400 rounded text-sm">Multi-Tenant ERP</span>
-                                <span class="px-2 py-1 bg-green-400/20 text-green-400 rounded text-sm">Full WordPress integration for company and client portals</span>
+                                <span class="px-2 py-1 bg-green-400/20 text-green-400 rounded text-sm">التشفير</span>
+                                <span class="px-2 py-1 bg-green-400/20 text-green-400 rounded text-sm">تكامل APIs</span>
+                                <span class="px-2 py-1 bg-green-400/20 text-green-400 rounded text-sm">ERP متعدد المستأجرين</span>
+                                <span class="px-2 py-1 bg-green-400/20 text-green-400 rounded text-sm">تكامل WordPress كامل للشركات وعملاء البوابات</span>
                             </div>
                         </div>
                     </div>
@@ -892,27 +916,27 @@
                     <!-- Project 2 -->
                     <div class="project-card glass-effect rounded-lg overflow-hidden cursor-pointer" data-aos="fade-up" data-aos-delay="200" onclick="openProjectModal('project2')">
                         <div class="relative bg-white p-6 rounded-lg flex items-center justify-center h-48">
-                            <span class="absolute top-2 left-2 bg-red-500 text-white text-xs px-2 py-1 rounded">
-                                B2B Platform
+                            <span class="absolute top-2 right-2 bg-red-500 text-white text-xs px-2 py-1 rounded">
+                                منصة B2B
                             </span>
                             <img src="assets/img/projects/ngs.png" class=" object-contain">
-                            <div class="absolute top-2 right-2 bg-red-500 text-white p-2 rounded-full shadow-md">
+                            <div class="absolute top-2 left-2 bg-red-500 text-white p-2 rounded-full shadow-md">
                                 <i class="fab fa-laravel"></i>
                             </div>
                         </div>
                         <div class="p-6">
-                            <h3 class="text-xl font-bold mb-2">B2B E-Commerce Platform (Part of New G Solution)</h3>
-                            <p class="text-gray-300 mb-4">A Laravel-based B2B e-commerce platform built on the S-Cart framework, directly integrated with the New G Solution ERP ecosystem. Designed for multi-client deployments with secure, isolated sub-domains.</p>
+                            <h3 class="text-xl font-bold mb-2">منصة التجارة الإلكترونية B2B (جزء من New G Solution)</h3>
+                            <p class="text-gray-300 mb-4">منصة تجارة إلكترونية B2B مبنية بـ Laravel على إطار S-Cart، متكاملة مباشرة مع نظام New G Solution ERP. مصممة للنشر متعدد العملاء مع نطاقات فرعية آمنة ومعزولة.</p>
                             <div class="flex flex-wrap gap-2">
                                 <span class="px-2 py-1 bg-green-400/20 text-green-400 rounded text-sm">PHP</span>
                                 <span class="px-2 py-1 bg-green-400/20 text-green-400 rounded text-sm">MySQL</span>
                                 <span class="px-2 py-1 bg-green-400/20 text-green-400 rounded text-sm">Laravel</span>
                                 <span class="px-2 py-1 bg-green-400/20 text-green-400 rounded text-sm">S-Cart Theme</span>
-                                <span class="px-2 py-1 bg-green-400/20 text-green-400 rounded text-sm">ERP Integration</span>
-                                <span class="px-2 py-1 bg-green-400/20 text-green-400 rounded text-sm">Order & RMA Modules</span>
-                                <span class="px-2 py-1 bg-green-400/20 text-green-400 rounded text-sm">Multi-Tenant Architecture</span>
-                                <span class="px-2 py-1 bg-green-400/20 text-green-400 rounded text-sm">Secure</span>
-                                <span class="px-2 py-1 bg-green-400/20 text-green-400 rounded text-sm">Isolated Sub-Domains</span>
+                                <span class="px-2 py-1 bg-green-400/20 text-green-400 rounded text-sm">تكامل ERP</span>
+                                <span class="px-2 py-1 bg-green-400/20 text-green-400 rounded text-sm">وحدات الطلبات و RMA</span>
+                                <span class="px-2 py-1 bg-green-400/20 text-green-400 rounded text-sm">معمارية متعددة المستأجرين</span>
+                                <span class="px-2 py-1 bg-green-400/20 text-green-400 rounded text-sm">آمن</span>
+                                <span class="px-2 py-1 bg-green-400/20 text-green-400 rounded text-sm">نطاقات فرعية معزولة</span>
                             </div>
                         </div>
                     </div>
@@ -922,22 +946,22 @@
                          
                         <div class="relative bg-white p-6 rounded-lg flex items-center justify-center h-48">
                           
-                            <span class="absolute top-2 left-2 bg-blue-500 text-white text-xs px-2 py-1 rounded">
-                                User Guide Platform
+                            <span class="absolute top-2 right-2 bg-blue-500 text-white text-xs px-2 py-1 rounded">
+                                منصة دليل المستخدم
                             </span>
                             <img src="assets/img/projects/ngs.png" class=" object-contain">
-                            <div class="absolute top-2 right-2 bg-blue-500 text-white p-2 rounded-full shadow-md">
+                            <div class="absolute top-2 left-2 bg-blue-500 text-white p-2 rounded-full shadow-md">
                                 <i class="fab fa-wordpress"></i>
                             </div>
                           </div>
                         <div class="p-6">
-                            <h3 class="text-xl font-bold mb-2">New G Solution – User Guide Platform</h3>
-                            <p class="text-gray-300 mb-4">A dedicated WordPress-based documentation platform developed as part of the New G Solution ERP ecosystem. Fully customized to provide structured user guides, clean navigation, and an optimized reading experience for clients and internal teams.</p>
+                            <h3 class="text-xl font-bold mb-2">New G Solution – منصة دليل المستخدم</h3>
+                            <p class="text-gray-300 mb-4">منصة توثيق مخصصة مبنية على WordPress كجزء من نظام New G Solution ERP. مخصصة بالكامل لتوفير أدلة المستخدم المنظمة والتنقل النظيف وتجربة قراءة محسنة للعملاء والفرق الداخلية.</p>
                             <div class="flex flex-wrap gap-2">
                                 <span class="px-2 py-1 bg-green-400/20 text-green-400 rounded text-sm">WordPress</span>
                                 <span class="px-2 py-1 bg-green-400/20 text-green-400 rounded text-sm">PHP</span>
                                 <span class="px-2 py-1 bg-green-400/20 text-green-400 rounded text-sm">HTML / CSS / JavaScript</span>
-                                <span class="px-2 py-1 bg-green-400/20 text-green-400 rounded text-sm">Custom Theme Development</span>
+                                <span class="px-2 py-1 bg-green-400/20 text-green-400 rounded text-sm">تطوير قوالب مخصصة</span>
                             </div>
                         </div>
                     </div>
@@ -947,60 +971,59 @@
                     
                         <div class="relative bg-white p-6 rounded-lg flex items-center justify-center h-48">
                           
-                            <span class="absolute top-2 left-2 bg-blue-500 text-white text-xs px-2 py-1 rounded">
-                                Official Website
+                            <span class="absolute top-2 right-2 bg-blue-500 text-white text-xs px-2 py-1 rounded">
+                                الموقع الرسمي
                             </span>
                             <img src="assets/img/projects/ngs.png" class=" object-contain">
-                            <div class="absolute top-2 right-2 bg-blue-500 text-white p-2 rounded-full shadow-md">
+                            <div class="absolute top-2 left-2 bg-blue-500 text-white p-2 rounded-full shadow-md">
                                 <i class="fab fa-wordpress"></i>
                             </div>
                           </div>
                           
                             
                         <div class="p-6">
-                            <h3 class="text-xl font-bold mb-2">New G Solution – Official Website</h3>
-                            <p class="text-gray-300 mb-4">The main corporate website for New G Solution ERP, fully developed and maintained by me. Built on WordPress to showcase ERP features, manage client subscriptions, and support affiliate marketing through MemberPress and EasyAffiliate integrations.</p>
+                            <h3 class="text-xl font-bold mb-2">New G Solution – الموقع الرسمي</h3>
+                            <p class="text-gray-300 mb-4">الموقع المؤسسي الرئيسي لـ New G Solution ERP، مطور ومحافظ عليه بالكامل من قبلي. مبني على WordPress لعرض ميزات ERP وإدارة اشتراكات العملاء ودعم التسويق بالعمولة من خلال تكاملات MemberPress و EasyAffiliate.</p>
                             <div class="flex flex-wrap gap-2">
                                 <span class="px-2 py-1 bg-green-400/20 text-green-400 rounded text-sm">WordPress</span>
                                 <span class="px-2 py-1 bg-green-400/20 text-green-400 rounded text-sm">PHP</span>
                                 <span class="px-2 py-1 bg-green-400/20 text-green-400 rounded text-sm">MemberPress</span>
                                 <span class="px-2 py-1 bg-green-400/20 text-green-400 rounded text-sm">EasyAffiliate</span>
                                 <span class="px-2 py-1 bg-green-400/20 text-green-400 rounded text-sm">HTML / CSS / JavaScript</span>
-                                <span class="px-2 py-1 bg-green-400/20 text-green-400 rounded text-sm">Responsive Design</span>
-                                <span class="px-2 py-1 bg-green-400/20 text-green-400 rounded text-sm">Security & Backups</span>
+                                <span class="px-2 py-1 bg-green-400/20 text-green-400 rounded text-sm">تصميم متجاوب</span>
+                                <span class="px-2 py-1 bg-green-400/20 text-green-400 rounded text-sm">الأمان والنسخ الاحتياطية</span>
                             </div>
                         </div>
                     </div>
 
-
                     <!-- Project 6 -->
                     <div class="project-card glass-effect rounded-lg overflow-hidden cursor-pointer" data-aos="fade-up" data-aos-delay="800" onclick="openProjectModal('project6')">                       
                     <div class="relative bg-white p-6 rounded-lg flex items-center justify-center h-48">
-                        <span class="absolute top-2 left-2 bg-green-500 text-white text-xs px-2 py-1 rounded">
-                            Shopify App
+                        <span class="absolute top-2 right-2 bg-green-500 text-white text-xs px-2 py-1 rounded">
+                            تطبيق Shopify
                         </span>
                         <img src="assets/img/projects/ngs.png" class=" object-contain">
-                        <div class="absolute top-2 right-2 bg-green-500 text-white p-2 rounded-full shadow-md">
+                        <div class="absolute top-2 left-2 bg-green-500 text-white p-2 rounded-full shadow-md">
                             <i class="fab fa-shopify text-lg"></i>
                         </div>
                         </div>
                         
                 <div class="p-6">
-                    <h3 class="text-xl font-bold mb-2">New G Solution – Shopify App</h3>
+                    <h3 class="text-xl font-bold mb-2">New G Solution – تطبيق Shopify</h3>
                     <p class="text-gray-300 mb-4">
-                    Officially approved Shopify App integrating New G Solution ERP with global e-commerce channels for automated inventory and order management.
+                    تطبيق Shopify معتمد رسمياً يربط New G Solution ERP مع قنوات التجارة الإلكترونية العالمية لإدارة المخزون والطلبات التلقائية.
                     </p>
                     <div class="flex flex-wrap gap-2">
                     <span class="px-2 py-1 bg-green-400/20 text-green-400 rounded text-sm">Shopify</span>
-                    <span class="px-2 py-1 bg-green-400/20 text-green-400 rounded text-sm">ERP Integration</span>
-                    <span class="px-2 py-1 bg-green-400/20 text-green-400 rounded text-sm">Cloud Sync</span>
+                    <span class="px-2 py-1 bg-green-400/20 text-green-400 rounded text-sm">تكامل ERP</span>
+                    <span class="px-2 py-1 bg-green-400/20 text-green-400 rounded text-sm">مزامنة سحابية</span>
                     <span class="px-2 py-1 bg-green-400/20 text-green-400 rounded text-sm">RESTful APIs</span>
                     <span class="px-2 py-1 bg-green-400/20 text-green-400 rounded text-sm">GraphQL</span>
-                    <span class="px-2 py-1 bg-green-400/20 text-green-400 rounded text-sm">OAuth 2.0 Authentication</span>
-                    <span class="px-2 py-1 bg-green-400/20 text-green-400 rounded text-sm">Tiered Subscription Plans</span>
+                    <span class="px-2 py-1 bg-green-400/20 text-green-400 rounded text-sm">مصادقة OAuth 2.0</span>
+                    <span class="px-2 py-1 bg-green-400/20 text-green-400 rounded text-sm">خطط اشتراك متدرجة</span>
                     <span class="px-2 py-1 bg-green-400/20 text-green-400 rounded text-sm">SKU</span>
                     <span class="px-2 py-1 bg-green-400/20 text-green-400 rounded text-sm">Master SKU</span>
-                    <span class="px-2 py-1 bg-green-400/20 text-green-400 rounded text-sm">Product Categories</span>
+                    <span class="px-2 py-1 bg-green-400/20 text-green-400 rounded text-sm">فئات المنتجات</span>
                     </div>
                 </div>
                 </div>
@@ -1010,16 +1033,16 @@
                       <!-- Project 9 -->
                       <div class="project-card glass-effect rounded-lg overflow-hidden cursor-pointer" data-aos="fade-up" data-aos-delay="1000" onclick="openProjectModal('project9')">
                         <img src="assets/img/projects/anbar.png" 
-                             alt="Anbar Restaurant Menu Website" class="w-full h-48 object-contain bg-white p-7">
+                             alt="موقع قائمة مطعم الأنبار" class="w-full h-48 object-contain bg-white p-7">
                         <div class="p-6">
-                          <h3 class="text-xl font-bold mb-2">Anbar Restaurant – Digital Menu</h3>
+                          <h3 class="text-xl font-bold mb-2">مطعم الأنبار – قائمة رقمية</h3>
                           <p class="text-gray-300 mb-4">
-                            Elegant digital menu website for Anbar Restaurant in Dubai, designed for iPad use with a seamless, app-like browsing experience.
+                            موقع قائمة رقمية أنيق لمطعم الأنبار في دبي، مصمم للاستخدام على iPad مع تجربة تصفح سلسة تشبه التطبيقات.
                           </p>
                           <div class="flex flex-wrap gap-2">
                             <span class="px-2 py-1 bg-green-400/20 text-green-400 rounded text-sm">WordPress</span>
-                            <span class="px-2 py-1 bg-green-400/20 text-green-400 rounded text-sm">Restaurant Menu</span>
-                            <span class="px-2 py-1 bg-green-400/20 text-green-400 rounded text-sm">Custom UI</span>
+                            <span class="px-2 py-1 bg-green-400/20 text-green-400 rounded text-sm">قائمة مطعم</span>
+                            <span class="px-2 py-1 bg-green-400/20 text-green-400 rounded text-sm">واجهة مخصصة</span>
                           </div>
                         </div>
                       </div>
@@ -1027,11 +1050,11 @@
                     <!-- Project 5 -->
                     <div class="project-card glass-effect rounded-lg overflow-hidden cursor-pointer" data-aos="fade-up" data-aos-delay="600" onclick="openProjectModal('project5')">
                         <img src="assets/img/projects/dxbkaraoke.png" 
-                             alt="DXB Karaoke Music Store" class="w-full h-48 object-contain bg-gray-700 p-4">
+                             alt="متجر أغاني الكاريوكي DXB" class="w-full h-48 object-contain bg-gray-700 p-4">
                         <div class="p-6">
-                          <h3 class="text-xl font-bold mb-2">DXB Karaoke Music Store</h3>
+                          <h3 class="text-xl font-bold mb-2">متجر أغاني الكاريوكي DXB</h3>
                           <p class="text-gray-300 mb-4">
-                            Custom WordPress / WooCommerce platform for Arabic and international karaoke songs with advanced singer taxonomy and bilingual setup.
+                            منصة WordPress / WooCommerce مخصصة للأغاني العربية والدولية للكاريوكي مع تصنيف متقدم للمطربين وإعداد ثنائي اللغة.
                           </p>
                           <div class="flex flex-wrap gap-2">
                             <span class="px-2 py-1 bg-green-400/20 text-green-400 rounded text-sm">WordPress</span>
@@ -1047,16 +1070,16 @@
                     <!-- Project 7 -->
                       <div class="project-card glass-effect rounded-lg overflow-hidden cursor-pointer" data-aos="fade-up" data-aos-delay="900" onclick="openProjectModal('project7')">
                         <img src="assets/img/projects/dxbagency.svg" 
-                             alt="DXB Media Agency Website" class="w-full h-48 object-contain bg-gray-700 p-4">
+                             alt="موقع وكالة DXB الإعلامية" class="w-full h-48 object-contain bg-gray-700 p-4">
                         <div class="p-6">
-                          <h3 class="text-xl font-bold mb-2">DXB Media Agency – Corporate Website</h3>
+                          <h3 class="text-xl font-bold mb-2">وكالة DXB الإعلامية – موقع مؤسسي</h3>
                           <p class="text-gray-300 mb-4">
-                            Fully customised WordPress website for a Dubai-based branding & marketing agency, with tailored theme, responsive UI and project portfolio section.
+                            موقع WordPress مخصص بالكامل لوكالة العلامة التجارية والتسويق في دبي، مع قالب مخصص وواجهة مستخدم متجاوبة وقسم محفظة المشاريع.
                           </p>
                           <div class="flex flex-wrap gap-2">
                             <span class="px-2 py-1 bg-green-400/20 text-green-400 rounded text-sm">WordPress</span>
-                            <span class="px-2 py-1 bg-green-400/20 text-green-400 rounded text-sm">Custom Theme</span>
-                            <span class="px-2 py-1 bg-green-400/20 text-green-400 rounded text-sm">Agency Website</span>
+                            <span class="px-2 py-1 bg-green-400/20 text-green-400 rounded text-sm">قالب مخصص</span>
+                            <span class="px-2 py-1 bg-green-400/20 text-green-400 rounded text-sm">موقع وكالة</span>
                           </div>
                         </div>
                       </div>
@@ -1067,16 +1090,16 @@
                       <!-- Project 10 -->
                       <div class="project-card glass-effect rounded-lg overflow-hidden cursor-pointer" data-aos="fade-up" data-aos-delay="1100" onclick="openProjectModal('project10')">
                         <img src="assets/img/projects/casper.png" 
-                             alt="Caspersy Restaurant Menu Website" class="w-full h-48 object-contain bg-gray-700 p-4">
+                             alt="موقع قائمة مطعم كاسبر" class="w-full h-48 object-contain bg-gray-700 p-4">
                         <div class="p-6">
-                          <h3 class="text-xl font-bold mb-2">Caspersy Restaurant – Dynamic Menu</h3>
+                          <h3 class="text-xl font-bold mb-2">مطعم كاسبر – قائمة ديناميكية</h3>
                           <p class="text-gray-300 mb-4">
-                            Bilingual WordPress menu website for Caspersy Restaurant with automated Excel-based price updates and an elegant user interface.
+                            موقع قائمة WordPress ثنائي اللغة لمطعم كاسبر مع تحديثات أسعار تلقائية من Excel وواجهة مستخدم أنيقة.
                           </p>
                           <div class="flex flex-wrap gap-2">
                             <span class="px-2 py-1 bg-green-400/20 text-green-400 rounded text-sm">WordPress</span>
-                            <span class="px-2 py-1 bg-green-400/20 text-green-400 rounded text-sm">Excel Integration</span>
-                            <span class="px-2 py-1 bg-green-400/20 text-green-400 rounded text-sm">Bilingual</span>
+                            <span class="px-2 py-1 bg-green-400/20 text-green-400 rounded text-sm">تكامل Excel</span>
+                            <span class="px-2 py-1 bg-green-400/20 text-green-400 rounded text-sm">ثنائي اللغة</span>
                           </div>
                         </div>
                       </div>
@@ -1086,17 +1109,17 @@
                       
                       <div class="project-card glass-effect rounded-lg overflow-hidden cursor-pointer" data-aos="fade-up" data-aos-delay="1200" onclick="openProjectModal('project11')">
                         <img src="assets/img/projects/ar-thesis.png" 
-                             alt="Augmented Reality for ERP Employee Training" class="w-full h-48 object-cover">
+                             alt="الواقع المعزز لتدريب موظفي ERP" class="w-full h-48 object-cover">
                         <div class="p-6">
-                          <h3 class="text-xl font-bold mb-2">Augmented Reality for ERP Employee Training</h3>
+                          <h3 class="text-xl font-bold mb-2">الواقع المعزز لتدريب موظفي ERP</h3>
                           <p class="text-gray-300 mb-4">
-                            An applied research project forming the Master’s thesis, exploring how Augmented Reality (AR) can enhance training efficiency for ERP system employees. The project focuses on interactive modules, visual guidance, and immersive task simulation within the New G Solution ERP environment.
+                            مشروع بحث أكاديمي يشكل أطروحة الماجستير، يستكشف كيف يمكن للواقع المعزز (AR) تحسين كفاءة التدريب لموظفي أنظمة ERP. يركز المشروع على الوحدات التفاعلية والإرشاد البصري ومحاكاة المهام الغامرة داخل بيئة New G Solution ERP.
                           </p>
                           <div class="flex flex-wrap gap-2">
-                            <span class="px-2 py-1 bg-green-400/20 text-green-400 rounded text-sm">Augmented Reality (AR)</span>
-                            <span class="px-2 py-1 bg-green-400/20 text-green-400 rounded text-sm">Web Science</span>
-                            <span class="px-2 py-1 bg-green-400/20 text-green-400 rounded text-sm">ERP Systems</span>
-                            <span class="px-2 py-1 bg-green-400/20 text-green-400 rounded text-sm">3D Visualization</span>
+                            <span class="px-2 py-1 bg-green-400/20 text-green-400 rounded text-sm">الواقع المعزز (AR)</span>
+                            <span class="px-2 py-1 bg-green-400/20 text-green-400 rounded text-sm">علوم الويب</span>
+                            <span class="px-2 py-1 bg-green-400/20 text-green-400 rounded text-sm">أنظمة ERP</span>
+                            <span class="px-2 py-1 bg-green-400/20 text-green-400 rounded text-sm">التصور ثلاثي الأبعاد</span>
                           </div>
                         </div>
                       </div>
@@ -1109,11 +1132,11 @@
             <div class="container mx-auto">
                 <div class="text-center mb-16" data-aos="fade-up">
                     <div class="inline-block bg-gray-800 px-4 py-2 rounded-full mb-4">
-                        <i class="fas fa-heart mr-2 text-green-400"></i>
-                        <span class="text-gray-300">Volunteer Work</span>
+                        <i class="fas fa-heart ml-2 text-green-400"></i>
+                        <span class="text-gray-300">العمل التطوعي</span>
                     </div>
                     <h2 class="text-4xl font-bold mb-6">
-                        <span class="text-green-400">Community</span> Service
+                        خدمة <span class="text-green-400">المجتمع</span>
                     </h2>
                 </div>
 
@@ -1123,11 +1146,11 @@
                         <div class="glass-effect p-6 rounded-lg" data-aos="fade-up">
                             <div class="text-center mb-4">
                                 <i class="fas fa-hands-helping text-4xl text-green-400 mb-4"></i>
-                                <h3 class="text-xl font-bold text-green-400">Al-Nada Charity</h3>
-                                <p class="text-gray-300">Damascus</p>
+                                <h3 class="text-xl font-bold text-green-400">جمعية الندى</h3>
+                                <p class="text-gray-300">دمشق</p>
                             </div>
                             <p class="text-gray-300 text-center">
-                                Active volunteer supporting community initiatives and charitable activities.
+                                متطوع نشط يدعم المبادرات المجتمعية والأنشطة الخيرية.
                             </p>
                         </div>
 
@@ -1135,11 +1158,11 @@
                         <div class="glass-effect p-6 rounded-lg" data-aos="fade-up" data-aos-delay="100">
                             <div class="text-center mb-4">
                                 <i class="fas fa-tree text-4xl text-green-400 mb-4"></i>
-                                <h3 class="text-xl font-bold text-green-400">Al-Shajarah Al-Tayebah Charity</h3>
-                                <p class="text-gray-300">Damascus (2019)</p>
+                                <h3 class="text-xl font-bold text-green-400">جمعية الشجرة الطيبة</h3>
+                                <p class="text-gray-300">دمشق (2019)</p>
                             </div>
                             <p class="text-gray-300 text-center">
-                                Long-term volunteer contributing to environmental and community development projects.
+                                متطوع طويل الأمد يساهم في مشاريع التنمية البيئية والمجتمعية.
                             </p>
                         </div>
 
@@ -1147,11 +1170,11 @@
                         <div class="glass-effect p-6 rounded-lg" data-aos="fade-up" data-aos-delay="200">
                             <div class="text-center mb-4">
                                 <i class="fas fa-trophy text-4xl text-green-400 mb-4"></i>
-                                <h3 class="text-xl font-bold text-green-400">ACM SCPC Contest</h3>
-                                <p class="text-gray-300">Syrian Virtual University, Latakia (2015)</p>
+                                <h3 class="text-xl font-bold text-green-400">مسابقة ACM SCPC</h3>
+                                <p class="text-gray-300">الجامعة الافتراضية السورية، اللاذقية (2015)</p>
                             </div>
                             <p class="text-gray-300 text-center">
-                                Participated in competitive programming contest, demonstrating technical skills and problem-solving abilities.
+                                شاركت في مسابقة البرمجة التنافسية، مما أظهر المهارات التقنية وقدرات حل المشاكل.
                             </p>
                         </div>
 
@@ -1160,16 +1183,16 @@
                         <div class="glass-effect p-6 rounded-lg" data-aos="fade-up" data-aos-delay="200">
                             <div class="text-center mb-4">
                                 <i class="fas fa-tint text-4xl text-green-400 mb-4"></i>
-                                <h3 class="text-xl font-bold text-green-400">RBCs Team</h3>
-                                <p class="text-gray-300">Damascus University (2015)</p>
+                                <h3 class="text-xl font-bold text-green-400">فريق RBC</h3>
+                                <p class="text-gray-300">جامعة دمشق (2015)</p>
                             </div>
                             <p class="text-gray-300 text-center">
-                                Founded Section of RBC Team, managing IT systems and linguistic checking processes 
-                                for various online projects and content management.
+                                أسست قسم فريق RBC، إدارة الأنظمة التقنية وعمليات المراجعة اللغوية 
+                                لمشاريع إلكترونية متنوعة وإدارة المحتوى.
                                 <div class="flex flex-wrap gap-2">
-                                    <span class="px-2 py-1 bg-green-400/20 text-green-400 rounded text-sm">IT Management</span>
-                                    <span class="px-2 py-1 bg-green-400/20 text-green-400 rounded text-sm">Linguistic Checking</span>
-                                    <span class="px-2 py-1 bg-green-400/20 text-green-400 rounded text-sm">Content Management</span>
+                                    <span class="px-2 py-1 bg-green-400/20 text-green-400 rounded text-sm">إدارة تقنية</span>
+                                    <span class="px-2 py-1 bg-green-400/20 text-green-400 rounded text-sm">المراجعة اللغوية</span>
+                                    <span class="px-2 py-1 bg-green-400/20 text-green-400 rounded text-sm">إدارة المحتوى</span>
                                 </div>
                             </p>
                         </div>
@@ -1185,11 +1208,11 @@
             <div class="container mx-auto">
                 <div class="text-center mb-16" data-aos="fade-up">
                     <div class="inline-block bg-gray-800 px-4 py-2 rounded-full mb-4">
-                        <i class="fas fa-language mr-2 text-green-400"></i>
-                        <span class="text-gray-300">Languages</span>
+                        <i class="fas fa-language ml-2 text-green-400"></i>
+                        <span class="text-gray-300">اللغات</span>
                     </div>
                     <h2 class="text-4xl font-bold mb-6">
-                        <span class="text-green-400">Language</span> Proficiency
+                        إتقان <span class="text-green-400">اللغات</span>
                     </h2>
                 </div>
 
@@ -1199,14 +1222,13 @@
 <div class="glass-effect p-6 rounded-lg" data-aos="fade-right">
     <div class="text-center mb-6">
         <i class="fas fa-globe text-4xl text-green-400 mb-4"></i>
-        <h3 class="text-2xl font-bold text-green-400">Arabic</h3>
-        <p class="text-gray-300">Native Language</p>
+        <h3 class="text-2xl font-bold text-green-400">العربية</h3>
+        <p class="text-gray-300">اللغة الأم</p>
     </div>
     <div class="text-gray-300 leading-relaxed text-center">
-        Native proficiency with advanced linguistic accuracy and
-        professional writing skills in Modern Standard Arabic.
+        إتقان أصلي مع دقة لغوية متقدمة ومهارات كتابة مهنية في العربية الفصحى.
         <br />
-        Fluent in formal, academic, and technical communication.
+        طلاقة في التواصل الرسمي والأكاديمي والتقني.
     </div>
 </div>
 
@@ -1214,21 +1236,21 @@
                         <div class="glass-effect p-6 rounded-lg" data-aos="fade-left">
                             <div class="text-center mb-6">
                                 <i class="fas fa-globe-americas text-4xl text-green-400 mb-4"></i>
-                                <h3 class="text-2xl font-bold text-green-400">English</h3>
-                                <p class="text-gray-300">Second Language</p>
+                                <h3 class="text-2xl font-bold text-green-400">الإنجليزية</h3>
+                                <p class="text-gray-300">اللغة الثانية</p>
                             </div>
                             <div class="space-y-4">
                                 <div class="flex justify-between items-center">
-                                    <span class="text-gray-300">Reading</span>
-                                    <span class="text-green-400 font-bold">Good</span>
+                                    <span class="text-gray-300">القراءة</span>
+                                    <span class="text-green-400 font-bold">جيد</span>
                                 </div>
                                 <div class="flex justify-between items-center">
-                                    <span class="text-gray-300">Speaking</span>
-                                    <span class="text-green-400 font-bold">Good</span>
+                                    <span class="text-gray-300">التحدث</span>
+                                    <span class="text-green-400 font-bold">جيد</span>
                                 </div>
                                 <div class="flex justify-between items-center">
-                                    <span class="text-gray-300">Writing</span>
-                                    <span class="text-green-400 font-bold">Good</span>
+                                    <span class="text-gray-300">الكتابة</span>
+                                    <span class="text-green-400 font-bold">جيد</span>
                                 </div>
                             </div>
                         </div>
@@ -1242,11 +1264,11 @@
             <div class="container mx-auto">
                 <div class="text-center mb-16" data-aos="fade-up">
                     <div class="inline-block bg-gray-800 px-4 py-2 rounded-full mb-4">
-                        <i class="fas fa-star mr-2 text-green-400"></i>
-                        <span class="text-gray-300">Hobbies & Interests</span>
+                        <i class="fas fa-star ml-2 text-green-400"></i>
+                        <span class="text-gray-300">الهوايات والاهتمامات</span>
                     </div>
                     <h2 class="text-4xl font-bold mb-6">
-                        <span class="text-green-400">Personal</span> Interests
+                        <span class="text-green-400">الاهتمامات</span> الشخصية
                     </h2>
                 </div>
 
@@ -1255,52 +1277,52 @@
                 
                         <div class="glass-effect p-4 rounded-lg text-center" data-aos="fade-up">
                             <i class="fas fa-network-wired text-2xl text-green-400 mb-2"></i>
-                            <div class="text-gray-300">System Architecture</div>
+                            <div class="text-gray-300">معمارية الأنظمة</div>
                         </div>
                 
                         <div class="glass-effect p-4 rounded-lg text-center" data-aos="fade-up" data-aos-delay="100">
                             <i class="fas fa-diagram-project text-2xl text-green-400 mb-2"></i>
-                            <div class="text-gray-300">ERP Process Design</div>
+                            <div class="text-gray-300">تصميم عمليات ERP</div>
                         </div>
                 
                         <div class="glass-effect p-4 rounded-lg text-center" data-aos="fade-up" data-aos-delay="200">
                             <i class="fas fa-brain text-2xl text-green-400 mb-2"></i>
-                            <div class="text-gray-300">Problem Solving</div>
+                            <div class="text-gray-300">حل المشاكل</div>
                         </div>
                 
                         <div class="glass-effect p-4 rounded-lg text-center" data-aos="fade-up" data-aos-delay="300">
                             <i class="fas fa-chalkboard-teacher text-2xl text-green-400 mb-2"></i>
-                            <div class="text-gray-300">Technical Training</div>
+                            <div class="text-gray-300">التدريب التقني</div>
                         </div>
                 
                         <div class="glass-effect p-4 rounded-lg text-center" data-aos="fade-up" data-aos-delay="400">
                             <i class="fas fa-flask text-2xl text-green-400 mb-2"></i>
-                            <div class="text-gray-300">Research & Innovation</div>
+                            <div class="text-gray-300">البحث والابتكار</div>
                         </div>
                 
                         <div class="glass-effect p-4 rounded-lg text-center" data-aos="fade-up" data-aos-delay="500">
                             <i class="fas fa-vr-cardboard text-2xl text-green-400 mb-2"></i>
-                            <div class="text-gray-300">Augmented Reality</div>
+                            <div class="text-gray-300">الواقع المعزز</div>
                         </div>
                 
                         <div class="glass-effect p-4 rounded-lg text-center" data-aos="fade-up" data-aos-delay="600">
                             <i class="fas fa-laptop-code text-2xl text-green-400 mb-2"></i>
-                            <div class="text-gray-300">Web Development</div>
+                            <div class="text-gray-300">تطوير الويب</div>
                         </div>
                 
                         <div class="glass-effect p-4 rounded-lg text-center" data-aos="fade-up" data-aos-delay="700">
                             <i class="fas fa-handshake text-2xl text-green-400 mb-2"></i>
-                            <div class="text-gray-300">Team Leadership</div>
+                            <div class="text-gray-300">قيادة الفريق</div>
                         </div>
                 
                         <div class="glass-effect p-4 rounded-lg text-center" data-aos="fade-up" data-aos-delay="800">
                             <i class="fas fa-lightbulb text-2xl text-green-400 mb-2"></i>
-                            <div class="text-gray-300">Creative Thinking</div>
+                            <div class="text-gray-300">التفكير الإبداعي</div>
                         </div>
                 
                         <div class="glass-effect p-4 rounded-lg text-center" data-aos="fade-up" data-aos-delay="900">
                             <i class="fas fa-book-open text-2xl text-green-400 mb-2"></i>
-                            <div class="text-gray-300">Continuous Learning</div>
+                            <div class="text-gray-300">التعلم المستمر</div>
                         </div>
                 
                     </div>
@@ -1314,11 +1336,11 @@
             <div class="container mx-auto">
                 <div class="text-center mb-16" data-aos="fade-up">
                     <div class="inline-block bg-gray-800 px-4 py-2 rounded-full mb-4">
-                        <i class="fas fa-envelope mr-2 text-green-400"></i>
-                        <span class="text-gray-300">Contact</span>
+                        <i class="fas fa-envelope ml-2 text-green-400"></i>
+                        <span class="text-gray-300">التواصل</span>
                     </div>
                     <h2 class="text-4xl font-bold mb-6">
-                        Let's <span class="text-green-400">Talk</span>
+                        دعنا <span class="text-green-400">نتحدث</span>
                     </h2>
                 </div>
 
@@ -1326,7 +1348,7 @@
                     <!-- Contact Info -->
                     <div class="space-y-8" data-aos="fade-right">
                         <div>
-                            <h3 class="text-2xl font-bold mb-6">Contact Information</h3>
+                            <h3 class="text-2xl font-bold mb-6">معلومات التواصل</h3>
                             <div class="space-y-4">
                                 <!-- Email -->
                                 <div class="text-center mb-6">
@@ -1341,8 +1363,8 @@
                                 </div>
                                 <!-- Phone Number -->
                                 <div class="text-center mb-6">
-                                    <p class="text-2xl font-bold text-white mb-4">+963-988 102 369</p>
-                                    <div class="flex justify-center space-x-6">
+                                    <p class="text-2xl font-bold text-white mb-4" dir="ltr" style="white-space: nowrap;">+963-988 102 369</p>
+                                    <div class="flex justify-center gap-4">
                                         <!-- Phone -->
                                         <a href="tel:+963988102369" class="group">
                                             <div class="w-14 h-14 bg-green-400/20 hover:bg-green-400/30 rounded-full flex items-center justify-center border border-green-400/30 hover:border-green-400/50 transition-all duration-300 group-hover:scale-110">
@@ -1370,7 +1392,7 @@
                     <!-- Follow Us -->
                     <div data-aos="fade-left">
                         <div>
-                            <h3 class="text-2xl font-bold mb-6">Follow Me</h3>
+                            <h3 class="text-2xl font-bold mb-6">تابعني</h3>
                             <div class="grid grid-cols-2 gap-4">
                                 <!-- YouTube -->
                                 <a href="https://www.youtube.com/c/AnasAbbasDev" target="_blank" class="glass-effect p-4 rounded-lg text-center hover:bg-green-400/10 transition-colors group">
@@ -1410,14 +1432,14 @@
     </main>
 
     <!-- Footer -->
-    <footer class="py-12 px-4 lg:px-8 lg:ml-80 lg:mr-20" style="background-color: #121212;">
+    <footer class="py-12 px-4 lg:px-8 lg:mr-80 lg:ml-20" style="background-color: #121212;">
         <div class="container mx-auto">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <!-- About -->
-                <div class="text-center md:text-left">
-                    <h3 class="text-2xl font-bold text-green-400 mb-4">Anas M. Abbas</h3>
+                <div class="text-center md:text-right">
+                    <h3 class="text-2xl font-bold text-green-400 mb-4">أنس م. عباس</h3>
                     <p class="text-gray-300 mb-4">
-                        Software Engineer & ERP Developer with 11+ years of experience in software development, training, and IT solutions. Passionate about sharing knowledge and building innovative digital solutions.
+                        مهندس برمجيات ومطور أنظمة ERP مع أكثر من 11 سنة من الخبرة في تطوير البرمجيات والتدريب والحلول التقنية. شغوف بمشاركة المعرفة وبناء الحلول الرقمية المبتكرة.
                     </p>
                     <div class="flex justify-center md:justify-start space-x-4">                     
                     </div>
@@ -1425,34 +1447,34 @@
 
                 <!-- Quick Links -->
                 <div class="text-center">
-                    <h4 class="text-xl font-bold text-white mb-4">Quick Links</h4>
+                    <h4 class="text-xl font-bold text-white mb-4">روابط سريعة</h4>
                     <div class="space-y-2">
-                        <a href="#about" class="inline-block text-gray-300 hover:text-green-400 transition-colors">About</a><br>
-                        <a href="#skills" class="inline-block text-gray-300 hover:text-green-400 transition-colors">Skills</a><br>
-                        <a href="#experience" class="inline-block text-gray-300 hover:text-green-400 transition-colors">Experience</a><br>
-                        <a href="#education" class="inline-block text-gray-300 hover:text-green-400 transition-colors">Education</a><br>
-                        <a href="#projects" class="inline-block text-gray-300 hover:text-green-400 transition-colors">Projects</a><br>
-                        <a href="#volunteer" class="inline-block text-gray-300 hover:text-green-400 transition-colors">Volunteer</a><br>
-                        <a href="#languages" class="inline-block text-gray-300 hover:text-green-400 transition-colors">Languages</a><br>    
-                        <a href="#hobbies" class="inline-block text-gray-300 hover:text-green-400 transition-colors">Hobbies</a><br>
-                        <a href="#contact" class="inline-block text-gray-300 hover:text-green-400 transition-colors">Contact</a>
+                        <a href="#about" class="inline-block text-gray-300 hover:text-green-400 transition-colors">نبذة</a><br>
+                        <a href="#skills" class="inline-block text-gray-300 hover:text-green-400 transition-colors">المهارات</a><br>
+                        <a href="#experience" class="inline-block text-gray-300 hover:text-green-400 transition-colors">الخبرة</a><br>
+                        <a href="#education" class="inline-block text-gray-300 hover:text-green-400 transition-colors">التعليم</a><br>
+                        <a href="#projects" class="inline-block text-gray-300 hover:text-green-400 transition-colors">المشاريع</a><br>
+                        <a href="#volunteer" class="inline-block text-gray-300 hover:text-green-400 transition-colors">التطوع</a><br>
+                        <a href="#languages" class="inline-block text-gray-300 hover:text-green-400 transition-colors">اللغات</a><br>    
+                        <a href="#hobbies" class="inline-block text-gray-300 hover:text-green-400 transition-colors">الهوايات</a><br>
+                        <a href="#contact" class="inline-block text-gray-300 hover:text-green-400 transition-colors">التواصل</a>
                     </div>
                 </div>
 
                 <!-- Contact Info -->
-                <div class="text-center md:text-right">
-                    <h4 class="text-xl font-bold text-white mb-4">Get In Touch</h4>
+                <div class="text-center md:text-left">
+                    <h4 class="text-xl font-bold text-white mb-4">تواصل معي</h4>
                     <div class="space-y-2 text-gray-300">
-                        <p><i class="fas fa-envelope mr-2 text-green-400"></i>anas.abass1@gmail.com</p>
-                        <p><i class="fas fa-phone mr-2 text-green-400"></i>+963-988 102 369</p>
-                        <p><i class="fas fa-map-marker-alt mr-2 text-green-400"></i>Damascus, Syria</p>
+                        <p><i class="fas fa-envelope ml-2 text-green-400"></i>anas.abass1@gmail.com</p>
+                        <p><i class="fas fa-phone ml-2 text-green-400"></i><span dir="ltr" style="white-space: nowrap;">+963-988 102 369</span></p>
+                        <p><i class="fas fa-map-marker-alt ml-2 text-green-400"></i>دمشق، سوريا</p>
                     </div>
                 </div>
             </div>
 
             <div class="border-t border-gray-700 mt-8 pt-8 text-center">
                 <p class="text-gray-400">
-                    © 2025 Anas M. Abbas. All rights reserved. Built with ❤️ using modern web technologies.
+                    © 2025 أنس م. عباس. جميع الحقوق محفوظة. مبني بـ ❤️ باستخدام تقنيات الويب الحديثة.
                 </p>
             </div>
         </div>
@@ -1476,7 +1498,7 @@
     </div>
 
     <script src="assets/js/main.js"></script>
-    <script src="assets/js/project_english.js"></script>
+    <script src="assets/js/project_arabic.js"></script>
     
     <script>
         // Language Bar Scroll Effect with Throttling and Modern Standards
@@ -1520,5 +1542,6 @@
             languageBar.classList.add('-translate-y-full');
         })();
     </script>
+    
 </body>
 </html>

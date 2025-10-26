@@ -109,7 +109,7 @@ faClass: 'fab',
 title: 'New G Solution – Official Website',
 image: 'assets/img/projects/ngs.png',
 description:
-'The main corporate website for New G Solution ERP, fully developed and maintained by me. Built on WordPress to showcase ERP features, manage client subscriptions, and support affiliate marketing through MemberPress and EasyAffiliate integrations.',
+'The main corporate website for New G Solution ERP, fully developed and maintained by me. Built on WordPress to showcase ERP features, manage client subscriptions, and support affiliate marketing through MemberPress and EasyAffiliate integrations. Design and visuals by <a href="https://www.instagram.com/noor.aldeen93" target="_blank" class="text-green-400 hover:underline">Noor Al-Din Salama</a>.',
 features: [
 'Full WordPress development and technical management of the company’s main website',
 'Integrated MemberPress for client subscription and license management',
@@ -207,7 +207,7 @@ Color: 'gray-700',
 title: 'DXB Media Agency – Corporate Website (Dubai)',
 image: 'assets/img/projects/dxbagency.svg',
 description:
-'Developed and deployed the official website for DXB Media Agency in Dubai using WordPress with a fully customised theme and tailored architecture. The site showcases the agency’s portfolio, services, blog and contact functionality, delivering a premium user experience and reflecting the brand’s modern identity.',
+'Developed and deployed the official website for DXB Media Agency in Dubai using WordPress with a fully customised theme and tailored architecture. The site showcases the agency’s portfolio, services, blog and contact functionality, delivering a premium user experience and reflecting the brand’s modern identity.  Design and visuals by <a href="https://www.instagram.com/noor.aldeen93" target="_blank" class="text-green-400 hover:underline">Noor Al-Din Salama</a>.',
 features: [
 'Full WordPress installation and theme customisation from scratch',
 'Development of services & portfolio sections including dynamic project gallery',
@@ -237,7 +237,7 @@ faClass: '',
 title: 'Anbar Restaurant – Interactive Digital Menu (Dubai)',
 image: 'assets/img/projects/anbar.png',
 description:
-'Developed the official digital menu website for Anbar Restaurant in Dubai using WordPress. The site was engineered specifically for iPad in-restaurant use, providing a fast, elegant, and touch-friendly interface that mirrors a native app experience.',
+'Developed the official digital menu website for Anbar Restaurant in Dubai using WordPress. The site was engineered specifically for iPad in-restaurant use, providing a fast, elegant, and touch-friendly interface that mirrors a native app experience.  Design and visuals by <a href="https://www.instagram.com/noor.aldeen93" target="_blank" class="text-green-400 hover:underline">Noor Al-Din Salama</a>.',
 features: [
 'Custom WordPress development tailored for digital menu display only (no cart or checkout)',
 'Responsive layout optimised for iPad and tablet usage',
@@ -345,15 +345,16 @@ function openProjectModal(projectId) {
         </div>
         
         <div class="flex space-x-4">
-            <a href="${project.github}" target="_blank" class="flex-1 bg-gray-800 hover:bg-gray-700 text-white font-bold py-3 px-6 rounded-lg transition-colors text-center">
-                <i class="fab fa-github mr-2"></i>View Code
-            </a>
+         
             <a href="${project.demo}" target="_blank" class="flex-1 bg-green-400 hover:bg-green-500 text-white font-bold py-3 px-6 rounded-lg transition-colors text-center">
                 <i class="fas fa-external-link-alt mr-2"></i>Live Demo
             </a>
         </div>
     `;
     
+//     <a href="${project.github}" target="_blank" class="flex-1 bg-gray-800 hover:bg-gray-700 text-white font-bold py-3 px-6 rounded-lg transition-colors text-center">
+//     <i class="fab fa-github mr-2"></i>View Code
+// </a>
     document.getElementById('projectModal').classList.remove('hidden');
 }
 

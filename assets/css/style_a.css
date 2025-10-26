@@ -1,97 +1,28 @@
-        * {
-            font-family: 'Inter', sans-serif;
+ body {
+            font-family: 'Cairo', 'Inter', sans-serif;
         }
-        
         .gradient-bg {
-            background: linear-gradient(135deg, #1A1A1A 0%, #121212 50%, #0a0a0a 100%);
+            background: linear-gradient(135deg, #0f0f0f 0%, #1a1a1a 50%, #0f0f0f 100%);
         }
-        
         .glass-effect {
-            background: rgba(26, 26, 26, 0.8);
+            background: rgba(255, 255, 255, 0.05);
             backdrop-filter: blur(10px);
             border: 1px solid rgba(255, 255, 255, 0.1);
         }
-        
-        .typing-cursor::after {
-            content: '|';
-            animation: blink 1s infinite;
+        .pulse-glow {
+            animation: pulse-glow 2s infinite;
         }
-        
-        @keyframes blink {
-            0%, 50% { opacity: 1; }
-            51%, 100% { opacity: 0; }
+        @keyframes pulse-glow {
+            0%, 100% { box-shadow: 0 0 20px rgba(34, 197, 94, 0.3); }
+            50% { box-shadow: 0 0 30px rgba(34, 197, 94, 0.6); }
         }
-        
         .floating {
             animation: floating 3s ease-in-out infinite;
         }
-        
         @keyframes floating {
             0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-20px); }
+            50% { transform: translateY(-10px); }
         }
-        
-        .pulse-glow {
-            animation: pulse-glow 2s ease-in-out infinite;
-        }
-        
-        @keyframes pulse-glow {
-            0%, 100% { box-shadow: 0 0 20px rgba(34, 197, 94, 0.3); }
-            50% { box-shadow: 0 0 40px rgba(34, 197, 94, 0.6); }
-        }
-        
-        .progress-bar {
-            transition: width 1s ease-in-out;
-        }
-        
-        .project-card {
-            transition: all 0.3s ease;
-        }
-        
-        .project-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-        }
-        
-        .nav-item {
-            transition: all 0.3s ease;
-        }
-        
-        .nav-item:hover {
-            background: rgba(34, 197, 94, 0.2);
-            transform: scale(1.1);
-        }
-        
-        .nav-item.active {
-            background: rgba(34, 197, 94, 0.3);
-        }
-        
-        .scroll-smooth {
-            scroll-behavior: smooth;
-        }
-        
-        .compiling-step {
-            opacity: 0;
-            animation: fadeInUp 0.8s ease forwards;
-        }
-        
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        
-        .compiling-step:nth-child(1) { animation-delay: 0.2s; }
-        .compiling-step:nth-child(2) { animation-delay: 0.4s; }
-        .compiling-step:nth-child(3) { animation-delay: 0.6s; }
-        .compiling-step:nth-child(4) { animation-delay: 0.8s; }
-        .compiling-step:nth-child(5) { animation-delay: 1s; }
-        
         .typing-animation {
             display: inline-block;
             position: relative;
@@ -103,7 +34,7 @@
             color: #22c55e;
             animation: blink 1s infinite;
             position: absolute;
-            right: -2px;
+            left: -2px;
             top: 0;
         }
         
@@ -128,51 +59,47 @@
             0%, 50% { opacity: 1; }
             51%, 100% { opacity: 0; }
         }
-        
+        .progress-bar {
+            transition: width 2s ease-in-out;
+        }
         .carousel-container {
             overflow: hidden;
+            width: 100%;
             position: relative;
+            mask-image: linear-gradient(to right, transparent 0%, black 5%, black 95%, transparent 100%);
+            -webkit-mask-image: linear-gradient(to right, transparent 0%, black 5%, black 95%, transparent 100%);
         }
-        
-        .carousel-track {
-            display: flex;
-            animation: scroll 20s linear infinite;
-        }
-        
-        .carousel-track:hover {
+                 .carousel-track,
+         .rtl-carousel {
+             display: flex;
+             animation: scroll 40s linear infinite;
+             will-change: transform;
+         }
+        .carousel-track:hover,
+        .rtl-carousel:hover {
             animation-play-state: paused;
         }
-        
-        @keyframes scroll {
-            0% { transform: translateX(0); }
-            100% { transform: translateX(-50%); }
-        }
-        
         .carousel-item {
             flex: 0 0 auto;
-            margin-right: 2rem;
+            margin-left: 3rem;
+            white-space: nowrap;
+            padding: 0.5rem 0;
+            min-width: fit-content;
         }
-        
-        @media (max-width: 768px) {
-            .sidebar-mobile {
-                transform: translateX(-100%);
-                transition: transform 0.3s ease;
-            }
-            .sidebar-mobile.open {
-                transform: translateX(0);
-            }
+        @keyframes scroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(50%); }
         }
-        
-        /* Modern Timeline Styles */
+        /* Modern Timeline Styles - RTL Version */
         .modern-timeline {
             position: relative;
-            padding-left: 3rem;
+            padding-right: 3rem;
         }
         
         .modern-timeline::before {
             content: '';
             position: absolute;
-            left: 1.5rem;
+            right: 1.5rem;
             top: 0;
             bottom: 0;
             width: 2px;
@@ -182,13 +109,13 @@
         .timeline-item-modern {
             position: relative;
             margin-bottom: 2.5rem;
-            padding-left: 2rem;
+            padding-right: 2rem;
         }
         
         .timeline-item-modern::before {
             content: '';
             position: absolute;
-            left: -1.25rem;
+            right: -1.25rem;
             top: 0.75rem;
             width: 0.75rem;
             height: 0.75rem;
@@ -260,7 +187,6 @@
             font-size: 0.75rem;
             border: 1px solid rgba(34, 197, 94, 0.2);
         }
-        
         /* Project Cards Hover Effect */
         .project-card {
             transition: all 0.3s ease;
@@ -276,4 +202,59 @@
             background: rgba(26, 26, 26, 0.9);
             border-color: rgba(34, 197, 94, 0.4);
         }
-    </style>
+        .compiling-step {
+            opacity: 0;
+            animation: fadeInUp 0.5s ease forwards;
+        }
+        .compiling-step:nth-child(1) { animation-delay: 0.5s; }
+        .compiling-step:nth-child(2) { animation-delay: 1s; }
+        .compiling-step:nth-child(3) { animation-delay: 1.5s; }
+        .compiling-step:nth-child(4) { animation-delay: 2s; }
+        .compiling-step:nth-child(5) { animation-delay: 2.5s; }
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .nav-item {
+            transition: all 0.3s ease;
+        }
+        .nav-item:hover {
+            background: rgba(34, 197, 94, 0.1);
+            transform: scale(1.05);
+        }
+        .nav-item.active {
+            background: rgba(34, 197, 94, 0.2);
+            border-color: rgba(34, 197, 94, 0.4);
+        }
+        
+        /* Language Bar Styles */
+        #languageBar {
+            will-change: transform;
+            transform-origin: top;
+            transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        /* Responsive adjustments for language bar */
+        @media (max-width: 1024px) {
+            #languageBar {
+                right: 0 !important;
+            }
+        }
+        
+        @media (max-width: 640px) {
+            #languageBar .container {
+                padding-left: 0.75rem;
+                padding-right: 0.75rem;
+            }
+            
+            #languageBar a {
+                padding-left: 0.75rem;
+                padding-right: 0.75rem;
+            }
+        }
