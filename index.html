@@ -12,6 +12,8 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style_e.css">
     <link rel="icon" href="assets/img/Logo.png" type="image/x-icon">
+    <!-- jsPDF library for PDF generation -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 </head>
 <body class="gradient-bg min-h-screen text-white scroll-smooth">
 
@@ -160,7 +162,7 @@
                 <span class="text-white text-sm mt-2 font-bold">ERP Architecture, PHP (Yii / Laravel), C#(.NET), API Integrations (Amazon, Ebay, Shopify, etc.), Cloud Systems</span>
             </div>          
             <!-- Download CV Button -->
-            <button class="w-full bg-green-400 hover:bg-green-500 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center space-x-2">
+            <button onclick="window.ATSResumeGenerator.generate()" class="w-full bg-green-400 hover:bg-green-500 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center space-x-2">
                 <i class="fas fa-download"></i>
                 <span>Download ATS CV</span>
             </button>
@@ -226,7 +228,7 @@
                             <span>Hire Me</span>
                         </button>
                     </a>
-                        <button class="bg-transparent border-2 border-green-400 text-green-400 hover:bg-green-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center space-x-3">
+                        <button onclick="window.ATSResumeGenerator.generate()" class="bg-transparent border-2 border-green-400 text-green-400 hover:bg-green-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center space-x-3">
                             <i class="fas fa-download"></i>
                             <span>Download ATS CV</span>
                         </button>
@@ -1477,8 +1479,18 @@
 
     <script src="assets/js/main.js"></script>
     <script src="assets/js/project_english.js"></script>
+    <script src="assets/js/ats_resume_generator.js"></script>
     
     <script>
+        // Legacy support for downloadCV function
+        function downloadCV() {
+            if (window.ATSResumeGenerator && typeof window.ATSResumeGenerator.generate === 'function') {
+                window.ATSResumeGenerator.generate();
+            } else {
+                alert('PDF generator is still loading. Please wait a moment and try again.');
+            }
+        }
+        
         // Language Bar Scroll Effect with Throttling and Modern Standards
         (function() {
             let lastScrollTop = 0;

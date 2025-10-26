@@ -94,41 +94,41 @@ document.addEventListener('click', (e) => {
 
 
 // Download CV functionality for sidebar
-document.querySelector('aside button[class*="bg-green-400"]').addEventListener('click', () => {
-    // Create a simple PDF content (in real implementation, you'd use a PDF library)
-    const cvContent = `
-        CURRICULUM VITAE
-        Anas M. Abbas
-        IT Specialist & Developer
+// document.querySelector('aside button[class*="bg-green-400"]').addEventListener('click', () => {
+//     // Create a simple PDF content (in real implementation, you'd use a PDF library)
+//     const cvContent = `
+//         CURRICULUM VITAE
+//         Anas M. Abbas
+//         IT Specialist & Developer
         
-        Personal Information:
-        - Location: Damascus, Syria
-        - Phone: +963-988 102 369
-        - Email: anas.abass1@gmail.com
+//         Personal Information:
+//         - Location: Damascus, Syria
+//         - Phone: +963-988 102 369
+//         - Email: anas.abass1@gmail.com
         
-        Experience:
-        - ERP Software Developer & WordPress Developer (2021-Present)
-        - IT Specialist Freelance (2019-Present)
-        - Programming Trainer (2019-Present)
-        - IT Specialist at APEX (2017-2019)
+//         Experience:
+//         - ERP Software Developer & WordPress Developer (2021-Present)
+//         - IT Specialist Freelance (2019-Present)
+//         - Programming Trainer (2019-Present)
+//         - IT Specialist at APEX (2017-2019)
         
-        Skills:
-        - PHP Yii Framework (95%)
-        - C# & .NET (90%)
-        - WordPress (88%)
-        - SQL Server (85%)
-    `;
+//         Skills:
+//         - PHP Yii Framework (95%)
+//         - C# & .NET (90%)
+//         - WordPress (88%)
+//         - SQL Server (85%)
+//     `;
     
-    const blob = new Blob([cvContent], { type: 'text/plain' });
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement('a');
-    a.href = url;
-    a.download = 'Anas_Abbas_CV.txt';
-    document.body.appendChild(a);
-    a.click();
-    document.body.removeChild(a);
-    URL.revokeObjectURL(url);
-});
+//     const blob = new Blob([cvContent], { type: 'text/plain' });
+//     const url = URL.createObjectURL(blob);
+//     const a = document.createElement('a');
+//     a.href = url;
+//     a.download = 'Anas_Abbas_CV.txt';
+//     document.body.appendChild(a);
+//     a.click();
+//     document.body.removeChild(a);
+//     URL.revokeObjectURL(url);
+// });
 
 // Compiling animation for steps
 const compilingSteps = document.querySelectorAll('.compiling-step');
@@ -137,38 +137,38 @@ compilingSteps.forEach((step, index) => {
 });
 
 // Download CV functionality for main section
-document.querySelector('main button[class*="border-green-400"]').addEventListener('click', () => {
-    // Create a simple PDF content (in real implementation, you'd use a PDF library)
-    const cvContent = `
-        CURRICULUM VITAE
-        Anas M. Abbas
-        IT Specialist & Developer
+// document.querySelector('main button[class*="border-green-400"]').addEventListener('click', () => {
+//     // Create a simple PDF content (in real implementation, you'd use a PDF library)
+//     const cvContent = `
+//         CURRICULUM VITAE
+//         Anas M. Abbas
+//         IT Specialist & Developer
         
-        Personal Information:
-        - Location: Damascus, Syria
-        - Phone: +963-988 102 369
-        - Email: anas.abass1@gmail.com
+//         Personal Information:
+//         - Location: Damascus, Syria
+//         - Phone: +963-988 102 369
+//         - Email: anas.abass1@gmail.com
         
-        Experience:
-        - ERP Software Developer & WordPress Developer (2021-Present)
-        - IT Specialist Freelance (2019-Present)
-        - Programming Trainer (2019-Present)
-        - IT Specialist at APEX (2017-2019)
+//         Experience:
+//         - ERP Software Developer & WordPress Developer (2021-Present)
+//         - IT Specialist Freelance (2019-Present)
+//         - Programming Trainer (2019-Present)
+//         - IT Specialist at APEX (2017-2019)
         
-        Skills:
-        - PHP Yii Framework (95%)
-        - C# & .NET (90%)
-        - WordPress (88%)
-        - SQL Server (85%)
-    `;
+//         Skills:
+//         - PHP Yii Framework (95%)
+//         - C# & .NET (90%)
+//         - WordPress (88%)
+//         - SQL Server (85%)
+//     `;
     
-    const blob = new Blob([cvContent], { type: 'text/plain' });
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement('a');
-    a.href = url;
-    a.download = 'Anas_Abbas_CV.txt';
-    document.body.appendChild(a);
-    a.click();
-    document.body.removeChild(a);
-    URL.revokeObjectURL(url);
-});
+//     const blob = new Blob([cvContent], { type: 'text/plain' });
+//     const url = URL.createObjectURL(blob);
+//     const a = document.createElement('a');
+//     a.href = url;
+//     a.download = 'Anas_Abbas_CV.txt';
+//     document.body.appendChild(a);
+//     a.click();
+//     document.body.removeChild(a);
+//     URL.revokeObjectURL(url);
+// });

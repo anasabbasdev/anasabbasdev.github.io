@@ -14,6 +14,10 @@
     <!-- <link rel="stylesheet" href="assets/css/style.css"> -->
     <link rel="icon" href="assets/img/Logo.png" type="image/x-icon">
     <link rel="stylesheet" href="assets/css/style_a.css">
+    <!-- jsPDF library for PDF generation -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <!-- html2canvas for rendering HTML to canvas (for Arabic text support) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
 </head>
 <body class="gradient-bg min-h-screen text-white scroll-smooth">
 
@@ -164,7 +168,7 @@
                 <span class="text-white text-sm mt-2 font-bold">معمارية ERP <br>، PHP (Yii / Laravel)، C#(.NET)، تكامل APIs (Amazon، Ebay، Shopify، إلخ)، الأنظمة السحابية</span>
             </div>          
             <!-- Download CV Button -->
-            <button class="w-full bg-green-400 hover:bg-green-500 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center space-x-2">
+            <button onclick="window.ATSResumeGeneratorArabic.generate()" class="w-full bg-green-400 hover:bg-green-500 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center space-x-2">
                 <i class="fas fa-download"></i>
                 <span>تحميل السيرة الذاتية</span>
             </button>
@@ -230,7 +234,7 @@
                             <span>تواصل معي</span>
                         </button>
                     </a>
-                        <button class="bg-transparent border-2 border-green-400 text-green-400 hover:bg-green-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center space-x-3" onclick="downloadCV()">
+                        <button onclick="window.ATSResumeGeneratorArabic.generate()" class="bg-transparent border-2 border-green-400 text-green-400 hover:bg-green-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center space-x-3">
                             <i class="fas fa-download mx-2"></i>
                             <span>تحميل السيرة الذاتية</span>
                         </button>
@@ -285,7 +289,7 @@
                     <div class="bg-gray-900 border border-gray-700 rounded-xl p-6 shadow-2xl backdrop-blur-sm">
                         <div class="flex items-center justify-between mb-4">
                             <div class="flex items-center space-x-2">
-                                <div class="flex space-x-2">
+                                <div class="flex gap-3 px-2">
                                     <div class="w-3 h-3 bg-red-500 rounded-full"></div>
                                     <div class="w-3 h-3 bg-yellow-500 rounded-full"></div>
                                     <div class="w-3 h-3 bg-green-500 rounded-full"></div>
@@ -300,32 +304,32 @@
                         <div class="space-y-3">
                             <div class="flex items-center space-x-2 compiling-step">
                                 <div class="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
-                                <span class="text-green-400 text-sm font-mono typing-animation"><span class="typing-text">جاري التجميع...</span></span>
+                                <span class="text-green-400 text-sm font-mono typing-animation  px-2"><span class="typing-text">جاري التجميع...</span></span>
                             </div>
                             <div class="space-y-1 font-mono text-sm">
                                 <div class="text-gray-300 compiling-step flex items-center space-x-2">
-                                    <span class="text-green-400">✓</span>
+                                    <span class="text-green-400 px-2">✓</span>
                                     <span>بناء المكونات</span>
                                 </div>
                                 <div class="text-gray-300 compiling-step flex items-center space-x-2">
-                                    <span class="text-green-400">✓</span>
+                                    <span class="text-green-400 px-2">✓</span>
                                     <span>تحسين حجم الحزم</span>
                                 </div>
                                 <div class="text-gray-300 compiling-step flex items-center space-x-2">
-                                    <span class="text-green-400">✓</span>
+                                    <span class="text-green-400 px-2">✓</span>
                                     <span>تشغيل الاختبارات المخصصة</span>
                                 </div>
                                 <div class="text-gray-300 compiling-step flex items-center space-x-2">
-                                    <span class="text-green-400">✓</span>
+                                    <span class="text-green-400 px-2">✓</span>
                                     <span>الإصدار الأخير</span>
                                 </div>
                             </div>
                             <div class="mt-4 p-4 bg-gradient-to-r from-green-400/10 to-blue-400/10 rounded-lg border border-green-400/20 compiling-step">
                                 <div class="flex items-center space-x-2">
-                                    <i class="fas fa-check-circle text-green-400"></i>
+                                    <i class="fas fa-check-circle text-green-400  px-2"></i>
                                     <span class="text-green-400 text-sm font-medium">تم التجميع بنجاح!</span>
                                 </div>
-                                <div class="text-gray-300 text-xs mt-1">جاهز لإنشاء تجارب مذهلة</div>
+                                <div class="text-gray-300 text-xs mt-1  px-2">جاهز لإنشاء تجارب مذهلة</div>
                             </div>
                         </div>
                     </div>
@@ -1499,8 +1503,19 @@
 
     <script src="assets/js/main.js"></script>
     <script src="assets/js/project_arabic.js"></script>
+    <script src="assets/js/ats_resume_generator_arabic.js"></script>
     
     <script>
+        // Legacy support for downloadCV function
+        function downloadCV() {
+            if (window.ATSResumeGeneratorArabic && typeof window.ATSResumeGeneratorArabic.generate === 'function') {
+                window.ATSResumeGeneratorArabic.generate();
+            } else {
+                alert('مولد PDF ما زال يحمّل. يرجى الانتظار لحظة والمحاولة مرة أخرى.');
+            }
+        }
+        
+        // Language Bar Scroll Effect with Throttling and Modern Standards
         // Language Bar Scroll Effect with Throttling and Modern Standards
         (function() {
             let lastScrollTop = 0;
