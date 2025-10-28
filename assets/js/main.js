@@ -68,27 +68,63 @@ progressBars.forEach(bar => {
     progressObserver.observe(bar);
 });
 
-// Mobile menu toggle
-function toggleMobileMenu() {
-    const mobileMenu = document.getElementById('mobileMenu');
-    mobileMenu.classList.toggle('hidden');
+// WooCommerce-style Mobile menu toggle
+function toggleWooMobileMenu() {
+    const wooMobileMenu = document.getElementById('wooMobileMenu');
+    const wooMobileMenuBtn = document.getElementById('wooMobileMenuBtn');
+    
+    if (wooMobileMenu && wooMobileMenuBtn) {
+        wooMobileMenu.classList.toggle('show');
+        wooMobileMenuBtn.classList.toggle('active');
+        
+        // Debug log
+        console.log('Menu toggled:', wooMobileMenu.classList.contains('show'));
+    }
 }
 
-// Add event listener for mobile menu button
-document.getElementById('mobileMenuBtn').addEventListener('click', (e) => {
-    e.preventDefault();
-    e.stopPropagation();
-    toggleMobileMenu();
+// Add event listener for WooCommerce-style mobile menu button
+document.addEventListener('DOMContentLoaded', function() {
+    const wooMobileMenuBtn = document.getElementById('wooMobileMenuBtn');
+    if (wooMobileMenuBtn) {
+        console.log('Mobile menu button found');
+        wooMobileMenuBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            console.log('Mobile menu button clicked');
+            toggleWooMobileMenu();
+        });
+    } else {
+        console.log('Mobile menu button not found');
+    }
 });
 
-// Close mobile menu when clicking outside
+// Close WooCommerce-style mobile menu when clicking outside
 document.addEventListener('click', (e) => {
-    const mobileMenu = document.getElementById('mobileMenu');
-    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const wooMobileMenu = document.getElementById('wooMobileMenu');
+    const wooMobileMenuBtn = document.getElementById('wooMobileMenuBtn');
     
-    if (!mobileMenu.contains(e.target) && !mobileMenuBtn.contains(e.target)) {
-        mobileMenu.classList.add('hidden');
+    if (wooMobileMenu && wooMobileMenuBtn) {
+        if (!wooMobileMenu.contains(e.target) && !wooMobileMenuBtn.contains(e.target)) {
+            wooMobileMenu.classList.remove('show');
+            wooMobileMenuBtn.classList.remove('active');
+        }
     }
+});
+
+// Close WooCommerce-style mobile menu when clicking on nav items
+document.addEventListener('DOMContentLoaded', function() {
+    const wooNavItems = document.querySelectorAll('#wooMobileMenu .nav-item');
+    wooNavItems.forEach(item => {
+        item.addEventListener('click', () => {
+            const wooMobileMenu = document.getElementById('wooMobileMenu');
+            const wooMobileMenuBtn = document.getElementById('wooMobileMenuBtn');
+            
+            if (wooMobileMenu && wooMobileMenuBtn) {
+                wooMobileMenu.classList.remove('show');
+                wooMobileMenuBtn.classList.remove('active');
+            }
+        });
+    });
 });
 
 
