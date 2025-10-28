@@ -72,55 +72,93 @@
         </div>
     </nav>
 
-    <!-- Mobile Navigation -->
-    <nav class="lg:hidden fixed top-4 left-4 z-40">
-        <div class="relative">
+    <!-- WooCommerce-style Mobile Navigation -->
+    <nav class="lg:hidden fixed top-0 left-0 right-0 z-50 bg-gray-900/95 backdrop-blur-md border-b border-gray-700 woo-mobile-nav">
+        <div class="flex items-center justify-between px-4 py-3">
+            <!-- Logo/Brand -->
+            <div class="flex items-center space-x-3">
+                <a href="index.html" class=" timeline-date-modern text-white flex items-center space-x-2 bg-green-400 hover:bg-green-500 text-white px-4 py-2 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-green-400/25" style="margin-bottom:0px;">
+                    <i class="fas fa-globe text-green-400 w-5"></i>
+                    <span class="text-white">English</span>
+                    <i class="fas fa-arrow-left"></i>
+                </a>
+                
+            </div>
+            
             <!-- Menu Button -->
-            <button id="mobileMenuBtn" class="w-12 h-12 bg-green-400 hover:bg-green-500 rounded-full flex items-center justify-center transition-colors">
+            <button id="wooMobileMenuBtn" class="w-10 h-10 bg-gray-700 hover:bg-gray-600 rounded-lg flex items-center justify-center transition-colors">
                 <i class="fas fa-bars text-white"></i>
             </button>
-            
-            <!-- Dropdown Menu -->
-            <div id="mobileMenu" class="hidden absolute top-14 left-0 glass-effect rounded-lg p-2 space-y-1 min-w-48">
-                <div class="nav-item active flex items-center space-x-3 px-3 py-2 rounded-lg cursor-pointer" data-section="home">
-                    <i class="fas fa-home text-green-400"></i>
-                    <span class="text-white">الرئيسية</span>
+        </div>
+        
+        <!-- WooCommerce-style Dropdown Menu -->
+        <div id="wooMobileMenu" class="bg-gray-800 border-t border-gray-700">
+            <div class="px-4 py-2">
+                <!-- Navigation Items -->
+                <div class="space-y-1">
+                    <div class="nav-item active flex items-center space-x-3 px-3 py-2 rounded-lg cursor-pointer hover:bg-gray-700 transition-colors" data-section="home">
+                        <i class="fas fa-home text-green-400 w-5"></i>
+                        <span class="text-white">الرئيسية</span>
+                    </div>
+                    <div class="nav-item flex items-center space-x-3 px-3 py-2 rounded-lg cursor-pointer hover:bg-gray-700 transition-colors" data-section="about">
+                        <i class="fas fa-user text-green-400 w-5"></i>
+                        <span class="text-white">نبذة</span>
+                    </div>
+                    <div class="nav-item flex items-center space-x-3 px-3 py-2 rounded-lg cursor-pointer hover:bg-gray-700 transition-colors" data-section="skills">
+                        <i class="fas fa-code text-green-400 w-5"></i>
+                        <span class="text-white">المهارات</span>
+                    </div>
+                    <div class="nav-item flex items-center space-x-3 px-3 py-2 rounded-lg cursor-pointer hover:bg-gray-700 transition-colors" data-section="experience">
+                        <i class="fas fa-briefcase text-green-400 w-5"></i>
+                        <span class="text-white">الخبرة</span>
+                    </div>
+                    <div class="nav-item flex items-center space-x-3 px-3 py-2 rounded-lg cursor-pointer hover:bg-gray-700 transition-colors" data-section="education">
+                        <i class="fas fa-graduation-cap text-green-400 w-5"></i>
+                        <span class="text-white">التعليم</span>
+                    </div>
+                    <div class="nav-item flex items-center space-x-3 px-3 py-2 rounded-lg cursor-pointer hover:bg-gray-700 transition-colors" data-section="projects">
+                        <i class="fas fa-project-diagram text-green-400 w-5"></i>
+                        <span class="text-white">المشاريع</span>
+                    </div>
+                    <div class="nav-item flex items-center space-x-3 px-3 py-2 rounded-lg cursor-pointer hover:bg-gray-700 transition-colors" data-section="volunteer">
+                        <i class="fas fa-heart text-green-400 w-5"></i>
+                        <span class="text-white">التطوع</span>
+                    </div>
+                    <div class="nav-item flex items-center space-x-3 px-3 py-2 rounded-lg cursor-pointer hover:bg-gray-700 transition-colors" data-section="languages">
+                        <i class="fas fa-language text-green-400 w-5"></i>
+                        <span class="text-white">اللغات</span>
+                    </div>
+                    <div class="nav-item flex items-center space-x-3 px-3 py-2 rounded-lg cursor-pointer hover:bg-gray-700 transition-colors" data-section="hobbies">
+                        <i class="fas fa-star text-green-400 w-5"></i>
+                        <span class="text-white">الهوايات</span>
+                    </div>
+                    <div class="nav-item flex items-center space-x-3 px-3 py-2 rounded-lg cursor-pointer hover:bg-gray-700 transition-colors" data-section="contact">
+                        <i class="fas fa-envelope text-green-400 w-5"></i>
+                        <span class="text-white">التواصل</span>
+                    </div>
                 </div>
-                <div class="nav-item flex items-center space-x-3 px-3 py-2 rounded-lg cursor-pointer" data-section="about">
-                    <i class="fas fa-user text-green-400"></i>
-                    <span class="text-white">نبذة</span>
+                
+                <!-- Divider -->
+                <div class="border-t border-gray-600 my-3"></div>
+                
+                <!-- Language Switch -->
+                <div class="space-y-1">
+                    <a href="index.html" class="flex items-center space-x-3 px-3 py-2 rounded-lg hover:bg-gray-700 transition-colors">
+                        <i class="fas fa-globe text-blue-400 w-5"></i>
+                        <span class="text-white">English</span>
+                        <i class="fas fa-arrow-right text-gray-400 ml-auto"></i>
+                    </a>
                 </div>
-                <div class="nav-item flex items-center space-x-3 px-3 py-2 rounded-lg cursor-pointer" data-section="skills">
-                    <i class="fas fa-code text-green-400"></i>
-                    <span class="text-white">المهارات</span>
-                </div>
-                <div class="nav-item flex items-center space-x-3 px-3 py-2 rounded-lg cursor-pointer" data-section="experience">
-                    <i class="fas fa-briefcase text-green-400"></i>
-                    <span class="text-white">الخبرة</span>
-                </div>
-                <div class="nav-item flex items-center space-x-3 px-3 py-2 rounded-lg cursor-pointer" data-section="education">
-                    <i class="fas fa-graduation-cap text-green-400"></i>
-                    <span class="text-white">التعليم</span>
-                </div>
-                <div class="nav-item flex items-center space-x-3 px-3 py-2 rounded-lg cursor-pointer" data-section="projects">
-                    <i class="fas fa-project-diagram text-green-400"></i>
-                    <span class="text-white">المشاريع</span>
-                </div>
-                <div class="nav-item flex items-center space-x-3 px-3 py-2 rounded-lg cursor-pointer" data-section="volunteer">
-                    <i class="fas fa-heart text-green-400"></i>
-                    <span class="text-white">التطوع</span>
-                </div>
-                <div class="nav-item flex items-center space-x-3 px-3 py-2 rounded-lg cursor-pointer" data-section="languages">
-                    <i class="fas fa-language text-green-400"></i>
-                    <span class="text-white">اللغات</span>
-                </div>
-                <div class="nav-item flex items-center space-x-3 px-3 py-2 rounded-lg cursor-pointer" data-section="hobbies">
-                    <i class="fas fa-star text-green-400"></i>
-                    <span class="text-white">الهوايات</span>
-                </div>
-                <div class="nav-item flex items-center space-x-3 px-3 py-2 rounded-lg cursor-pointer" data-section="contact">
-                    <i class="fas fa-envelope text-green-400"></i>
-                    <span class="text-white">التواصل</span>
+                
+                <!-- Divider -->
+                <div class="border-t border-gray-600 my-3"></div>
+                
+                <!-- Download CV -->
+                <div class="space-y-1">
+                    <button onclick="window.ATSResumeGenerator.generate()" class="w-full flex items-center space-x-3 px-3 py-2 rounded-lg hover:bg-gray-700 transition-colors">
+                        <i class="fas fa-download text-green-400 w-5"></i>
+                        <span class="text-white">تحميل السيرة الذاتية</span>
+                    </button>
                 </div>
             </div>
         </div>
@@ -176,7 +214,7 @@
     </aside>
 
     <!-- Main Content -->
-    <main class="lg:mr-80 lg:ml-20 min-h-screen">
+    <main class="lg:mr-80 lg:ml-20 min-h-screen max-md:w-full">
         <!-- Home Section -->
         <section id="home" class="min-h-screen flex items-center justify-center relative overflow-hidden pt-20 lg:pt-0">
             <!-- Animated Background Elements -->
@@ -1443,7 +1481,7 @@
     </main>
 
     <!-- Footer -->
-    <footer class="py-12 px-4 lg:px-8 lg:mr-80 lg:ml-20" style="background-color: #121212;">
+    <footer class="py-12 px-4 lg:px-8 lg:mr-80 lg:ml-20 max-md:w-full" style="background-color: #121212;">
         <div class="container mx-auto">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <!-- About -->
@@ -1513,6 +1551,69 @@
     <script src="assets/js/main.js"></script>
     <script src="assets/js/project_arabic.js"></script>
     <script src="assets/js/ats_resume_generator_arabic.js"></script>
+    
+    <script>
+        // WooCommerce-style Mobile menu toggle for Arabic
+        function toggleWooMobileMenuArabic() {
+            const wooMobileMenu = document.getElementById('wooMobileMenu');
+            const wooMobileMenuBtn = document.getElementById('wooMobileMenuBtn');
+            
+            if (wooMobileMenu && wooMobileMenuBtn) {
+                wooMobileMenu.classList.toggle('show');
+                wooMobileMenuBtn.classList.toggle('active');
+                
+                // Debug log
+                console.log('Arabic Menu toggled:', wooMobileMenu.classList.contains('show'));
+            }
+        }
+
+        // Add event listener for WooCommerce-style mobile menu button (Arabic specific)
+        document.addEventListener('DOMContentLoaded', function() {
+            const wooMobileMenuBtn = document.getElementById('wooMobileMenuBtn');
+            if (wooMobileMenuBtn) {
+                console.log('Arabic Mobile menu button found');
+                
+                // Add new event listener
+                wooMobileMenuBtn.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    console.log('Arabic Mobile menu button clicked');
+                    toggleWooMobileMenuArabic();
+                });
+            } else {
+                console.log('Arabic Mobile menu button not found');
+            }
+        });
+
+        // Close WooCommerce-style mobile menu when clicking outside (Arabic specific)
+        document.addEventListener('click', (e) => {
+            const wooMobileMenu = document.getElementById('wooMobileMenu');
+            const wooMobileMenuBtn = document.getElementById('wooMobileMenuBtn');
+            
+            if (wooMobileMenu && wooMobileMenuBtn) {
+                if (!wooMobileMenu.contains(e.target) && !wooMobileMenuBtn.contains(e.target)) {
+                    wooMobileMenu.classList.remove('show');
+                    wooMobileMenuBtn.classList.remove('active');
+                }
+            }
+        });
+
+        // Close WooCommerce-style mobile menu when clicking on nav items (Arabic specific)
+        document.addEventListener('DOMContentLoaded', function() {
+            const wooNavItems = document.querySelectorAll('#wooMobileMenu .nav-item');
+            wooNavItems.forEach(item => {
+                item.addEventListener('click', () => {
+                    const wooMobileMenu = document.getElementById('wooMobileMenu');
+                    const wooMobileMenuBtn = document.getElementById('wooMobileMenuBtn');
+                    
+                    if (wooMobileMenu && wooMobileMenuBtn) {
+                        wooMobileMenu.classList.remove('show');
+                        wooMobileMenuBtn.classList.remove('active');
+                    }
+                });
+            });
+        });
+    </script>
     
     <script>
         // Legacy support for downloadCV function

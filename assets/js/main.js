@@ -15,10 +15,20 @@ navItems.forEach(item => {
         
         if (targetElement) {
             targetElement.scrollIntoView({ behavior: 'smooth' });
-            // Close mobile menu if open
+            // Close mobile menu if open (both old and new)
             const mobileMenu = document.getElementById('mobileMenu');
+            const wooMobileMenu = document.getElementById('wooMobileMenu');
+            const wooMobileMenuBtn = document.getElementById('wooMobileMenuBtn');
+            
             if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
                 mobileMenu.classList.add('hidden');
+            }
+            
+            if (wooMobileMenu && wooMobileMenu.classList.contains('show')) {
+                wooMobileMenu.classList.remove('show');
+                if (wooMobileMenuBtn) {
+                    wooMobileMenuBtn.classList.remove('active');
+                }
             }
         }
     });
@@ -68,8 +78,13 @@ progressBars.forEach(bar => {
     progressObserver.observe(bar);
 });
 
-// WooCommerce-style Mobile menu toggle
+// WooCommerce-style Mobile menu toggle (English only)
 function toggleWooMobileMenu() {
+    // Only work on English page
+    if (document.documentElement.lang === 'ar') {
+        return;
+    }
+    
     const wooMobileMenu = document.getElementById('wooMobileMenu');
     const wooMobileMenuBtn = document.getElementById('wooMobileMenuBtn');
     
@@ -78,28 +93,38 @@ function toggleWooMobileMenu() {
         wooMobileMenuBtn.classList.toggle('active');
         
         // Debug log
-        console.log('Menu toggled:', wooMobileMenu.classList.contains('show'));
+        console.log('English Menu toggled:', wooMobileMenu.classList.contains('show'));
     }
 }
 
-// Add event listener for WooCommerce-style mobile menu button
+// Add event listener for WooCommerce-style mobile menu button (English only)
 document.addEventListener('DOMContentLoaded', function() {
+    // Only work on English page
+    if (document.documentElement.lang === 'ar') {
+        return;
+    }
+    
     const wooMobileMenuBtn = document.getElementById('wooMobileMenuBtn');
     if (wooMobileMenuBtn) {
-        console.log('Mobile menu button found');
+        console.log('English Mobile menu button found');
         wooMobileMenuBtn.addEventListener('click', (e) => {
             e.preventDefault();
             e.stopPropagation();
-            console.log('Mobile menu button clicked');
+            console.log('English Mobile menu button clicked');
             toggleWooMobileMenu();
         });
     } else {
-        console.log('Mobile menu button not found');
+        console.log('English Mobile menu button not found');
     }
 });
 
-// Close WooCommerce-style mobile menu when clicking outside
+// Close WooCommerce-style mobile menu when clicking outside (English only)
 document.addEventListener('click', (e) => {
+    // Only work on English page
+    if (document.documentElement.lang === 'ar') {
+        return;
+    }
+    
     const wooMobileMenu = document.getElementById('wooMobileMenu');
     const wooMobileMenuBtn = document.getElementById('wooMobileMenuBtn');
     
@@ -111,8 +136,13 @@ document.addEventListener('click', (e) => {
     }
 });
 
-// Close WooCommerce-style mobile menu when clicking on nav items
+// Close WooCommerce-style mobile menu when clicking on nav items (English only)
 document.addEventListener('DOMContentLoaded', function() {
+    // Only work on English page
+    if (document.documentElement.lang === 'ar') {
+        return;
+    }
+    
     const wooNavItems = document.querySelectorAll('#wooMobileMenu .nav-item');
     wooNavItems.forEach(item => {
         item.addEventListener('click', () => {
