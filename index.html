@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anas M. Abbas - Software Engineer & ERP Developer</title>
+    <title>Anas M. Abbas - Systems Architect & CTO</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -53,7 +53,7 @@
                 <i class="fas fa-graduation-cap text-sm"></i>
             </div>
             <div class="nav-item w-8 h-8 rounded-full flex items-center justify-center cursor-pointer" data-section="projects">
-                <i class="fas fa-project-diagram text-sm"></i>
+                <i class="fas fa-server text-sm"></i>
             </div>
             <div class="nav-item w-8 h-8 rounded-full flex items-center justify-center cursor-pointer" data-section="volunteer">
                 <i class="fas fa-heart text-sm"></i>
@@ -118,8 +118,8 @@
                         <span class="text-white">Education</span>
                     </div>
                     <div class="nav-item flex items-center space-x-3 px-3 py-2 rounded-lg cursor-pointer hover:bg-gray-700 transition-colors" data-section="projects">
-                        <i class="fas fa-project-diagram text-green-400 w-5"></i>
-                        <span class="text-white">Projects</span>
+                        <i class="fas fa-server text-green-400 w-5"></i>
+                        <span class="text-white">Selected Systems</span>
                     </div>
                     <div class="nav-item flex items-center space-x-3 px-3 py-2 rounded-lg cursor-pointer hover:bg-gray-700 transition-colors" data-section="volunteer">
                         <i class="fas fa-heart text-green-400 w-5"></i>
@@ -180,7 +180,7 @@
                     </div>
                 </div>
                 <h1 class="text-2xl font-bold mt-4">Anas M. Abbas</h1>
-                <p class="text-green-400 text-base  typing-animation"><span class="typing-text">Software Engineer <br>& ERP Systems Developer</span></p>
+                <p class="text-green-400 text-base  typing-animation"><span class="typing-text">Systems Architect <br>& CTO</span></p>
             </div>
 
             <!-- Personal Info -->
@@ -233,13 +233,13 @@
                             <span class="text-gray-300 font-medium">Welcome to my world</span>
                         </div>
                         <h1 class="text-6xl lg:text-7xl font-bold leading-tight">
-                            I Build
-                            <span class="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-400">Digital</span>
+                            Architecting
+                            <span class="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-400">ERP Systems</span>
                             <br>
-                            <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Solutions</span>
+                            <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">For Unreliable Data</span>
                         </h1>
                         <p class="text-base lg:text-xl text-gray-300 leading-relaxed">
-                            I am an <span class="text-green-400 font-semibold">Software Engineer & ERP Developer</span> with 11+ years of experience in creating innovative solutions and training the next generation of developers.
+                            I design resilient systems that function when data arrives incomplete, delayed, or out of sequence — the real-world conditions most integrations fail to handle.
                         </p>
                     </div>
 
@@ -266,16 +266,9 @@
 
                     <!-- CTA Buttons -->
                     <div class="flex flex-col sm:flex-row gap-4">
-                    
-                    <a href="https://wa.me/963988102369" target="_blank">   
-                        <button class="bg-gradient-to-r from-green-400 to-green-500 hover:from-green-500 hover:to-green-600 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center space-x-3 shadow-lg hover:shadow-green-400/25">                       
-                            <i class="fa-brands fa-whatsapp text-2xl"></i>
-                            <span>Hire Me</span>
-                        </button>
-                    </a>
-                        <button onclick="window.ATSResumeGenerator.generate()" class="bg-transparent border-2 border-green-400 text-green-400 hover:bg-green-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center space-x-3">
-                            <i class="fas fa-download"></i>
-                            <span>Download ATS CV</span>
+                        <button onclick="document.querySelector('#core-proof').scrollIntoView({behavior: 'smooth'})" class="bg-gradient-to-r from-green-400 to-green-500 hover:from-green-500 hover:to-green-600 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center space-x-3 shadow-lg hover:shadow-green-400/25">
+                            <i class="fas fa-arrow-down"></i>
+                            <span>See Core System Architecture</span>
                         </button>
                     </div>
 
@@ -393,6 +386,123 @@
             </div>
         </section>
 
+        <!-- Core Proof Section: New G Solution ERP -->
+        <section id="core-proof" class="py-20 px-4 lg:px-8" style="background-color: #121212;">
+            <div class="container mx-auto">
+                <div class="text-center mb-16" data-aos="fade-up">
+                    <div class="inline-block bg-gray-800 px-4 py-2 rounded-full mb-4">
+                        <i class="fas fa-database mr-2 text-green-400"></i>
+                        <span class="text-gray-300">Core System Architecture</span>
+                    </div>
+                    <h2 class="text-4xl font-bold mb-6">
+                        New G Solution — <span class="text-green-400">Cloud ERP Platform</span>
+                    </h2>
+                    <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+                        A multi-tenant ERP system designed for the realities most platforms ignore: delayed orders, incomplete supplier data, API rate limits, and unreliable third-party integrations.
+                    </p>
+                </div>
+
+                <div class="max-w-5xl mx-auto space-y-12">
+                    <!-- Problem Statement -->
+                    <div class="glass-effect p-8 rounded-lg" data-aos="fade-up">
+                        <div class="flex items-start space-x-4">
+                            <div class="flex-shrink-0 w-12 h-12 bg-red-500/20 rounded-lg flex items-center justify-center">
+                                <i class="fas fa-exclamation-triangle text-red-400 text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-2xl font-bold mb-4 text-white">The Real Problem</h3>
+                                <p class="text-gray-300 text-lg leading-relaxed mb-4">
+                                    Traditional ERP systems assume clean, on-time data from reliable sources. Real-world e-commerce and logistics integrations break this assumption constantly.
+                                </p>
+                                <ul class="space-y-2 text-gray-300">
+                                    <li class="flex items-start"><i class="fas fa-times text-red-400 mr-3 mt-1"></i>Orders arrive out of sequence or hours late</li>
+                                    <li class="flex items-start"><i class="fas fa-times text-red-400 mr-3 mt-1"></i>APIs impose rate limits that block bulk synchronization</li>
+                                    <li class="flex items-start"><i class="fas fa-times text-red-400 mr-3 mt-1"></i>Supplier data conflicts across channels (Amazon, eBay, Shopify)</li>
+                                    <li class="flex items-start"><i class="fas fa-times text-red-400 mr-3 mt-1"></i>Inventory must remain consistent despite partial updates</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Architectural Decisions -->
+                    <div class="glass-effect p-8 rounded-lg" data-aos="fade-up" data-aos-delay="100">
+                        <div class="flex items-start space-x-4">
+                            <div class="flex-shrink-0 w-12 h-12 bg-green-500/20 rounded-lg flex items-center justify-center">
+                                <i class="fas fa-cogs text-green-400 text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-2xl font-bold mb-4 text-white">Architectural Decisions</h3>
+                                <div class="space-y-6">
+                                    <div>
+                                        <h4 class="text-lg font-semibold text-green-400 mb-2">Event-Driven State Reconciliation</h4>
+                                        <p class="text-gray-300">Orders processed as immutable events with timestamps, allowing late arrivals to reconstruct accurate state without overwriting completed operations.</p>
+                                    </div>
+                                    <div>
+                                        <h4 class="text-lg font-semibold text-green-400 mb-2">Queue-Based Integration Layer</h4>
+                                        <p class="text-gray-300">API calls queued with exponential backoff and priority ranking to respect rate limits while maintaining data consistency across Amazon, eBay, Shopify, and logistics providers.</p>
+                                    </div>
+                                    <div>
+                                        <h4 class="text-lg font-semibold text-green-400 mb-2">SKU Normalization</h4>
+                                        <p class="text-gray-300">Cross-channel product mapping system to resolve inventory conflicts when the same product has different identifiers on different platforms.</p>
+                                    </div>
+                                    <div>
+                                        <h4 class="text-lg font-semibold text-green-400 mb-2">Multi-Tenant Isolation</h4>
+                                        <p class="text-gray-300">Object-Based Access Control (OBAC), Role-Based Access Control (RBAC) ensuring client data separation at database and application layers with isolated sub-domains per tenant.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Technical Foundation -->
+                    <div class="glass-effect p-8 rounded-lg" data-aos="fade-up" data-aos-delay="200">
+                        <h3 class="text-2xl font-bold mb-6 text-white">Technical Foundation</h3>
+                        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                            <div class="text-center p-4 bg-gray-800/50 rounded-lg">
+                                <i class="fab fa-php text-3xl text-blue-400 mb-2"></i>
+                                <p class="text-gray-300 text-sm">PHP Yii Framework</p>
+                            </div>
+                            <!-- Laravel -->
+                            <div class="text-center p-4 bg-gray-800/50 rounded-lg">
+                                <i class="fab fa-laravel text-3xl text-red-400 mb-2"></i>
+                                <p class="text-gray-300 text-sm">Laravel Framework</p>
+                            </div>
+                            <div class="text-center p-4 bg-gray-800/50 rounded-lg">
+                                <i class="fab fa-aws text-3xl text-orange-400 mb-2"></i>
+                                <p class="text-gray-300 text-sm">AWS EC2 Infrastructure</p>
+                            </div>
+                            <div class="text-center p-4 bg-gray-800/50 rounded-lg">
+                                <i class="fas fa-database text-3xl text-green-400 mb-2"></i>
+                                <p class="text-gray-300 text-sm">MariaDB</p>
+                            </div>
+                            <div class="text-center p-4 bg-gray-800/50 rounded-lg">
+                                <i class="fas fa-network-wired text-3xl text-purple-400 mb-2"></i>
+                                <p class="text-gray-300 text-sm">RESTful APIs</p>
+                            </div>
+                            <!-- OAuth -->
+                            <div class="text-center p-4 bg-gray-800/50 rounded-lg">
+                                <i class="fas fa-key text-3xl text-purple-400 mb-2"></i>
+                                <p class="text-gray-300 text-sm">OAuth 2.0</p>
+                            </div>
+                            <!-- Encryption -->
+                            <div class="text-center p-4 bg-gray-800/50 rounded-lg">
+                                <i class="fas fa-shield-alt text-3xl text-purple-400 mb-2"></i>
+                                <p class="text-gray-300 text-sm">Encryption</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CTA to full details -->
+                    <div class="text-center" data-aos="fade-up" data-aos-delay="300">
+                        <button onclick="openProjectModal('project1')" class="bg-gradient-to-r from-green-400 to-green-500 hover:from-green-500 hover:to-green-600 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center space-x-3 shadow-lg hover:shadow-green-400/25 mx-auto">
+                            <i class="fas fa-arrow-right"></i>
+                            <span>View Full System Details</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- About Section -->
         <section id="about" class="py-20 px-4 lg:px-8">
             <div class="container mx-auto">
@@ -419,20 +529,17 @@
                             <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent rounded-lg"></div>
                             <div class="absolute bottom-4 left-4 text-white">
                                 <h3 class="text-xl lg:text-2xl font-bold">Anas Abbas</h3>
-                                <p class="text-green-400">Software Engineer & ERP Developer</p>
+                                <p class="text-green-400">Systems Architect & CTO</p>
                             </div>
                         </div>
                     </div>
 
                     <div class="space-y-6" data-aos="fade-left" class="order-1 lg:order-2">
                         <p class="text-base lg:text-lg text-gray-300 leading-relaxed">
-                            Software Engineer and ERP Developer with 11+ years of experience in full-stack and WordPress development. Currently CTO at New G Solution, leading a global ERP platform integrating major e-commerce and logistics systems.
+                            Systems Architect and CTO with 11+ years designing systems where failure is the baseline. Currently leading New G Solution — a cloud ERP platform processing thousands of daily transactions across Amazon, eBay, Shopify, and logistics providers despite incomplete data, API limits, and unreliable timing.
                         </p>
                         <p class="text-base lg:text-lg text-gray-300 leading-relaxed">
-                            Conducting applied research on using Augmented Reality (AR) for ERP employee training — combining innovation with practical enterprise development.
-                        </p>
-                        <p class="text-base lg:text-lg text-gray-300 leading-relaxed">
-                            Passionate about mentoring and IT education, with 500+ students trained in programming and software fundamentals.
+                            Conducting applied research on Augmented Reality (AR) for ERP training as part of a Master's thesis in Web Science — bridging academic rigor with production system design.
                         </p>
                         
                         
@@ -451,6 +558,100 @@
                             </div>
                         </div>
                         
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTO & Architect Role Section -->
+        <section id="cto-role" class="py-20 px-4 lg:px-8">
+            <div class="container mx-auto">
+                <div class="text-center mb-16" data-aos="fade-up">
+                    <div class="inline-block bg-gray-800 px-4 py-2 rounded-full mb-4">
+                        <i class="fas fa-chess-king mr-2 text-green-400"></i>
+                        <span class="text-gray-300">CTO & Architect</span>
+                    </div>
+                    <h2 class="text-4xl font-bold mb-6">
+                        Decision-Making <span class="text-green-400">Under Uncertainty</span>
+                    </h2>
+                </div>
+
+                <div class="max-w-4xl mx-auto space-y-8">
+                    <!-- Role Focus -->
+                    <div class="glass-effect p-8 rounded-lg" data-aos="fade-up">
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                            <div class="text-center">
+                                <div class="w-16 h-16 bg-green-500/20 rounded-lg flex items-center justify-center mx-auto mb-4">
+                                    <i class="fas fa-project-diagram text-green-400 text-2xl"></i>
+                                </div>
+                                <h3 class="text-lg font-bold mb-2 text-white">System Design</h3>
+                                <p class="text-gray-300 text-sm">Architecting for data inconsistency, not ideal conditions</p>
+                            </div>
+                            <div class="text-center">
+                                <div class="w-16 h-16 bg-blue-500/20 rounded-lg flex items-center justify-center mx-auto mb-4">
+                                    <i class="fas fa-balance-scale text-blue-400 text-2xl"></i>
+                                </div>
+                                <h3 class="text-lg font-bold mb-2 text-white">Trade-off Analysis</h3>
+                                <p class="text-gray-300 text-sm">Choosing between eventual consistency and system availability</p>
+                            </div>
+                            <div class="text-center">
+                                <div class="w-16 h-16 bg-purple-500/20 rounded-lg flex items-center justify-center mx-auto mb-4">
+                                    <i class="fas fa-shield-alt text-purple-400 text-2xl"></i>
+                                </div>
+                                <h3 class="text-lg font-bold mb-2 text-white">Resilience Planning</h3>
+                                <p class="text-gray-300 text-sm">Designing systems that degrade gracefully under failure</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Key Decisions -->
+                    <div class="glass-effect p-8 rounded-lg" data-aos="fade-up" data-aos-delay="100">
+                        <h3 class="text-2xl font-bold mb-6 text-white">Key Architectural Decisions</h3>
+                        <div class="space-y-6">
+                            <div class="flex items-start space-x-4">
+                                <div class="flex-shrink-0 w-8 h-8 bg-green-500/20 rounded-full flex items-center justify-center mt-1">
+                                    <i class="fas fa-check text-green-400"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-white mb-1">Multi-Tenant Architecture Over Single Instance</h4>
+                                    <p class="text-gray-300 text-sm">Chose OBAC isolation to allow independent scaling per client while maintaining shared infrastructure cost efficiency.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start space-x-4">
+                                <div class="flex-shrink-0 w-8 h-8 bg-green-500/20 rounded-full flex items-center justify-center mt-1">
+                                    <i class="fas fa-check text-green-400"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-white mb-1">Event Sourcing for Order Processing</h4>
+                                    <p class="text-gray-300 text-sm">Prioritized auditability and late-event reconciliation over immediate transactional consistency.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start space-x-4">
+                                <div class="flex-shrink-0 w-8 h-8 bg-green-500/20 rounded-full flex items-center justify-center mt-1">
+                                    <i class="fas fa-check text-green-400"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-white mb-1">Queue-Based Integration Layer</h4>
+                                    <p class="text-gray-300 text-sm">Accepted latency trade-off to ensure zero data loss despite API rate limits and third-party downtime.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start space-x-4">
+                                <div class="flex-shrink-0 w-8 h-8 bg-green-500/20 rounded-full flex items-center justify-center mt-1">
+                                    <i class="fas fa-check text-green-400"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-white mb-1">SKU Normalization Strategy</h4>
+                                    <p class="text-gray-300 text-sm">Implemented centralized product identity mapping to resolve cross-platform inventory conflicts.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Philosophy -->
+                    <div class="glass-effect p-6 rounded-lg border-l-4 border-green-400" data-aos="fade-up" data-aos-delay="200">
+                        <p class="text-lg text-gray-300 italic">
+                            "Real systems don't fail cleanly. They fail gradually, inconsistently, and unpredictably. Architecture is about designing for that reality — not the idealized version in documentation."
+                        </p>
                     </div>
                 </div>
             </div>
@@ -553,9 +754,10 @@
                             <p class="timeline-company-modern">New G Solution ERP / Web Developer Online (U.S.A.)</p>
                         
                             <p class="timeline-description-modern">
-                                Joined the company in 2021 as an ERP and WordPress developer, contributing to core module development and custom website projects.  
-                                Gradually advanced to lead the development team and now serve as the Chief Technology Officer responsible for the system’s overall architecture, security, and technical strategy.  
-                                Spearheaded the design of a multi-tenant cloud ERP platform built with PHP (Yii Framework) on AWS EC2, integrating over 50 external APIs (Amazon, eBay, Shopify, Walmart, FedEx, UPS and more) with encrypted data flows and custom ACL(OBAC and RBAC) permissions.
+                                Joined the company in 2021 as an ERP developer, contributing to core module development and system architecture.  
+                                Gradually advanced to lead the development team and now serve as the Chief Technology Officer responsible for the system's overall architecture, security, and technical strategy.  
+                                Spearheaded the design of a multi-tenant cloud ERP platform built with PHP (Yii Framework) on AWS EC2, integrating over 50 external APIs (Amazon, eBay, Shopify, Walmart, FedEx, UPS and more) with encrypted data flows and custom ACL(OBAC and RBAC) permissions.  
+                                Delivered production-grade digital platforms using modern CMS-based stacks when appropriate.
                             </p>
                         
                             <div class="timeline-tech-modern">
@@ -889,27 +1091,30 @@
             </div>
         </section>
 
-        <!-- Projects Section -->
+        <!-- Selected Systems Section -->
         <section id="projects" class="py-20 px-4 lg:px-8">
             <div class="container mx-auto">
                 <div class="text-center mb-16" data-aos="fade-up">
                     <div class="inline-block bg-gray-800 px-4 py-2 rounded-full mb-4">
-                        <i class="fas fa-project-diagram mr-2 text-green-400"></i>
-                        <span class="text-gray-300">Projects</span>
+                        <i class="fas fa-server mr-2 text-green-400"></i>
+                        <span class="text-gray-300">Selected Systems</span>
                     </div>
                     <h2 class="text-4xl font-bold mb-6">
-                        My <span class="text-green-400">Latest</span> Projects
+                        <span class="text-green-400">Core</span> System Architecture
                     </h2>
+                    <p class="text-gray-300 max-w-2xl mx-auto">
+                        Complex systems designed to handle real-world integration failures and incomplete data flows
+                    </p>
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <!-- Project 1 -->
+                    <!-- System 1 -->
                     <div class="project-card glass-effect rounded-lg overflow-hidden cursor-pointer" data-aos="fade-up" data-aos-delay="100" onclick="openProjectModal('project1')">
                        
                         <div class="relative bg-white p-6 rounded-lg flex items-center justify-center h-48">
                           
                             <span class="absolute top-2 left-2 bg-gray-700 text-white text-xs px-2 py-1 rounded">
-                                ERP Software
+                                Multi-Tenant ERP
                             </span>
                             <img src="assets/img/projects/ngs.png" class=" object-contain">
                             <div class="absolute top-2 right-2 bg-gray-600 text-white p-2 rounded-full shadow-md">
@@ -917,8 +1122,8 @@
                             </div>
                           </div>
                         <div class="p-6">
-                            <h3 class="text-xl font-bold mb-2">New G Solution – Cloud ERP Platform</h3>
-                            <p class="text-gray-300 mb-4">Enterprise Resource Planning system built with PHP Yii Framework and deployed on AWS EC2.</p>
+                            <h3 class="text-xl font-bold mb-2">New G Solution – Cloud ERP</h3>
+                            <p class="text-gray-300 mb-4"><strong>Problem:</strong> Inconsistent data from 10+ e-commerce and logistics APIs<br><strong>Complexity:</strong> Event-driven state reconciliation with late-arrival handling</p>
                             <div class="flex flex-wrap gap-2">
                                 <span class="px-2 py-1 bg-green-400/20 text-green-400 rounded text-sm">PHP Yii</span>
                                 <span class="px-2 py-1 bg-green-400/20 text-green-400 rounded text-sm">AWS EC2</span>
@@ -936,11 +1141,11 @@
                         </div>
                     </div>
 
-                    <!-- Project 2 -->
+                    <!-- System 2 -->
                     <div class="project-card glass-effect rounded-lg overflow-hidden cursor-pointer" data-aos="fade-up" data-aos-delay="200" onclick="openProjectModal('project2')">
                         <div class="relative bg-white p-6 rounded-lg flex items-center justify-center h-48">
                             <span class="absolute top-2 left-2 bg-red-500 text-white text-xs px-2 py-1 rounded">
-                                B2B Platform
+                                B2B Integration
                             </span>
                             <img src="assets/img/projects/ngs.png" class=" object-contain">
                             <div class="absolute top-2 right-2 bg-red-500 text-white p-2 rounded-full shadow-md">
@@ -948,8 +1153,8 @@
                             </div>
                         </div>
                         <div class="p-6">
-                            <h3 class="text-xl font-bold mb-2">B2B E-Commerce Platform (Part of New G Solution)</h3>
-                            <p class="text-gray-300 mb-4">A Laravel-based B2B e-commerce platform built on the S-Cart framework, directly integrated with the New G Solution ERP ecosystem. Designed for multi-client deployments with secure, isolated sub-domains.</p>
+                            <h3 class="text-xl font-bold mb-2">B2B E-Commerce Platform</h3>
+                            <p class="text-gray-300 mb-4"><strong>Problem:</strong> Multi-tenant storefronts with isolated data per client<br><strong>Complexity:</strong> Secure sub-domain architecture with ERP order synchronization</p>
                             <div class="flex flex-wrap gap-2">
                                 <span class="px-2 py-1 bg-green-400/20 text-green-400 rounded text-sm">PHP</span>
                                 <span class="px-2 py-1 bg-green-400/20 text-green-400 rounded text-sm">MySQL</span>
@@ -964,67 +1169,11 @@
                         </div>
                     </div>
 
-                    <!-- Project 3 -->
-                    <div class="project-card glass-effect rounded-lg overflow-hidden cursor-pointer" data-aos="fade-up" data-aos-delay="300" onclick="openProjectModal('project3')">
-                         
-                        <div class="relative bg-white p-6 rounded-lg flex items-center justify-center h-48">
-                          
-                            <span class="absolute top-2 left-2 bg-blue-500 text-white text-xs px-2 py-1 rounded">
-                                User Guide Platform
-                            </span>
-                            <img src="assets/img/projects/ngs.png" class=" object-contain">
-                            <div class="absolute top-2 right-2 bg-blue-500 text-white p-2 rounded-full shadow-md">
-                                <i class="fab fa-wordpress"></i>
-                            </div>
-                          </div>
-                        <div class="p-6">
-                            <h3 class="text-xl font-bold mb-2">New G Solution – User Guide Platform</h3>
-                            <p class="text-gray-300 mb-4">A dedicated WordPress-based documentation platform developed as part of the New G Solution ERP ecosystem. Fully customized to provide structured user guides, clean navigation, and an optimized reading experience for clients and internal teams.</p>
-                            <div class="flex flex-wrap gap-2">
-                                <span class="px-2 py-1 bg-green-400/20 text-green-400 rounded text-sm">WordPress</span>
-                                <span class="px-2 py-1 bg-green-400/20 text-green-400 rounded text-sm">PHP</span>
-                                <span class="px-2 py-1 bg-green-400/20 text-green-400 rounded text-sm">HTML / CSS / JavaScript</span>
-                                <span class="px-2 py-1 bg-green-400/20 text-green-400 rounded text-sm">Custom Theme Development</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Project 4 -->
-                    <div class="project-card glass-effect rounded-lg overflow-hidden cursor-pointer" data-aos="fade-up" data-aos-delay="400" onclick="openProjectModal('project4')">
-                    
-                        <div class="relative bg-white p-6 rounded-lg flex items-center justify-center h-48">
-                          
-                            <span class="absolute top-2 left-2 bg-blue-500 text-white text-xs px-2 py-1 rounded">
-                                Official Website
-                            </span>
-                            <img src="assets/img/projects/ngs.png" class=" object-contain">
-                            <div class="absolute top-2 right-2 bg-blue-500 text-white p-2 rounded-full shadow-md">
-                                <i class="fab fa-wordpress"></i>
-                            </div>
-                          </div>
-                          
-                            
-                        <div class="p-6">
-                            <h3 class="text-xl font-bold mb-2">New G Solution – Official Website</h3>
-                            <p class="text-gray-300 mb-4">The main corporate website for New G Solution ERP, fully developed and maintained by me. Built on WordPress to showcase ERP features, manage client subscriptions, and support affiliate marketing through MemberPress and EasyAffiliate integrations.</p>
-                            <div class="flex flex-wrap gap-2">
-                                <span class="px-2 py-1 bg-green-400/20 text-green-400 rounded text-sm">WordPress</span>
-                                <span class="px-2 py-1 bg-green-400/20 text-green-400 rounded text-sm">PHP</span>
-                                <span class="px-2 py-1 bg-green-400/20 text-green-400 rounded text-sm">MemberPress</span>
-                                <span class="px-2 py-1 bg-green-400/20 text-green-400 rounded text-sm">EasyAffiliate</span>
-                                <span class="px-2 py-1 bg-green-400/20 text-green-400 rounded text-sm">HTML / CSS / JavaScript</span>
-                                <span class="px-2 py-1 bg-green-400/20 text-green-400 rounded text-sm">Responsive Design</span>
-                                <span class="px-2 py-1 bg-green-400/20 text-green-400 rounded text-sm">Security & Backups</span>
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <!-- Project 6 -->
-                    <div class="project-card glass-effect rounded-lg overflow-hidden cursor-pointer" data-aos="fade-up" data-aos-delay="800" onclick="openProjectModal('project6')">                       
+                    <!-- System 3 -->
+                    <div class="project-card glass-effect rounded-lg overflow-hidden cursor-pointer" data-aos="fade-up" data-aos-delay="300" onclick="openProjectModal('project6')">                       
                     <div class="relative bg-white p-6 rounded-lg flex items-center justify-center h-48">
                         <span class="absolute top-2 left-2 bg-green-500 text-white text-xs px-2 py-1 rounded">
-                            Shopify App
+                            3rd-Party Integration
                         </span>
                         <img src="assets/img/projects/ngs.png" class=" object-contain">
                         <div class="absolute top-2 right-2 bg-green-500 text-white p-2 rounded-full shadow-md">
@@ -1033,120 +1182,57 @@
                         </div>
                         
                 <div class="p-6">
-                    <h3 class="text-xl font-bold mb-2">New G Solution – Shopify App</h3>
-                    <p class="text-gray-300 mb-4">
-                    Officially approved Shopify App integrating New G Solution ERP with global e-commerce channels for automated inventory and order management.
-                    </p>
+                    <h3 class="text-xl font-bold mb-2">Shopify App Integration</h3>
+                    <p class="text-gray-300 mb-4"><strong>Problem:</strong> Rate-limited API calls with real-time inventory demands<br><strong>Complexity:</strong> Queue-based sync with OAuth 2.0 and tiered subscription handling</p>
                     <div class="flex flex-wrap gap-2">
-                    <span class="px-2 py-1 bg-green-400/20 text-green-400 rounded text-sm">Shopify</span>
-                    <span class="px-2 py-1 bg-green-400/20 text-green-400 rounded text-sm">ERP Integration</span>
-                    <span class="px-2 py-1 bg-green-400/20 text-green-400 rounded text-sm">Cloud Sync</span>
                     <span class="px-2 py-1 bg-green-400/20 text-green-400 rounded text-sm">RESTful APIs</span>
                     <span class="px-2 py-1 bg-green-400/20 text-green-400 rounded text-sm">GraphQL</span>
-                    <span class="px-2 py-1 bg-green-400/20 text-green-400 rounded text-sm">OAuth 2.0 Authentication</span>
-                    <span class="px-2 py-1 bg-green-400/20 text-green-400 rounded text-sm">Tiered Subscription Plans</span>
-                    <span class="px-2 py-1 bg-green-400/20 text-green-400 rounded text-sm">SKU</span>
-                    <span class="px-2 py-1 bg-green-400/20 text-green-400 rounded text-sm">Master SKU</span>
-                    <span class="px-2 py-1 bg-green-400/20 text-green-400 rounded text-sm">Product Categories</span>
+                    <span class="px-2 py-1 bg-green-400/20 text-green-400 rounded text-sm">OAuth 2.0</span>
                     </div>
                 </div>
                 </div>
-                
+                </div>
+            </div>
+        </section>
 
-                
-                      <!-- Project 9 -->
-                      <div class="project-card glass-effect rounded-lg overflow-hidden cursor-pointer" data-aos="fade-up" data-aos-delay="1000" onclick="openProjectModal('project9')">
-                        <img src="assets/img/projects/anbar.png" 
-                             alt="Anbar Restaurant Menu Website" class="w-full h-48 object-contain bg-white p-7">
-                        <div class="p-6">
-                          <h3 class="text-xl font-bold mb-2">Anbar Restaurant – Digital Menu</h3>
-                          <p class="text-gray-300 mb-4">
-                            Elegant digital menu website for Anbar Restaurant in Dubai, designed for iPad use with a seamless, app-like browsing experience.
-                          </p>
-                          <div class="flex flex-wrap gap-2">
-                            <span class="px-2 py-1 bg-green-400/20 text-green-400 rounded text-sm">WordPress</span>
-                            <span class="px-2 py-1 bg-green-400/20 text-green-400 rounded text-sm">Restaurant Menu</span>
-                            <span class="px-2 py-1 bg-green-400/20 text-green-400 rounded text-sm">Custom UI</span>
-                          </div>
+        <!-- Selected Clients & Digital Platforms Section -->
+        <section id="clients" class="py-20 px-4 lg:px-8" style="background-color: #121212;">
+            <div class="container mx-auto">
+                <div class="text-center mb-12" data-aos="fade-up">
+                    <div class="inline-block bg-gray-800 px-4 py-2 rounded-full mb-4">
+                        <i class="fas fa-handshake mr-2 text-green-400"></i>
+                        <span class="text-gray-300">Selected Clients</span>
+                    </div>
+                    <h2 class="text-4xl font-bold mb-6">
+                        Selected Clients & <span class="text-green-400">Digital Platforms</span>
+                    </h2>
+                    <p class="text-gray-300 max-w-2xl mx-auto text-lg">
+                        In parallel with system architecture work, I've delivered digital platforms for recognized brands in the Arab region.
+                    </p>
+                </div>
+
+                <div class="max-w-5xl mx-auto">
+                    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 items-center" data-aos="fade-up">
+                        <!-- Client Logo: Anbar -->
+                        <div class="flex items-center justify-center p-6 glass-effect rounded-lg hover:scale-105 transition-transform">
+                            <img src="assets/img/projects/anbar.png" alt="Anbar Restaurant" class="w-full h-20 object-contain opacity-70 hover:opacity-100 transition-opacity">
                         </div>
-                      </div>
-                      
-                    <!-- Project 5 -->
-                    <div class="project-card glass-effect rounded-lg overflow-hidden cursor-pointer" data-aos="fade-up" data-aos-delay="600" onclick="openProjectModal('project5')">
-                        <img src="assets/img/projects/dxbkaraoke.png" 
-                             alt="DXB Karaoke Music Store" class="w-full h-48 object-contain bg-gray-700 p-4">
-                        <div class="p-6">
-                          <h3 class="text-xl font-bold mb-2">DXB Karaoke Music Store</h3>
-                          <p class="text-gray-300 mb-4">
-                            Custom WordPress / WooCommerce platform for Arabic and international karaoke songs with advanced singer taxonomy and bilingual setup.
-                          </p>
-                          <div class="flex flex-wrap gap-2">
-                            <span class="px-2 py-1 bg-green-400/20 text-green-400 rounded text-sm">WordPress</span>
-                            <span class="px-2 py-1 bg-green-400/20 text-green-400 rounded text-sm">WooCommerce</span>
-                            <span class="px-2 py-1 bg-green-400/20 text-green-400 rounded text-sm">Polylang</span>
-                          </div>
+                        
+                        <!-- Client Logo: Caspersy -->
+                        <div class="flex items-center justify-center p-6 glass-effect rounded-lg hover:scale-105 transition-transform">
+                            <img src="assets/img/projects/casper.png" alt="Caspersy Restaurant" class="w-full h-20 object-contain opacity-70 hover:opacity-100 transition-opacity">
                         </div>
-                      </div>
-                      
-
-          
-                      
-                    <!-- Project 7 -->
-                      <div class="project-card glass-effect rounded-lg overflow-hidden cursor-pointer" data-aos="fade-up" data-aos-delay="900" onclick="openProjectModal('project7')">
-                        <img src="assets/img/projects/dxbagency.svg" 
-                             alt="DXB Media Agency Website" class="w-full h-48 object-contain bg-gray-700 p-4">
-                        <div class="p-6">
-                          <h3 class="text-xl font-bold mb-2">DXB Media Agency – Corporate Website</h3>
-                          <p class="text-gray-300 mb-4">
-                            Fully customised WordPress website for a Dubai-based branding & marketing agency, with tailored theme, responsive UI and project portfolio section.
-                          </p>
-                          <div class="flex flex-wrap gap-2">
-                            <span class="px-2 py-1 bg-green-400/20 text-green-400 rounded text-sm">WordPress</span>
-                            <span class="px-2 py-1 bg-green-400/20 text-green-400 rounded text-sm">Custom Theme</span>
-                            <span class="px-2 py-1 bg-green-400/20 text-green-400 rounded text-sm">Agency Website</span>
-                          </div>
+                        
+                        <!-- Client Logo: DXB Karaoke -->
+                        <div class="flex items-center justify-center p-6 glass-effect rounded-lg hover:scale-105 transition-transform">
+                            <img src="assets/img/projects/dxbkaraoke.png" alt="DXB Karaoke" class="w-full h-20 object-contain opacity-70 hover:opacity-100 transition-opacity">
                         </div>
-                      </div>
-
-
-
-
-                      <!-- Project 10 -->
-                      <div class="project-card glass-effect rounded-lg overflow-hidden cursor-pointer" data-aos="fade-up" data-aos-delay="1100" onclick="openProjectModal('project10')">
-                        <img src="assets/img/projects/casper.png" 
-                             alt="Caspersy Restaurant Menu Website" class="w-full h-48 object-contain bg-gray-700 p-4">
-                        <div class="p-6">
-                          <h3 class="text-xl font-bold mb-2">Caspersy Restaurant – Dynamic Menu</h3>
-                          <p class="text-gray-300 mb-4">
-                            Bilingual WordPress menu website for Caspersy Restaurant with automated Excel-based price updates and an elegant user interface.
-                          </p>
-                          <div class="flex flex-wrap gap-2">
-                            <span class="px-2 py-1 bg-green-400/20 text-green-400 rounded text-sm">WordPress</span>
-                            <span class="px-2 py-1 bg-green-400/20 text-green-400 rounded text-sm">Excel Integration</span>
-                            <span class="px-2 py-1 bg-green-400/20 text-green-400 rounded text-sm">Bilingual</span>
-                          </div>
+                        
+                        <!-- Client Logo: DXB Agency -->
+                        <div class="flex items-center justify-center p-6 glass-effect rounded-lg hover:scale-105 transition-transform">
+                            <img src="assets/img/projects/dxbagency.svg" alt="DXB Media Agency" class="w-full h-20 object-contain opacity-70 hover:opacity-100 transition-opacity">
                         </div>
-                      </div>
-                      
-
-                      <!-- Project 11 -->
-                      
-                      <div class="project-card glass-effect rounded-lg overflow-hidden cursor-pointer" data-aos="fade-up" data-aos-delay="1200" onclick="openProjectModal('project11')">
-                        <img src="assets/img/projects/ar-thesis.png" 
-                             alt="Augmented Reality for ERP Employee Training" class="w-full h-48 object-cover">
-                        <div class="p-6">
-                          <h3 class="text-xl font-bold mb-2">Augmented Reality for ERP Employee Training</h3>
-                          <p class="text-gray-300 mb-4">
-                            An applied research project forming the Master’s thesis, exploring how Augmented Reality (AR) can enhance training efficiency for ERP system employees. The project focuses on interactive modules, visual guidance, and immersive task simulation within the New G Solution ERP environment.
-                          </p>
-                          <div class="flex flex-wrap gap-2">
-                            <span class="px-2 py-1 bg-green-400/20 text-green-400 rounded text-sm">Augmented Reality (AR)</span>
-                            <span class="px-2 py-1 bg-green-400/20 text-green-400 rounded text-sm">Web Science</span>
-                            <span class="px-2 py-1 bg-green-400/20 text-green-400 rounded text-sm">ERP Systems</span>
-                            <span class="px-2 py-1 bg-green-400/20 text-green-400 rounded text-sm">3D Visualization</span>
-                          </div>
-                        </div>
-                      </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -1222,6 +1308,104 @@
                         </div>
 
                         
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Academic Programming Courses Section -->
+        <section id="academic-courses" class="py-20 px-4 lg:px-8">
+            <div class="container mx-auto">
+                <div class="text-center mb-12" data-aos="fade-up">
+                    <div class="inline-block bg-gray-800 px-4 py-2 rounded-full mb-4">
+                        <i class="fas fa-chalkboard-teacher mr-2 text-blue-400"></i>
+                        <span class="text-gray-300">Academic Teaching</span>
+                    </div>
+                    <h2 class="text-4xl font-bold mb-4">
+                        Academic <span class="text-blue-400">Programming Courses</span>
+                    </h2>
+                    <p class="text-gray-300 max-w-2xl mx-auto mb-2">
+                        University-level academic programming instruction
+                    </p>
+                    <p class="text-sm text-gray-400 italic max-w-xl mx-auto">
+                        These are university-level academic programming courses, separate from ERP and professional system work.
+                    </p>
+                </div>
+
+                <div class="max-w-4xl mx-auto">
+                    <div class="glass-effect p-8 rounded-lg" data-aos="fade-up">
+                        <div class="space-y-6">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <!-- Course 1 -->
+                                <a href="https://youtube.com/playlist?list=PLnk49GvOG2j4FYuyLsppMw53yZj0LVGNl&si=K-eqUGVnS7eveKld" target="_blank" rel="noopener noreferrer" class="group glass-effect p-4 rounded-lg hover:bg-gray-700/50 transition-all border border-gray-700 hover:border-blue-400/30">
+                                    <div class="flex items-start space-x-3">
+                                        <div class="flex-shrink-0 w-10 h-10 bg-blue-500/20 rounded-lg flex items-center justify-center group-hover:bg-blue-500/30 transition-colors">
+                                            <i class="fab fa-microsoft text-blue-400"></i>
+                                        </div>
+                                        <div class="flex-1 min-w-0">
+                                            <h3 class="text-base font-semibold text-white mb-1 group-hover:text-blue-300 transition-colors">Full Stack Web Development</h3>
+                                            <p class="text-gray-400 text-sm">C# .NET Web Forms</p>
+                                        </div>
+                                        <i class="fas fa-external-link-alt text-gray-500 text-xs mt-1 group-hover:text-blue-400 transition-colors"></i>
+                                    </div>
+                                </a>
+
+                                <!-- Course 2 -->
+                                <a href="https://youtube.com/playlist?list=PLnk49GvOG2j7Majn1Sn4ORj3KnfXlTXQE&si=1ST0UCiXIpjkM2Za" target="_blank" rel="noopener noreferrer" class="group glass-effect p-4 rounded-lg hover:bg-gray-700/50 transition-all border border-gray-700 hover:border-blue-400/30">
+                                    <div class="flex items-start space-x-3">
+                                        <div class="flex-shrink-0 w-10 h-10 bg-blue-500/20 rounded-lg flex items-center justify-center group-hover:bg-blue-500/30 transition-colors">
+                                            <i class="fab fa-windows text-blue-400"></i>
+                                        </div>
+                                        <div class="flex-1 min-w-0">
+                                            <h3 class="text-base font-semibold text-white mb-1 group-hover:text-blue-300 transition-colors">Visual Programming</h3>
+                                            <p class="text-gray-400 text-sm">Windows Applications with C#</p>
+                                        </div>
+                                        <i class="fas fa-external-link-alt text-gray-500 text-xs mt-1 group-hover:text-blue-400 transition-colors"></i>
+                                    </div>
+                                </a>
+
+                                <!-- Course 3 -->
+                                <a href="https://youtube.com/playlist?list=PLnk49GvOG2j50hvNOIz5CeKc2lhmppwPj&si=Rf7JdSPAetvTm2Tq" target="_blank" rel="noopener noreferrer" class="group glass-effect p-4 rounded-lg hover:bg-gray-700/50 transition-all border border-gray-700 hover:border-blue-400/30">
+                                    <div class="flex items-start space-x-3">
+                                        <div class="flex-shrink-0 w-10 h-10 bg-purple-500/20 rounded-lg flex items-center justify-center group-hover:bg-purple-500/30 transition-colors">
+                                            <i class="fas fa-cube text-purple-400"></i>
+                                        </div>
+                                        <div class="flex-1 min-w-0">
+                                            <h3 class="text-base font-semibold text-white mb-1 group-hover:text-purple-300 transition-colors">Object-Oriented Programming</h3>
+                                            <p class="text-gray-400 text-sm">OOP Fundamentals</p>
+                                        </div>
+                                        <i class="fas fa-external-link-alt text-gray-500 text-xs mt-1 group-hover:text-purple-400 transition-colors"></i>
+                                    </div>
+                                </a>
+
+                                <!-- Course 4 -->
+                                <a href="https://youtube.com/playlist?list=PLnk49GvOG2j7rLkdqXl3lVxXolfBqR_I5&si=ou92F9xDYV2VGLvh" target="_blank" rel="noopener noreferrer" class="group glass-effect p-4 rounded-lg hover:bg-gray-700/50 transition-all border border-gray-700 hover:border-blue-400/30">
+                                    <div class="flex items-start space-x-3">
+                                        <div class="flex-shrink-0 w-10 h-10 bg-green-500/20 rounded-lg flex items-center justify-center group-hover:bg-green-500/30 transition-colors">
+                                            <i class="fas fa-database text-green-400"></i>
+                                        </div>
+                                        <div class="flex-1 min-w-0">
+                                            <h3 class="text-base font-semibold text-white mb-1 group-hover:text-green-300 transition-colors">SQL Server Database Workshop</h3>
+                                            <p class="text-gray-400 text-sm">Database Fundamentals</p>
+                                        </div>
+                                        <i class="fas fa-external-link-alt text-gray-500 text-xs mt-1 group-hover:text-green-400 transition-colors"></i>
+                                    </div>
+                                </a>
+                            </div>
+                            
+                            <div class="pt-4 border-t border-gray-700">
+                                <div class="flex items-center justify-between">
+                                    <p class="text-gray-400 text-sm">
+                                        <strong class="text-gray-300">500+ students</strong> trained across university courses
+                                    </p>
+                                    <a href="https://www.youtube.com/c/AnasAbbasDev" target="_blank" rel="noopener noreferrer" class="inline-flex items-center space-x-2 text-blue-400 hover:text-blue-300 transition-colors text-sm">
+                                        <i class="fab fa-youtube"></i>
+                                        <span>View Channel</span>
+                                        <i class="fas fa-external-link-alt text-xs"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -1365,15 +1549,18 @@
                         <span class="text-gray-300">Contact</span>
                     </div>
                     <h2 class="text-4xl font-bold mb-6">
-                        Let's <span class="text-green-400">Talk</span>
+                        Let's Discuss Your <span class="text-green-400">System Architecture</span>
                     </h2>
+                    <p class="text-xl text-gray-300 max-w-2xl mx-auto">
+                        Available for CTO roles, technical leadership positions, and architecture consulting for complex ERP systems
+                    </p>
                 </div>
 
                 <div class="max-w-4xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12">
                     <!-- Contact Info -->
                     <div class="space-y-8" data-aos="fade-right">
                         <div>
-                            <h3 class="text-2xl font-bold mb-6">Contact Information</h3>
+                            <h3 class="text-2xl font-bold mb-6">Get in Touch</h3>
                             <div class="space-y-4">
                                 <!-- Email -->
                                 <div class="text-center mb-6">
