@@ -97,8 +97,15 @@
             <div class="nav-item w-8 h-8 rounded-full flex items-center justify-center cursor-pointer" data-section="projects">
                 <i class="fas fa-server text-sm"></i>
             </div>
+           
             <div class="nav-item w-8 h-8 rounded-full flex items-center justify-center cursor-pointer" data-section="volunteer">
                 <i class="fas fa-heart text-sm"></i>
+            </div>
+            <div class="nav-item w-8 h-8 rounded-full flex items-center justify-center cursor-pointer" data-section="community-services">
+                <i class="fas fa-tools text-sm"></i>
+            </div>
+            <div class="nav-item w-8 h-8 rounded-full flex items-center justify-center cursor-pointer" data-section="academic-courses">
+                <i class=" fas fa-chalkboard-teacher text-sm"></i>
             </div>
             <div class="nav-item w-8 h-8 rounded-full flex items-center justify-center cursor-pointer" data-section="languages">
                 <i class="fas fa-language text-sm"></i>
@@ -163,9 +170,17 @@
                         <i class="fas fa-server text-green-400 w-5"></i>
                         <span class="text-white">Selected Systems</span>
                     </div>
+                    <div class="nav-item flex items-center space-x-3 px-3 py-2 rounded-lg cursor-pointer hover:bg-gray-700 transition-colors" data-section="community-services">
+                        <i class="fas fa-tools text-green-400 w-5"></i>
+                        <span class="text-white">Free Public Tools</span>
+                    </div>
                     <div class="nav-item flex items-center space-x-3 px-3 py-2 rounded-lg cursor-pointer hover:bg-gray-700 transition-colors" data-section="volunteer">
                         <i class="fas fa-heart text-green-400 w-5"></i>
                         <span class="text-white">Volunteer</span>
+                    </div>
+                    <div class="nav-item flex items-center space-x-3 px-3 py-2 rounded-lg cursor-pointer hover:bg-gray-700 transition-colors" data-section="academic-courses">
+                        <i class=" fas fa-chalkboard-teacher text-green-400 w-5"></i>
+                        <span class="text-white">Academic Courses</span>
                     </div>
                     <div class="nav-item flex items-center space-x-3 px-3 py-2 rounded-lg cursor-pointer hover:bg-gray-700 transition-colors" data-section="languages">
                         <i class="fas fa-language text-green-400 w-5"></i>
@@ -1355,6 +1370,88 @@
             </div>
         </section>
 
+
+                <!-- Community Services Section -->
+                <section id="community-services" class="py-20 px-4 lg:px-8" style="background-color: #121212;">
+                    <div class="container mx-auto">
+                        <div class="text-center mb-12" data-aos="fade-up">
+                            <div class="inline-block bg-gray-800 px-4 py-2 rounded-full mb-4">
+                                <i class="fas fa-tools mr-2 text-green-400"></i>
+                                <span class="text-gray-300">Free Public Tools</span>
+                            </div>
+                            <h2 class="text-4xl font-bold mb-4">
+                                Free <span class="text-green-400">Public Tools</span>
+                            </h2>
+                            <p class="text-gray-300 max-w-2xl mx-auto">
+                                Free applications built to serve the community during the Syrian currency transition
+                            </p>
+                        </div>
+        
+                        <div class="max-w-5xl mx-auto">
+                            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                                <!-- App 1: Currency Assistant -->
+                                <div class="glass-effect p-6 rounded-lg hover:bg-gray-700/50 transition-all border border-gray-700 hover:border-green-400/30" data-aos="fade-up">
+                                    <div class="flex items-start space-x-4 mb-4">
+                                        <div class="flex-shrink-0 w-14 h-14 bg-green-500/20 rounded-lg flex items-center justify-center">
+                                            <i class="fas fa-calculator text-green-400 text-2xl"></i>
+                                        </div>
+                                        <div class="flex-1">
+                                            <h3 class="text-xl font-bold text-white mb-2">Syrian Currency Assistant</h3>
+                                            <p class="text-gray-400 text-sm mb-4">
+                                                Instant conversion between new and old Syrian currency. Supports manual USD input, mixed payments, and calculates change in both currencies. Includes popular conversion charts.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="space-y-3">
+                                        <div class="flex flex-wrap gap-2 mb-4">
+                                            <span class="px-3 py-1 bg-green-400/20 text-green-400 rounded-full text-xs">Currency Converter</span>
+                                            <span class="px-3 py-1 bg-green-400/20 text-green-400 rounded-full text-xs">Offline</span>
+                                            <span class="px-3 py-1 bg-green-400/20 text-green-400 rounded-full text-xs">Free</span>
+                                        </div>
+                                        <a href="https://anas-code.com/currency" target="_blank" rel="noopener noreferrer" class="w-full bg-gradient-to-r from-green-400 to-green-500 hover:from-green-500 hover:to-green-600 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center space-x-2 shadow-lg hover:shadow-green-400/25">
+                                            <i class="fas fa-external-link-alt"></i>
+                                            <span>Open App</span>
+                                        </a>
+                                    </div>
+                                </div>
+        
+                                <!-- App 2: AI Currency Reader -->
+                                <div class="glass-effect p-6 rounded-lg hover:bg-gray-700/50 transition-all border border-gray-700 hover:border-purple-400/30" data-aos="fade-up" data-aos-delay="100">
+                                    <div class="flex items-start space-x-4 mb-4">
+                                        <div class="flex-shrink-0 w-14 h-14 bg-purple-500/20 rounded-lg flex items-center justify-center">
+                                            <i class="fas fa-eye text-purple-400 text-2xl"></i>
+                                        </div>
+                                        <div class="flex-1">
+                                            <h3 class="text-xl font-bold text-white mb-2">Read Currency with My Eyes</h3>
+                                            <p class="text-gray-400 text-sm mb-4">
+                                                AI-powered currency recognition app for visually impaired users. Identifies both new and old Syrian currency notes. Currently in beta testing with blind users.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="space-y-3">
+                                        <div class="flex flex-wrap gap-2 mb-4">
+                                            <span class="px-3 py-1 bg-purple-400/20 text-purple-400 rounded-full text-xs">AI Recognition</span>
+                                            <span class="px-3 py-1 bg-purple-400/20 text-purple-400 rounded-full text-xs">Accessibility</span>
+                                            <span class="px-3 py-1 bg-purple-400/20 text-purple-400 rounded-full text-xs">Beta</span>
+                                        </div>
+                                        <a href="https://reader.anas-code.com/" target="_blank" rel="noopener noreferrer" class="w-full bg-gradient-to-r from-purple-400 to-purple-500 hover:from-purple-500 hover:to-purple-600 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center space-x-2 shadow-lg hover:shadow-purple-400/25">
+                                            <i class="fas fa-external-link-alt"></i>
+                                            <span>Open App</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="mt-8 text-center">
+                                <p class="text-gray-400 text-sm">
+                                    <i class="fas fa-gift text-green-400 mr-2"></i>
+                                    Both applications are <strong class="text-green-400">completely free</strong> for public use
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
         <!-- Academic Programming Courses Section -->
         <section id="academic-courses" class="py-20 px-4 lg:px-8">
             <div class="container mx-auto">
@@ -1452,6 +1549,8 @@
                 </div>
             </div>
         </section>
+
+
 
         <!-- Languages Section -->
         <section id="languages" class="py-20 px-4 lg:px-8">
